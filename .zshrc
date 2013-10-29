@@ -18,6 +18,8 @@ alias update="sudo apt-get update && sudo apt-get upgrade"
 alias atlanta="ssh ghost@direct.daneden.me -p 1991"
 alias git=hub
 
+function gifme() { echo "https://dl.dropboxusercontent.com/u/40044953/gifs/$@" | pbcopy; }
+
 # Set to this to use case-sensitive completion
 # CASE_SENSITIVE="true"
 
@@ -65,3 +67,7 @@ export PATH="/usr/local/heroku/bin:$PATH"
 
 ### Add NPM path
 export NODE_PATH="/usr/local/lib/node"
+
+autoload -U promptinit && promptinit
+
+prompt pure
