@@ -18,6 +18,9 @@ alias update="sudo apt-get update && sudo apt-get upgrade"
 alias atlanta="ssh ghost@direct.daneden.me -p 1991"
 alias git=hub
 
+# Fixing autocorrect where appropriate
+alias grunt="nocorrect grunt"
+
 function gifme() { echo "https://dl.dropboxusercontent.com/u/40044953/gifs/$@" | pbcopy; }
 
 # Set to this to use case-sensitive completion
