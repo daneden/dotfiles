@@ -21,7 +21,7 @@ alias git=hub
 # Fixing autocorrect where appropriate
 alias grunt="nocorrect grunt"
 
-function gifme() { echo "https://dl.dropboxusercontent.com/u/40044953/gifs/$@" | pbcopy; }
+function gifme() { echo "https://dl.dropboxusercontent.com/u/40044953/gifs/$@" | tr -d '\n' | pbcopy; }
 
 # Set to this to use case-sensitive completion
 # CASE_SENSITIVE="true"
