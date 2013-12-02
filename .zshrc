@@ -72,5 +72,3 @@ export PATH="/usr/local/heroku/bin:$PATH"
 export NODE_PATH="/usr/local/lib/node"
 
 autoload -U promptinit && promptinit
-
-prompt pure
