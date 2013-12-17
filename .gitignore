@@ -1,0 +1,12 @@
+# Ignore everything!
+*
+**/*
+
+# And restore normality to the files we actually want to track
+!.gitignore
+!.git
+!.gitconfig
+
+!.grunt-init
+!.shells
+!.zshrc
