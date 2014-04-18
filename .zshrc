@@ -82,4 +82,7 @@ export PATH="/usr/local/heroku/bin:$PATH"
 ### Add NPM path
 export NODE_PATH="/usr/local/lib/node"
 
+### Change the default editor to Atom
+export EDITOR=/Applications/Atom.app/Contents/MacOS/Atom
+
 autoload -U promptinit && promptinit

@@ -6,3 +6,18 @@
 [filter "media"]
 	clean = git-media-clean %f
 	smudge = git-media-smudge %f
+[color]
+	ui = 1
+[alias]
+	s = status -sb
+	status = status -sb
+	a = add -A .
+	co = checkout
+  cm = commit
+  p = push
+  # Show verbose output about tags, branches or remotes
+  tags = tag -l
+  branches = branch -a
+  remotes = remote -v
+[core]
+	editor = atom
