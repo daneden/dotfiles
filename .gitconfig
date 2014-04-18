@@ -20,4 +20,4 @@
   branches = branch -a
   remotes = remote -v
 [core]
-	editor = atom
+	editor = atom -w
