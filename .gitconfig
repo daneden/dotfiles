@@ -2,10 +2,7 @@
 	name = Daniel Eden
 	email = dte@dropbox.com
 [push]
-	default = simple
-[filter "media"]
-	clean = git-media-clean %f
-	smudge = git-media-smudge %f
+	default = current
 [color]
 	ui = 1
 [alias]
