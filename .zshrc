@@ -48,12 +48,13 @@ export PATH=$PATH:/usr/local/rvm/gems/ruby-1.9.3-p327/bin:/usr/local/rvm/gems/ru
 PATH=$PATH:$HOME/.rvm/bin # Add RVM to PATH for scripting
 export PATH=$PATH:/usr/local/bin
 export PATH=$PATH:~/bin:/usr/local/share/npm/bin
+export PATH=$HOME/.arc_install/arcanist/bin:$PATH
 
 # Set local development variable for Jekyll
 export JEKYLL_ENV=development
 
 ### Change the default editor to Atom
-export EDITOR=/Applications/Atom.app/Contents/MacOS/Atom
+export EDITOR='subl'
 
 ### Added by the Heroku Toolbelt
 export PATH="/usr/local/heroku/bin:$PATH"
