@@ -65,4 +65,7 @@ export PATH="/usr/local/heroku/bin:$PATH"
 ### Add NPM path
 export NODE_PATH="/usr/local/lib/node"
 
+### Set character encoding
+export LC_CTYPE=en_US.UTF-8
+
 autoload -U promptinit && promptinit
