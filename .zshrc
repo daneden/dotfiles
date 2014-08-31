@@ -5,7 +5,7 @@ ZSH=$HOME/.oh-my-zsh
 # Look in ~/.oh-my-zsh/themes/
 # Optionally, if you set this to "random", it'll load a random theme each
 # time that oh-my-zsh is loaded.
-ZSH_THEME="af-magic"
+ZSH_THEME="agnoster"
 
 ###########
 # ALIASES #
@@ -26,6 +26,9 @@ CASE_SENSITIVE="true"
 
 # Comment this out to disable bi-weekly auto-update checks
 DISABLE_AUTO_UPDATE="true"
+
+# Set default user
+DEFAULT_USER=`whoami`
 
 # Display red dots while waiting for completion
 COMPLETION_WAITING_DOTS="true"
@@ -62,8 +65,4 @@ export PATH="/usr/local/heroku/bin:$PATH"
 ### Add NPM path
 export NODE_PATH="/usr/local/lib/node"
 
-# Use pure because it's pretty
-. ~/.shells/pure.zsh
-
-# I can't remember what this does. Oh well.
 autoload -U promptinit && promptinit
