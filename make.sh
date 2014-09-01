@@ -8,7 +8,7 @@
 
 dir=~/.dotfiles                    # dotfiles directory
 olddir=~/.dotfiles_old             # old dotfiles backup directory
-files="gitconfig gitignore zshrc oh-my-zsh"    # list of files/folders to symlink in homedir
+files="gitconfig gitignore zshrc oh-my-zsh scss-lint.yml"    # list of files/folders to symlink in homedir
 
 ##########
 
