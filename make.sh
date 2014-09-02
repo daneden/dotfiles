@@ -9,6 +9,7 @@
 dir=~/.dotfiles                    # dotfiles directory
 olddir=~/.dotfiles_old             # old dotfiles backup directory
 files="gitconfig gitignore zshrc oh-my-zsh scss-lint.yml"    # list of files/folders to symlink in homedir
+nodot="Brewfile" # list of non-dot files to symlink
 
 ##########
 
@@ -24,8 +25,17 @@ printf "...done\n\n"
 
 # move any existing dotfiles in homedir to dotfiles_old directory, then create symlinks
 for file in $files; do
-    printf "Moving any existing dotfiles from ~ to $olddir\n"
-    mv ~/.$file $olddir
-    printf "Creating symlink to $file in home directory.\n\n"
-    ln -s $dir/$file ~/.$file
+  printf "Moving any existing dotfiles from ~ to $olddir\n"
+  mv ~/.$file $olddir
+  printf "Creating symlink to $file in home directory.\n\n"
+  ln -s $dir/$file ~/.$file
 done
+
+for file in $nodot; do
+	printf "Moving no-dot files from ~ to $olddir\n"
+	mv ~/$file $olddir
+	printf "Creating symlink to $file in home directory\n\n"
+	ln -s $dir/$file ~/$file
+done
+
+printf "You’re all set, kid. Happy zshing."
