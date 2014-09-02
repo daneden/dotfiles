@@ -75,4 +75,7 @@ export LC_CTYPE=en_US.UTF-8
 # Let 'er rip
 source $ZSH/oh-my-zsh.sh
 
+# Add arc tab completion
+source /usr/local/arcanist/resources/shell/bash-completion
+
 autoload -U promptinit && promptinit
