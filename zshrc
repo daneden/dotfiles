@@ -12,9 +12,9 @@ ZSH_THEME="agnoster"
 ###########
 
 # This guy is specific to *nix/apt-get boxes
-# if [ `hostname` = atlanta ]; then
-# 	alias update="sudo apt-get update && sudo apt-get upgrade"
-# fi
+if [ `hostname` = atlanta ]; then
+	alias update="sudo apt-get update && sudo apt-get upgrade"
+fi
 
 # Update dotfiles
 alias updot="git --git-dir=$HOME/.dotfiles/.git pull --recurse-submodules && ~/.dotfiles/make.sh"
