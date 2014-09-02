@@ -13,8 +13,10 @@ ZSH_THEME="agnoster"
 
 # This guy is specific to *nix/apt-get boxes
 alias update="sudo apt-get update && sudo apt-get upgrade"
+
 # This guy is to help me quickly jump into my server
 alias atlanta="ssh ghost@direct.daneden.me -p 1991"
+
 # And this guy is to make use of hub, assuming it's installed
 alias git=hub
 
@@ -25,10 +27,14 @@ alias grunt="nocorrect grunt"
 CASE_SENSITIVE="true"
 
 # Comment this out to disable bi-weekly auto-update checks
-DISABLE_AUTO_UPDATE="true"
+#DISABLE_AUTO_UPDATE="true"
 
 # Display red dots while waiting for completion
 COMPLETION_WAITING_DOTS="true"
+
+# Remove name@host from zsh theme
+# (Except in ssh, which is actually pretty handy)
+DEFAULT_USER=`whoami`
 
 # Uncomment following line if you want to disable marking untracked files under
 # VCS as dirty. This makes repository status check for large repositories much,
@@ -38,7 +44,7 @@ DISABLE_UNTRACKED_FILES_DIRTY="true"
 # Which plugins would you like to load? (plugins can be found in ~/.oh-my-zsh/plugins/*)
 # Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
-plugins=(git ruby ssh-agent colored-man colorize command-not-found cp dirpersist sublime github)
+plugins=(git ssh-agent command-not-found cp dirpersist)
 
 # Let 'er rip
 source $ZSH/oh-my-zsh.sh
@@ -50,10 +56,7 @@ export PATH=$PATH:/usr/local/bin
 export PATH=$PATH:~/bin:/usr/local/share/npm/bin
 export PATH=$HOME/.arc_install/arcanist/bin:$PATH
 
-# Set local development variable for Jekyll
-export JEKYLL_ENV=development
-
-### Change the default editor to Atom
+# Change the default editor
 export EDITOR='subl'
 
 ### Added by the Heroku Toolbelt
