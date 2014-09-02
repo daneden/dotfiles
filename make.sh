@@ -25,19 +25,19 @@ cd $dir
 printf "...done\n\n"
 
 # move any existing dotfiles in homedir to dotfiles_old directory, then create symlinks
+printf "Moving any existing dotfiles from ~ to $olddir\n"
 for file in $files; do
-  printf "Moving any existing dotfiles from ~ to $olddir\n"
   mv ~/.$file $olddir
-  printf "Creating symlink to $file in home directory.\n\n"
+  printf "Creating symlink to $file in home directory.\n"
   ln -s $dir/$file ~/.$file
 done
 
+printf "\nMoving no-dot files from ~ to $olddir\n"
 for file in $nodot; do
-	printf "Moving no-dot files from ~ to $olddir\n"
 	mv ~/$file $olddir
 	printf "Creating symlink to $file in home directory\n\n"
 	ln -s $dir/$file ~/$file
 	chflags -h hidden ~/$file
 done
 
-printf "You’re all set, kid. Happy zshing. \n"
+printf "\nYou’re all set, kid. Happy zshing. \n"
