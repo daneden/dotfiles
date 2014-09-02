@@ -40,4 +40,4 @@ for file in $nodot; do
 	chflags -h hidden ~/$file
 done
 
-printf "You’re all set, kid. Happy zshing."
+printf "You’re all set, kid. Happy zshing. \n"

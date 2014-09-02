@@ -12,7 +12,12 @@ ZSH_THEME="agnoster"
 ###########
 
 # This guy is specific to *nix/apt-get boxes
-alias update="sudo apt-get update && sudo apt-get upgrade"
+# if [ `hostname` = atlanta ]; then
+# 	alias update="sudo apt-get update && sudo apt-get upgrade"
+# fi
+
+# Update dotfiles
+alias updot="git --git-dir=$HOME/.dotfiles/.git pull --recurse-submodules && ~/.dotfiles/make.sh"
 
 # This guy is to help me quickly jump into my server
 alias atlanta="ssh ghost@direct.daneden.me -p 1991"
