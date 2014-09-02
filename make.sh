@@ -7,7 +7,8 @@
 ########## Variables
 
 dir=~/.dotfiles                    # dotfiles directory
-olddir=~/.dotfiles_old             # old dotfiles backup directory
+now=`date +%Y-%m-%d-%H:%M:%S`
+olddir=~/.dotfiles_old/$now      # old dotfiles backup directory
 files="gitconfig gitignore zshrc oh-my-zsh scss-lint.yml"    # list of files/folders to symlink in homedir
 nodot="Brewfile" # list of non-dot files to symlink
 
