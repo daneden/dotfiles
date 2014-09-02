@@ -27,9 +27,6 @@ CASE_SENSITIVE="true"
 # Comment this out to disable bi-weekly auto-update checks
 DISABLE_AUTO_UPDATE="true"
 
-# Set default user
-DEFAULT_USER=`whoami`
-
 # Display red dots while waiting for completion
 COMPLETION_WAITING_DOTS="true"
 
