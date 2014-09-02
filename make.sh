@@ -36,6 +36,7 @@ for file in $nodot; do
 	mv ~/$file $olddir
 	printf "Creating symlink to $file in home directory\n\n"
 	ln -s $dir/$file ~/$file
+	chflags hidden ~/$file
 done
 
 printf "You’re all set, kid. Happy zshing."
