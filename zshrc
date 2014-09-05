@@ -80,3 +80,6 @@ source $ZSH/oh-my-zsh.sh
 source /usr/local/arcanist/resources/shell/bash-completion
 
 autoload -U promptinit && promptinit
+
+
+export PATH="$PATH:$HOME/.rvm/bin" # Add RVM to PATH for scripting
