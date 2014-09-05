@@ -55,10 +55,6 @@ plugins=(git ssh-agent command-not-found cp dirpersist)
 # Make sure Homebrew’s path appears first
 export PATH=/usr/local/bin:$PATH
 
-# No idea what this is. Presumably it was added by RVM
-export PATH=$PATH:/usr/local/rvm/gems/ruby-1.9.3-p327/bin:/usr/local/rvm/gems/ruby-1.9.3-p327@global/bin:/usr/local/rvm/rubies/ruby-1.9.3-p327/bin:/usr/local/rvm/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games
-PATH=$PATH:$HOME/.rvm/bin # Add RVM to PATH for scripting
-
 # NPM path
 export PATH=$PATH:~/bin:/usr/local/share/npm/bin
 
