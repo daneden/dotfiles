@@ -49,7 +49,7 @@ DEFAULT_USER=`whoami`
 # Which plugins would you like to load? (plugins can be found in ~/.oh-my-zsh/plugins/*)
 # Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
-plugins=(git ssh-agent command-not-found cp dirpersist)
+plugins=(git ssh-agent command-not-found cp dirpersist autojump)
 
 # Customize to your needs...
 # Make sure Homebrew’s path appears first
@@ -79,8 +79,5 @@ export LC_CTYPE=en_US.UTF-8
 
 # Let 'er rip
 source $ZSH/oh-my-zsh.sh
-
-# Add arc tab completion
-source /usr/local/arcanist/resources/shell/bash-completion
 
 autoload -U promptinit && promptinit

@@ -71,7 +71,7 @@ linters:
     enabled: true
 
   PropertySortOrder:
-    enabled: true
+    enabled: false
     ignore_unspecified: false
 
   PropertySpelling:
@@ -90,7 +90,7 @@ linters:
     allow_single_line_rule_sets: true
 
   SingleLinePerSelector:
-    enabled: true
+    enabled: false
 
   SpaceAfterComma:
     enabled: true
