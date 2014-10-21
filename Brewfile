@@ -1,5 +1,5 @@
 # Brewfile
-# Just run `brew bundle` in the same directory to have it run
+# Just run `brew tap homebrew/boneyard && brew bundle` in the same directory to have it run
 #
 # Need Homebrew?
 # Run `ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"`

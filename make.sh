@@ -40,4 +40,4 @@ for file in $nodot; do
 	chflags -h hidden ~/$file
 done
 
-printf "\nYou’re all set, kid. Happy zshing. \n"
+printf "\nAll done!\nYou probably want to run `brew tap homebrew/boneyard && brew bundle` to finish up."
