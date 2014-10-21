@@ -1,6 +1,6 @@
 [user]
 	name = Daniel Eden
-	email = dte@dropbox.com
+	email = dan.eden@me.com
 [push]
 	default = current
 [color]
@@ -34,3 +34,7 @@
 	tool = Kaleidoscope
 [credential]
 	helper = osxkeychain
+[filter "media"]
+	clean = git media clean %f
+	smudge = git media smudge %f
+	required = true
