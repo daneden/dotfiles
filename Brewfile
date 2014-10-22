@@ -3,8 +3,8 @@
 #
 # Need Homebrew?
 # Run `ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"`
+# Or on a Linux box, run `ruby -e "$(wget -O- https://raw.github.com/Homebrew/linuxbrew/go/install)"`
 
-install apple-gcc42
 install autoconf
 install autojump
 install automake
