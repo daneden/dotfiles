@@ -12,7 +12,6 @@ install cask
 install cmake
 install freetype
 install git
-install gmp4
 install graphicsmagick
 install hub
 install imagemagick
