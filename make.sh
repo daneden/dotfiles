@@ -40,4 +40,7 @@ for file in $nodot; do
 	chflags -h hidden ~/$file
 done
 
-printf "\nAll done!\nYou probably want to run `brew tap homebrew/boneyard && brew bundle` to finish up."
+# Check presence of Homebrew, add bundler, then install our desired recipes & update them
+type brew &>/dev/null && printf "`brew tap homebrew/boneyard && brew bundle && brew update`" || echo "`ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)" && brew tap homebrew/boneyard && brew bundle && brew update`"
+
+printf "\nAll done!\nYou may want to run 'brew upgrade', too.\n"
