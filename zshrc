@@ -73,6 +73,13 @@ export NODE_PATH="/usr/local/lib/node"
 ### Set character encoding
 export LC_CTYPE=en_US.UTF-8
 
+### Load custom functions
+export FPATH=~/.zfuncs:$FPATH
+autoload -Uz gifme
+
+gifs_list=(`ls ~/Dropbox\ \(Personal\)/Public/gifs`)
+compctl -k gifs_list gifme
+
 # Let 'er rip
 source $ZSH/oh-my-zsh.sh
 
