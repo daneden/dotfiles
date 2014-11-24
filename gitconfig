@@ -19,7 +19,7 @@
 	view = log --graph --oneline --decorate --boundary --all HEAD
   pullall = !f(){ git pull "$@" && git submodule update --init --recursive; }; f
 [core]
-	editor = vim 
+	editor = vim -c start
 [mergetool "Kaleidoscope"]
 	cmd = ksdiff --merge --output \"$MERGED\" --base \"$BASE\" -- \"$LOCAL\" --snapshot \"$REMOTE\" --snapshot
 	trustexitcode = true
