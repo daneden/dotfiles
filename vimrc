@@ -13,6 +13,10 @@ Plugin 'gmarik/Vundle.vim'
 " Command-T quick open files
 Plugin 'git://git.wincent.com/command-t.git'
 
+" SCSS syntax highlighting
+Plugin 'JulesWang/css.vim'
+Plugin 'cakebaker/scss-syntax.vim'
+
 " All of your Plugins must be added before the following line
 call vundle#end()            " required
 filetype plugin indent on    " required
