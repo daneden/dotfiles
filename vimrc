@@ -71,4 +71,9 @@ nnoremap <C-H> <C-W><C-H>
 set splitbelow
 set splitright
 
-
+" Set tab options
+" Expand tabs to spaces
+set expandtab
+" Set tab size
+set tabstop=2
+set shiftwidth=2
