@@ -43,4 +43,7 @@ done
 # Check presence of Homebrew, add bundler, then install our desired recipes & update them
 type brew &>/dev/null && printf "`brew tap homebrew/boneyard && brew bundle && brew update`" || echo "`ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)" && brew tap homebrew/boneyard && brew bundle && brew update`"
 
+# Install Vim plugins
+printf "`vim +PluginInstall +qall`"
+
 printf "\nAll done!\nYou may want to run 'brew upgrade', too.\n"
