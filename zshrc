@@ -79,7 +79,7 @@ autoload -Uz gifme
 
 gifs_list=(`ls ~/Dropbox\ \(Personal\)/Public/gifs`)
 compctl -k gifs_list gifme
-jiofrjiofewjiofewjiofejwiofejiowfweji
+
 # Let 'er rip
 source $ZSH/oh-my-zsh.sh
 
