@@ -18,7 +18,7 @@
   remotes = remote -v
 	view = log --graph --oneline --decorate --boundary --all HEAD
 [core]
-	editor = subl -w
+	editor = vim 
 [mergetool "Kaleidoscope"]
 	cmd = ksdiff --merge --output \"$MERGED\" --base \"$BASE\" -- \"$LOCAL\" --snapshot \"$REMOTE\" --snapshot
 	trustexitcode = true

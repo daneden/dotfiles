@@ -1,0 +1,3 @@
+# Ignore vim bundles (easier to manage)
+vim/bundle
+!vim/bundle/Vundle.vim
