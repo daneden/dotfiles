@@ -23,6 +23,9 @@ Plugin 'airblade/vim-gitgutter'
 " Color scheme
 Plugin 'altercation/vim-colors-solarized'
 
+" Powerline
+Plugin 'bling/vim-airline'
+
 " All of your Plugins must be added before the following line
 call vundle#end()            " required
 filetype plugin indent on    " required
@@ -52,3 +55,8 @@ let g:solarized_visibility = "high"
 let g:solarized_contrast = "high"
 colorscheme solarized
 hi clear SignColumn
+
+let g:airline_powerline_fonts=1
+
+" Change leader key to something more accessible
+let mapleader=","
