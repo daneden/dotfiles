@@ -21,7 +21,7 @@ Plugin 'cakebaker/scss-syntax.vim'
 Plugin 'airblade/vim-gitgutter'
 
 " Color scheme
-Plugin 'chriskempson/vim-tomorrow-theme'
+Plugin 'altercation/vim-colors-solarized'
 
 " All of your Plugins must be added before the following line
 call vundle#end()            " required
@@ -45,4 +45,10 @@ syntax on
 set number
 
 " Color scheme
-colorscheme tomorrow-night
+set t_Co=256
+set background=dark
+" solarized options 
+let g:solarized_visibility = "high"
+let g:solarized_contrast = "high"
+colorscheme solarized
+hi clear SignColumn
