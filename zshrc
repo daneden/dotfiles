@@ -28,8 +28,10 @@ alias git=hub
 # Fixing autocorrect where appropriate
 alias grunt="nocorrect grunt"
 
-# Make editing vimrc easier/less meta
+# Make editing config files easier/less meta
 alias vimrc="vim ~/.vimrc"
+alias zshrc="vim ~/.zshrc"
+alias dotfiles="cd ~/.dotfiles"
 
 # Set to this to use case-sensitive completion
 CASE_SENSITIVE="true"
