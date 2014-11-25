@@ -7,3 +7,4 @@ find.
 | `^w then ^w` | Cycle through open splits         |
 | `cc`         | Delete line and enter insert mode |
 | `cw`         | Change word                       |
+| `^w then =`  | Make all splits equal in size     |
