@@ -1,5 +1,5 @@
 # Vim Cheat Sheet
-Just a list of the hard-to-forget but easy-to-love commands and shortcuts that I
+Just a list of the hard-to-remember but easy-to-love commands and shortcuts that I
 find.
 
 | Command      | What is happened                  |
