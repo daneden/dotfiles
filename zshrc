@@ -28,6 +28,9 @@ alias git=hub
 # Fixing autocorrect where appropriate
 alias grunt="nocorrect grunt"
 
+# Make editing vimrc easier/less meta
+alias vimrc="vim ~/.vimrc"
+
 # Set to this to use case-sensitive completion
 CASE_SENSITIVE="true"
 
