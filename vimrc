@@ -100,6 +100,12 @@ set expandtab
 set tabstop=2
 set shiftwidth=2
 
+" Allow mouse interaction
+set mouse=a
+
+" Automatically make splits equal in size
+autocmd VimResized * wincmd =
+
 " Most of the rules from here on out are stolen from thoughtbot/dotfiles
 " Make it obvious where 80 characters is
 set textwidth=80
