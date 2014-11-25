@@ -32,6 +32,7 @@ alias grunt="nocorrect grunt"
 alias vimrc="vim ~/.vimrc"
 alias zshrc="vim ~/.zshrc"
 alias dotfiles="cd ~/.dotfiles"
+alias src="source ~/.zshrc"
 
 # Set to this to use case-sensitive completion
 CASE_SENSITIVE="true"
