@@ -48,6 +48,9 @@ Plugin 'mattn/gist-vim'
 " Web API (required for Gists)
 Plugin 'mattn/webapi-vim'
 
+" Dash for documentation
+Plugin 'rizzatti/dash.vim'
+
 " All of your Plugins must be added before the following line
 call vundle#end()            " required
 filetype plugin indent on    " required
