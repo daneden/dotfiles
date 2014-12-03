@@ -57,6 +57,9 @@ Plugin 'reedes/vim-pencil'
 " Rename files
 Plugin 'danro/rename.vim'
 
+" Ack for fast search
+Plugin 'mileszs/ack.vim'
+
 " All of your Plugins must be added before the following line
 call vundle#end()            " required
 filetype plugin indent on    " required
