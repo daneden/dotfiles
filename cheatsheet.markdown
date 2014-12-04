@@ -8,3 +8,4 @@ find.
 | `cc`         | Delete line and enter insert mode |
 | `cw`         | Change word                       |
 | `^w then =`  | Make all splits equal in size     |
+| `gg=G`       | Reindent the file                 |
