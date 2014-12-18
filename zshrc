@@ -33,6 +33,7 @@ alias vimrc="vim ~/.vimrc"
 alias zshrc="vim ~/.zshrc"
 alias dotfiles="cd ~/.dotfiles"
 alias src="source ~/.zshrc"
+alias sketchplugs="cd ~/Library/Containers/com.bohemiancoding.sketch3/Data/Library/Application\ Support/com.bohemiancoding.sketch3/Plugins"
 
 # Set to this to use case-sensitive completion
 CASE_SENSITIVE="true"
