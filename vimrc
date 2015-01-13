@@ -63,6 +63,9 @@ Plugin 'mileszs/ack.vim'
 " Linting!
 Plugin 'scrooloose/syntastic'
 
+" NERDTree
+Plugin 'scrooloose/nerdtree.git'
+
 " All of your Plugins must be added before the following line
 call vundle#end()            " required
 filetype plugin indent on    " required
@@ -120,6 +123,15 @@ set shiftwidth=2
 
 " Allow mouse interaction
 set mouse=a
+
+" Set mapping for NERDTree
+nnoremap <leader>e :NERDTree<cr>
+
+" Automatically open NERDTree (this might get old fast)
+autocmd VimEnter * NERDTree
+
+" Shift the cursor to the file pane instead of defaulting to NERDTree
+autocmd VimEnter * wincmd p
 
 " Automatically make splits equal in size
 autocmd VimResized * wincmd =
