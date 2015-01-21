@@ -66,6 +66,9 @@ Plugin 'scrooloose/syntastic'
 " NERDTree
 Plugin 'scrooloose/nerdtree.git'
 
+" Autoformatting
+Plugin 'Chiel92/vim-autoformat'
+
 " All of your Plugins must be added before the following line
 call vundle#end()            " required
 filetype plugin indent on    " required
@@ -113,6 +116,9 @@ nnoremap <C-H> <C-W><C-H>
 " More natural splitting
 set splitbelow
 set splitright
+
+" Allow filetree file modifications
+set modifiable
 
 " Set tab options
 " Expand tabs to spaces
