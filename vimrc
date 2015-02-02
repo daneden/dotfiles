@@ -69,6 +69,9 @@ Plugin 'scrooloose/nerdtree.git'
 " Transparent pasting (cmd-v works as expectec)
 Plugin 'ConradIrwin/vim-bracketed-paste'
 
+" Base16 themes
+Plugin 'chriskempson/base16-vim'
+
 " All of your Plugins must be added before the following line
 call vundle#end()            " required
 filetype plugin indent on    " required
@@ -99,7 +102,7 @@ set background=dark
 " solarized options 
 let g:solarized_visibility = "high"
 let g:solarized_contrast = "high"
-colorscheme solarized
+colorscheme base16-railscasts
 hi clear SignColumn
 
 let g:airline_powerline_fonts=1
