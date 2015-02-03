@@ -102,7 +102,7 @@ set background=dark
 " solarized options 
 let g:solarized_visibility = "high"
 let g:solarized_contrast = "high"
-colorscheme base16-railscasts
+colorscheme base16-google
 hi clear SignColumn
 
 let g:airline_powerline_fonts=1
