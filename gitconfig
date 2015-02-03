@@ -18,6 +18,7 @@
   remotes = remote -v
 	view = log --graph --oneline --decorate --boundary --all HEAD
   pullall = !f(){ git pull "$@" && git submodule update --init --recursive; }; f
+  open = browse
 [core]
 	editor = vim -c start
 [mergetool "Kaleidoscope"]
