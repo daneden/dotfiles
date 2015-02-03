@@ -84,6 +84,7 @@ export LC_CTYPE=en_US.UTF-8
 export FPATH=~/.zfuncs:$FPATH
 autoload -Uz gifme
 autoload new-post
+autoload git-open
 
 gifs_list=(`ls ~/Dropbox\ \(Personal\)/Public/gifs`)
 compctl -k gifs_list gifme
