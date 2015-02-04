@@ -16,6 +16,9 @@ if [ `hostname` = atlanta ]; then
 	alias update="sudo apt-get update && sudo apt-get upgrade"
 fi
 
+# sudofy commands with a quirky alias
+alias please='sudo $(history -p !!)'
+
 # Update dotfiles
 alias updot="git --git-dir=$HOME/.dotfiles/.git pull --recurse-submodules && ~/.dotfiles/make.sh"
 
