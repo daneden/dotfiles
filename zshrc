@@ -97,5 +97,5 @@ source $ZSH/oh-my-zsh.sh
 
 autoload -U promptinit && promptinit
 
-
-export PATH="$PATH:$HOME/.rvm/bin" # Add RVM to PATH for scripting
+# Eval rbenv for ruby goodness
+eval "$(rbenv init -)"
