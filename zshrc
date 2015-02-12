@@ -71,9 +71,6 @@ export PATH=$PATH:~/bin:/usr/local/share/npm/bin
 # Arcanist path
 export PATH=$HOME/.arc_install/arcanist/bin:$PATH
 
-# Change the default editor
-export EDITOR='subl'
-
 ### Added by the Heroku Toolbelt
 export PATH="/usr/local/heroku/bin:$PATH"
 
