@@ -3,3 +3,6 @@ vim/bundle
 !vim/bundle/Vundle.vim
 
 vim/.netrwhist
+
+# Ignore private config
+zprivate

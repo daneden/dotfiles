@@ -16,9 +16,9 @@
   tags = tag -l
   branches = branch -a
   remotes = remote -v
-	view = log --graph --oneline --decorate --boundary --all HEAD
   pullall = !f(){ git pull "$@" && git submodule update --init --recursive; }; f
   open = browse
+	lg = log --color --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr)%C(bold blue)<%an>%Creset' --abbrev-commit
 [core]
 	editor = vim -c start
 [mergetool "Kaleidoscope"]
