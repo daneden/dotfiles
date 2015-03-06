@@ -27,6 +27,9 @@ alias dotfiles="cd $HOME/.dotfiles"
 alias src="source $HOME/.zshrc"
 alias sketchplugs="cd $HOME/Library/Containers/com.bohemiancoding.sketch3/Data/Library/Application\ Support/com.bohemiancoding.sketch3/Plugins"
 
+alias jb="jekyll build --config _config.yml,_config_local.yml"
+alias js="jekyll serve --watch --config _config.yml,_config_local.yml"
+
 # Set to this to use case-sensitive completion
 CASE_SENSITIVE="false"
 
