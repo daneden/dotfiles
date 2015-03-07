@@ -72,6 +72,9 @@ Plugin 'ConradIrwin/vim-bracketed-paste'
 " Base16 themes
 Plugin 'chriskempson/base16-vim'
 
+" Less syntax highlighting
+Plugin 'groenewege/vim-less'
+
 " All of your Plugins must be added before the following line
 call vundle#end()            " required
 filetype plugin indent on    " required
