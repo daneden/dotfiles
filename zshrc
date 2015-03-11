@@ -79,7 +79,7 @@ autoload new-post
 autoload git-open
 
 if [ ! `hostname` = atlanta ]; then
-  gifs_list=(`ls ~/Dropbox\ \(Personal\)/Public/gifs`)
+  gifs_list=(`ls ~/Dropbox\ \(Personal\)/Photos/gifs`)
   compctl -k gifs_list gifme
 fi
 

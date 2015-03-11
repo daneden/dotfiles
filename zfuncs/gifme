@@ -1,24 +1,12 @@
-# GIFme
-# This is a really simple/stupid command line (specifically zsh) function to copy public Dropbox links to your gifs.
-#
-# Put this somewhere in your .zshrc and replace {{YOUR_PUBLIC_ID}} with your public Dropbox ID (find this by going to dropbox.com, finding a file in your "Public" folder, selecting it and clicking "Copy public link", and looking for the long number in the URL)
-#
-# This assumes your gifs (and other images you want to share) are stored in your Dropbox "Public" folder in a directory called "gifs".
-# This whole thing ain't pretty, and it could be much better. But it's a start.
-#
-# Usage:
-# "$ gifme yup.gif" will copy a public link to "{{Dropbox Directory}}/Public/gifs/yup.gif"
-# "$ gifme nope.gif --open" will copy a public link to "{{Dropbox Directory}}/Public/gifs/nope.gif" and open that URL in your default browser
-
 function gifme() {
   if [[ -z $1 ]]; then
     echo "Usage: gifme name.gif [--open]";
   else
-    echo "https://dl.dropboxusercontent.com/u/40044953/gifs/$1" | tr -d '\n' | pbcopy;
+    echo "http://gif.daneden.me/$1" | tr -d '\n' | pbcopy;
     echo "Copied link to $1";
   fi
 
   if [[ -n $2 ]]; then
-    open https://dl.dropboxusercontent.com/u/40044953/gifs/$1;
+    open http://gif.daneden.me/$1;
   fi
 }
