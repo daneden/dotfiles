@@ -159,6 +159,20 @@ function! s:CloseIfOnlyNerdTreeLeft()
   endif
 endfunction
 
+" Removes trailing spaces
+function! TrimWhiteSpace()
+    %s/\s\+$//e
+endfunction
+
+nnoremap <silent> <Leader>rts :call TrimWhiteSpace()<CR>
+
+" Automatically trim whitespace on save
+autocmd FileWritePre    * :call TrimWhiteSpace()
+autocmd FileAppendPre   * :call TrimWhiteSpace()
+autocmd FilterWritePre  * :call TrimWhiteSpace()
+autocmd BufWritePre     * :call TrimWhiteSpace()
+
+
 " Most of the rules from here on out are stolen from thoughtbot/dotfiles
 " Make it obvious where 80 characters is
 set textwidth=80
