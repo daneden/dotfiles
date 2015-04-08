@@ -75,6 +75,9 @@ Plugin 'chriskempson/base16-vim'
 " Less syntax highlighting
 Plugin 'groenewege/vim-less'
 
+" Git syntax stuff
+Plugin 'tpope/vim-git'
+
 " All of your Plugins must be added before the following line
 call vundle#end()            " required
 filetype plugin indent on    " required
@@ -102,7 +105,7 @@ set number
 " Color scheme
 set t_Co=256
 set background=dark
-" solarized options 
+" solarized options
 let g:solarized_visibility = "high"
 let g:solarized_contrast = "high"
 colorscheme base16-google
