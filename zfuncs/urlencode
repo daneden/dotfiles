@@ -1,0 +1,4 @@
+#!/bin/bash
+function urlencode() {
+  echo -n "$1" | perl -MURI::Escape -ne 'print uri_escape($_)'
+}

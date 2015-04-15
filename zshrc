@@ -78,9 +78,19 @@ export LC_CTYPE=en_US.UTF-8
 
 ### Load custom functions
 export FPATH=~/.zfuncs:$FPATH
-autoload -Uz gifme
-autoload new-post
-autoload git-open
+
+lt_shell_functions_dir=~/.zfuncs
+
+if [[ -d $lt_shell_functions_dir ]]; then
+    fpath=($lt_shell_functions_dir $fpath)
+    for function_file in $lt_shell_functions_dir/*
+    do
+        autoload -Uz ${function_file##*/} || printf "Autoloading $function_file failed\n"
+    done
+#    unset function_file
+else
+    printf "no $lt_shell_functions_dir exists.\n"
+fi
 
 if [ ! `hostname` = atlanta ]; then
   gifs_list=(`ls ~/Dropbox\ \(Personal\)/Photos/gifs`)

@@ -1,12 +1,9 @@
 function gifme() {
   if [[ -z $1 ]]; then
-    echo "Usage: gifme name.gif [--open]";
+    echo "Usage: gifme name.gif";
   else
-    echo "http://gif.daneden.me/$1" | tr -d '\n' | pbcopy;
+    NAME=$(urlencode $1);
+    echo "http://gif.daneden.me/$NAME" | tr -d '\n' | pbcopy;
     echo "Copied link to $1";
-  fi
-
-  if [[ -n $2 ]]; then
-    open http://gif.daneden.me/$1;
   fi
 }
