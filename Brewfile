@@ -8,7 +8,7 @@
 install autoconf
 install autojump
 install automake
-install cask
+install caskroom/cask/brew-cask
 install cmake
 install freetype
 install git
@@ -16,7 +16,6 @@ install graphicsmagick
 install hub
 install imagemagick
 install jpeg
-install libmpc08
 install libpng
 install libtool
 install mercurial
@@ -25,6 +24,16 @@ install node
 install pkg-config
 install pngquant
 install pow
+install rbenv
 install wget
 install xz
 install zsh
+
+cask install google-chrome
+cask install spotify
+cask install dropbox
+cask install iterm2
+cask install fantastical
+cask install mailbox
+cask install keepingyouawake
+

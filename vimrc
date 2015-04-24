@@ -102,6 +102,10 @@ syntax on
 " Set linenums
 set number
 
+" Highlight cursor column & row
+set cursorline
+set cursorcolumn
+
 " Color scheme
 set t_Co=256
 set background=dark
