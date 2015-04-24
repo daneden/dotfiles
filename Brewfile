@@ -36,4 +36,5 @@ cask 'iterm2'
 cask 'fantastical'
 cask 'mailbox'
 cask 'keepingyouawake'
-
+cask 'kaleidoscope'
+cask 'colorpicker-skalacolor'
