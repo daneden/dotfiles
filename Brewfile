@@ -19,7 +19,6 @@ install jpeg
 install libpng
 install libtool
 install mercurial
-install mpfr2
 install node
 install pkg-config
 install pngquant
