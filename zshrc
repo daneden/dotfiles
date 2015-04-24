@@ -79,6 +79,9 @@ export LC_CTYPE=en_US.UTF-8
 ### Load custom functions
 export FPATH=~/.zfuncs:$FPATH
 
+### Set Vim as the default editor
+export EDITOR="/usr/bin/vim"
+
 lt_shell_functions_dir=~/.zfuncs
 
 if [[ -d $lt_shell_functions_dir ]]; then

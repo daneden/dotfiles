@@ -5,34 +5,35 @@
 # Run `ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"`
 # Or on a Linux box, run `ruby -e "$(wget -O- https://raw.github.com/Homebrew/linuxbrew/go/install)"`
 
-install autoconf
-install autojump
-install automake
-install caskroom/cask/brew-cask
-install cmake
-install freetype
-install git
-install graphicsmagick
-install hub
-install imagemagick
-install jpeg
-install libpng
-install libtool
-install mercurial
-install node
-install pkg-config
-install pngquant
-install pow
-install rbenv
-install wget
-install xz
-install zsh
+tap 'caskroom/cask'
 
-cask install google-chrome
-cask install spotify
-cask install dropbox
-cask install iterm2
-cask install fantastical
-cask install mailbox
-cask install keepingyouawake
+brew 'autoconf'
+brew 'autojump'
+brew 'automake'
+brew 'cmake'
+brew 'freetype'
+brew 'git'
+brew 'graphicsmagick'
+brew 'hub'
+brew 'imagemagick'
+brew 'jpeg'
+brew 'libpng'
+brew 'libtool'
+brew 'mercurial'
+brew 'node'
+brew 'pkg-config'
+brew 'pngquant'
+brew 'pow'
+brew 'rbenv'
+brew 'wget'
+brew 'xz'
+brew 'zsh'
+
+cask 'google-chrome'
+cask 'spotify'
+cask 'dropbox'
+cask 'iterm2'
+cask 'fantastical'
+cask 'mailbox'
+cask 'keepingyouawake'
 
