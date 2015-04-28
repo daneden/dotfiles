@@ -78,6 +78,9 @@ Plugin 'groenewege/vim-less'
 " Git syntax stuff
 Plugin 'tpope/vim-git'
 
+" Dim inactive panes
+Plugin 'blueyed/vim-diminactive'
+
 " All of your Plugins must be added before the following line
 call vundle#end()            " required
 filetype plugin indent on    " required
@@ -179,6 +182,8 @@ autocmd FileAppendPre   * :call TrimWhiteSpace()
 autocmd FilterWritePre  * :call TrimWhiteSpace()
 autocmd BufWritePre     * :call TrimWhiteSpace()
 
+" Dim inactive windows
+autocmd VimEnter * DimInactive
 
 " Most of the rules from here on out are stolen from thoughtbot/dotfiles
 " Make it obvious where 80 characters is
