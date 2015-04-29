@@ -20,9 +20,6 @@ Plugin 'cakebaker/scss-syntax.vim'
 " Git gutter
 Plugin 'airblade/vim-gitgutter'
 
-" Color scheme
-Plugin 'altercation/vim-colors-solarized'
-
 " Powerline
 Plugin 'bling/vim-airline'
 
@@ -42,23 +39,8 @@ Plugin 'tpope/vim-fugitive'
 " HTML5
 Plugin 'othree/html5.vim'
 
-" Gists
-Plugin 'mattn/gist-vim'
-
-" Web API (required for Gists)
-Plugin 'mattn/webapi-vim'
-
 " Dash for documentation
 Plugin 'rizzatti/dash.vim'
-
-" Pencil for writing
-Plugin 'reedes/vim-pencil'
-
-" Rename files
-Plugin 'danro/rename.vim'
-
-" Ack for fast search
-Plugin 'mileszs/ack.vim'
 
 " Linting!
 Plugin 'scrooloose/syntastic'
@@ -66,7 +48,7 @@ Plugin 'scrooloose/syntastic'
 " NERDTree
 Plugin 'scrooloose/nerdtree.git'
 
-" Transparent pasting (cmd-v works as expectec)
+" Transparent pasting (cmd-v works as expected)
 Plugin 'ConradIrwin/vim-bracketed-paste'
 
 " Base16 themes
@@ -112,9 +94,6 @@ set cursorcolumn
 " Color scheme
 set t_Co=256
 set background=dark
-" solarized options
-let g:solarized_visibility = "high"
-let g:solarized_contrast = "high"
 colorscheme base16-google
 hi clear SignColumn
 
