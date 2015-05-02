@@ -82,6 +82,9 @@ export FPATH=~/.zfuncs:$FPATH
 ### Set Vim as the default editor
 export EDITOR="/usr/bin/vim"
 
+### Set new path for Homebrew Cask
+export HOMEBREW_CASK_OPTS="--appdir=/Applications"
+
 lt_shell_functions_dir=~/.zfuncs
 
 if [[ -d $lt_shell_functions_dir ]]; then
