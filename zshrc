@@ -34,6 +34,13 @@ alias js="bundle exec jekyll serve --watch --config _config.yml,_config_local.ym
 # `bundle exec` can be a bit long.
 alias be="bundle exec"
 
+# Easily jump to the root of a git repo
+alias groot='cd "$(git rev-parse --show-toplevel)"'
+
+##############
+# ZSH CONFIG #
+##############
+
 # Set to this to use case-sensitive completion
 CASE_SENSITIVE="false"
 
