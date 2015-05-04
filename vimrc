@@ -10,18 +10,45 @@ call vundle#begin()
 " let Vundle manage Vundle, required
 Plugin 'gmarik/Vundle.vim'
 
-" Command-T quick open files
-Plugin 'git://git.wincent.com/command-t.git'
+"""""""""""""""""""""""""""""""
+"
+" Syntax Highlighting
+"
+"""""""""""""""""""""""""""""""
 
-" SCSS syntax highlighting
+" Coffeescript
+Plugin 'kchmck/vim-coffee-script'
+
+" (S)CSS
 Plugin 'JulesWang/css.vim'
 Plugin 'cakebaker/scss-syntax.vim'
+
+" HTML5
+Plugin 'othree/html5.vim'
+
+" Less
+Plugin 'groenewege/vim-less'
+
+"""""""""""""""""""""""""""""""
+"
+" Git things
+"
+"""""""""""""""""""""""""""""""
 
 " Git gutter
 Plugin 'airblade/vim-gitgutter'
 
-" Powerline
-Plugin 'bling/vim-airline'
+" Git wrapper
+Plugin 'tpope/vim-fugitive'
+
+" Git syntax stuff
+Plugin 'tpope/vim-git'
+
+"""""""""""""""""""""""""""""""
+"
+" Code helpers
+"
+"""""""""""""""""""""""""""""""
 
 " Commenting
 " Use <Leader>cc to comment/uncomment lines
@@ -33,17 +60,20 @@ Plugin 'tpope/vim-surround'
 " Tab completions
 Plugin 'ervandew/supertab'
 
-" Git wrapper
-Plugin 'tpope/vim-fugitive'
-
-" HTML5
-Plugin 'othree/html5.vim'
+" Linting!
+Plugin 'scrooloose/syntastic'
 
 " Dash for documentation
 Plugin 'rizzatti/dash.vim'
 
-" Linting!
-Plugin 'scrooloose/syntastic'
+"""""""""""""""""""""""""""""""
+"
+" Misc. conveniences
+"
+"""""""""""""""""""""""""""""""
+
+" Powerline
+Plugin 'bling/vim-airline'
 
 " NERDTree
 Plugin 'scrooloose/nerdtree.git'
@@ -54,14 +84,17 @@ Plugin 'ConradIrwin/vim-bracketed-paste'
 " Base16 themes
 Plugin 'chriskempson/base16-vim'
 
-" Less syntax highlighting
-Plugin 'groenewege/vim-less'
-
-" Git syntax stuff
-Plugin 'tpope/vim-git'
-
 " Dim inactive panes
 Plugin 'blueyed/vim-diminactive'
+
+" Command-T quick open files
+Plugin 'git://git.wincent.com/command-t.git'
+
+"""""""""""""""""""""""""""""""
+"
+" END OF PLUGINS
+"
+"""""""""""""""""""""""""""""""
 
 " All of your Plugins must be added before the following line
 call vundle#end()            " required
