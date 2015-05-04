@@ -127,7 +127,7 @@ set cursorcolumn
 " Color scheme
 set t_Co=256
 set background=dark
-colorscheme base16-solarized
+colorscheme base16-google
 hi clear SignColumn
 
 let g:airline_powerline_fonts=1
