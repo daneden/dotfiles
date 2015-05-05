@@ -7,7 +7,7 @@
 
 tap 'caskroom/cask'
 
-install 'ack'
+install 'ag'
 install 'autoconf'
 install 'autojump'
 install 'automake'
