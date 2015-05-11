@@ -111,5 +111,6 @@ source $ZSH/oh-my-zsh.sh
 
 autoload -U promptinit && promptinit
 
-# Eval rbenv for ruby goodness
+# Add rbenv to PATH
+export PATH="$HOME/.rbenv/bin:$PATH"
 eval "$(rbenv init -)"
