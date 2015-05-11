@@ -197,6 +197,9 @@ autocmd BufWritePre     * :call TrimWhiteSpace()
 " Dim inactive windows
 autocmd VimEnter * DimInactive
 
+" Enable system clipboard
+set clipboard=unnamed
+
 " Most of the rules from here on out are stolen from thoughtbot/dotfiles
 " Make it obvious where 80 characters is
 set textwidth=80
