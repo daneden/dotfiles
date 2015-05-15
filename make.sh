@@ -40,6 +40,13 @@ for file in $nodot; do
 	chflags -h hidden ~/$file
 done
 
+if [ "$(uname)" == "Darwin" ]; then
+  echo "Installing pip and Codemod.\n"
+  echo "We're going to need your password.\n"
+  sudo easy_install pip
+  sudo pip install git+https://github.com/facebook/codemod.git
+fi
+
 # Check presence of Homebrew, add bundler, then install our desired recipes & update them
 type brew &>/dev/null && printf "`brew tap Homebrew/bundle && brew bundle &&
   brew update`" || echo "`ruby -e \"$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)\" && brew tap Homebrew/bundle && brew bundle && brew update`"
