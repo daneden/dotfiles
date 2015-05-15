@@ -200,6 +200,9 @@ autocmd VimEnter * DimInactive
 " Enable system clipboard
 set clipboard=unnamed
 
+" Automatically refresh changed files (if the buffer is unchanged)
+set autoread
+
 " Most of the rules from here on out are stolen from thoughtbot/dotfiles
 " Make it obvious where 80 characters is
 set textwidth=80
