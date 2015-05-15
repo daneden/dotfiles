@@ -51,8 +51,8 @@ done
 #------------------------------
 
 # Install pip and Codemod
-echo "Installing pip and Codemod.\n"
-echo "We're going to need your password.\n"
+echo "Installing pip and Codemod."
+echo "We're going to need your password."
 
 if [ "$(uname)" == "Darwin" ]; then
   sudo easy_install pip
@@ -60,7 +60,7 @@ elif [ "$(expr substr $(uname -s) 1 5)" == "Linux" ]; then
   sudo apt-get install pip
 fi
 
-sudo pip install git+https://github.com/facebook/codemod.git
+sudo -H pip install git+https://github.com/facebook/codemod.git
 
 
 # Check presence of Homebrew, add bundler, then install our desired recipes & update them
