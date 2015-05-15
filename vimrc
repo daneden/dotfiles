@@ -75,9 +75,6 @@ Plugin 'rizzatti/dash.vim'
 " Powerline
 Plugin 'bling/vim-airline'
 
-" NERDTree
-Plugin 'scrooloose/nerdtree.git'
-
 " Transparent pasting (cmd-v works as expected)
 Plugin 'ConradIrwin/vim-bracketed-paste'
 
@@ -87,8 +84,11 @@ Plugin 'chriskempson/base16-vim'
 " Dim inactive panes
 Plugin 'blueyed/vim-diminactive'
 
-" Command-T quick open files
-Plugin 'git://git.wincent.com/command-t.git'
+" Fuzzy file/buffer finder
+Plugin 'kien/ctrlp.vim'
+
+" Ag
+Plugin 'rking/ag.vim'
 
 """""""""""""""""""""""""""""""
 "
@@ -124,6 +124,11 @@ set number
 set cursorline
 set cursorcolumn
 
+hi CursorLineNR cterm=bold
+augroup CLNRSet
+    autocmd! ColorScheme * hi CursorLineNR cterm=bold
+augroup END
+
 " Color scheme
 set t_Co=256
 set background=dark
@@ -155,31 +160,14 @@ set shiftwidth=2
 " Allow mouse interaction
 set mouse=a
 
-" Set mapping for NERDTree
-nnoremap <leader>e :NERDTree<cr>
-
-" Automatically open NERDTree (this might get old fast)
-autocmd VimEnter * NERDTree
+" Set mapping for CtrlP
+nnoremap ff :CtrlPMixed<cr>
 
 " Shift the cursor to the file pane instead of defaulting to NERDTree
 autocmd VimEnter * wincmd p
 
 " Automatically make splits equal in size
 autocmd VimResized * wincmd =
-
-autocmd WinEnter * call s:CloseIfOnlyNerdTreeLeft()
-
-" Close all open buffers on entering a window if the only
-" buffer that's left is the NERDTree buffer
-function! s:CloseIfOnlyNerdTreeLeft()
-  if exists("t:NERDTreeBufName")
-    if bufwinnr(t:NERDTreeBufName) != -1
-      if winnr("$") == 1
-        q
-      endif
-    endif
-  endif
-endfunction
 
 " Removes trailing spaces
 function! TrimWhiteSpace()
