@@ -114,6 +114,12 @@ filetype plugin indent on    " required
 " Set up SCSS Lint
 let g:syntastic_scss_checkers = ['scss_lint']
 
+"""""""""""""""""""""""""""""""
+"
+" Appearance & theming
+"
+"""""""""""""""""""""""""""""""
+
 " Set syntax highlighting
 syntax on
 
@@ -137,6 +143,42 @@ hi clear SignColumn
 
 let g:airline_powerline_fonts=1
 
+" Enable the list of buffers
+let g:airline#extensions#tabline#enabled = 1
+
+" Show just the filename
+let g:airline#extensions#tabline#fnamemod = ':t'
+
+" This allows buffers to be hidden if you've modified a buffer.
+" This is almost a must if you wish to use buffers in this way.
+set hidden
+
+" Dim inactive windows
+autocmd VimEnter * DimInactive
+
+"""""""""""""""""""""""""""""""
+"
+" Key mapping
+"
+"""""""""""""""""""""""""""""""
+
+" To open a new empty buffer
+" This replaces :tabnew which I used to bind to this mapping
+nmap <leader>T :enew<cr>
+
+" Move to the next buffer
+nmap <leader>l :bnext<CR>
+
+" Move to the previous buffer
+nmap <leader>h :bprevious<CR>
+
+" Close the current buffer and move to the previous one
+" This replicates the idea of closing a tab
+nmap <leader>bq :bp <BAR> bd #<CR>
+
+" Show all open buffers and their status
+nmap <leader>bl :ls<CR>
+
 " Change leader key to something more accessible
 let mapleader=","
 
@@ -145,6 +187,19 @@ nnoremap <C-J> <C-W><C-J>
 nnoremap <C-K> <C-W><C-K>
 nnoremap <C-L> <C-W><C-L>
 nnoremap <C-H> <C-W><C-H>
+
+" Set mapping for CtrlP
+nnoremap ff :CtrlPMixed<cr>
+
+" Set mapping to navigate back and forth in a query
+nnoremap cn :cn<cr>
+nnoremap cp :cp<cr>
+
+"""""""""""""""""""""""""""""""
+"
+" Conveniences
+"
+"""""""""""""""""""""""""""""""
 
 " More natural splitting
 set splitbelow
@@ -160,14 +215,20 @@ set shiftwidth=2
 " Allow mouse interaction
 set mouse=a
 
-" Set mapping for CtrlP
-nnoremap ff :CtrlPMixed<cr>
-
-" Shift the cursor to the file pane instead of defaulting to NERDTree
-autocmd VimEnter * wincmd p
-
 " Automatically make splits equal in size
 autocmd VimResized * wincmd =
+
+" Enable system clipboard
+set clipboard=unnamed
+
+" Automatically refresh changed files (if the buffer is unchanged)
+set autoread
+
+"""""""""""""""""""""""""""""""
+"
+" White space
+"
+"""""""""""""""""""""""""""""""
 
 " Removes trailing spaces
 function! TrimWhiteSpace()
@@ -182,14 +243,11 @@ autocmd FileAppendPre   * :call TrimWhiteSpace()
 autocmd FilterWritePre  * :call TrimWhiteSpace()
 autocmd BufWritePre     * :call TrimWhiteSpace()
 
-" Dim inactive windows
-autocmd VimEnter * DimInactive
-
-" Enable system clipboard
-set clipboard=unnamed
-
-" Automatically refresh changed files (if the buffer is unchanged)
-set autoread
+"""""""""""""""""""""""""""""""
+"
+" Thoughtbot's vimrc
+"
+"""""""""""""""""""""""""""""""
 
 " Most of the rules from here on out are stolen from thoughtbot/dotfiles
 " Make it obvious where 80 characters is
