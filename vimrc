@@ -162,6 +162,9 @@ autocmd VimEnter * DimInactive
 "
 """""""""""""""""""""""""""""""
 
+" Change leader key to something more accessible
+let mapleader=","
+
 " To open a new empty buffer
 " This replaces :tabnew which I used to bind to this mapping
 nmap <leader>T :enew<cr>
@@ -179,9 +182,6 @@ nmap <leader>bq :bp <BAR> bd #<CR>
 " Show all open buffers and their status
 nmap <leader>bl :ls<CR>
 
-" Change leader key to something more accessible
-let mapleader=","
-
 " Remap split navigation
 nnoremap <C-J> <C-W><C-J>
 nnoremap <C-K> <C-W><C-K>
@@ -194,6 +194,23 @@ nnoremap ff :CtrlPMixed<cr>
 " Set mapping to navigate back and forth in a query
 nnoremap cn :cn<cr>
 nnoremap cp :cp<cr>
+
+"""""""""""""""""""""""""""""""
+"
+" CtrlP Config
+"
+"""""""""""""""""""""""""""""""
+
+" Setup some default ignores
+let g:ctrlp_custom_ignore = {
+  \ 'dir':  '\v[\/](\.(git|hg|svn)|\_site)$',
+  \ 'file': '\v\.(exe|so|dll|class|png|jpg|jpeg)$',
+\}
+
+" Use the nearest .git directory as the cwd
+" This makes a lot of sense if you are working on a project that is in version
+" control. It also supports works with .svn, .hg, .bzr.
+let g:ctrlp_working_path_mode = 'r'
 
 """""""""""""""""""""""""""""""
 "
