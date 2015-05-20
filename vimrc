@@ -85,7 +85,7 @@ Plugin 'chriskempson/base16-vim'
 Plugin 'blueyed/vim-diminactive'
 
 " Fuzzy file/buffer finder
-Plugin 'kien/ctrlp.vim'
+Plugin 'wincent/command-t'
 
 " Ag
 Plugin 'rking/ag.vim'
@@ -188,8 +188,8 @@ nnoremap <C-K> <C-W><C-K>
 nnoremap <C-L> <C-W><C-L>
 nnoremap <C-H> <C-W><C-H>
 
-" Set mapping for CtrlP
-nnoremap ff :CtrlPMixed<cr>
+" Set mapping for CommandT
+nnoremap ff :CommandT<cr>
 
 " Set mapping to navigate back and forth in a query
 nnoremap cn :cn<cr>
