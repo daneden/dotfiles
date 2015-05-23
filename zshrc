@@ -110,14 +110,14 @@ if [ ! `hostname` = atlanta ]; then
   compctl -k gifs_list gifme
 fi
 
-# Import private config
-source $HOME/.zprivate
-
-# Let 'er rip
-source $ZSH/oh-my-zsh.sh
-
 autoload -U promptinit && promptinit
 
 # Add rbenv to PATH
 export PATH="$HOME/.rbenv/bin:$PATH"
 eval "$(rbenv init -)"
+
+# Import private config
+source $HOME/.zprivate
+
+# Let 'er rip
+source $ZSH/oh-my-zsh.sh
