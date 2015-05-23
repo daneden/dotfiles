@@ -9,8 +9,8 @@
 dir=$HOME/.dotfiles                    # dotfiles directory
 now=`date +%Y-%m-%d-%H:%M:%S`
 olddir=$HOME/.dotfiles_old/$now      # old dotfiles backup directory
-files="gitconfig gitignore zfuncs vimrc vim zprivate"    # list of files/folders to symlink in homedir
-nodot="Brewfile" # list of non-dot files to symlink
+files=("gitconfig" "gitignore" "zfuncs" "vimrc" "vim" "zprivate")    # list of files/folders to symlink in homedir
+nodot=("Brewfile") # list of non-dot files to symlink
 
 #------------------------------
 #
@@ -44,21 +44,18 @@ for file in $nodot; do
 	chflags -h hidden $HOME/$file
 done
 
+# Install Prezto
 if [ ! -d "$HOME/.zprezto" ]; then
   git clone --recursive https://github.com/sorin-ionescu/prezto.git "${ZDOTDIR:-$HOME}/.zprezto"
-
-  setopt EXTENDED_GLOB
-  for rcfile in "${ZDOTDIR:-$HOME}"/.zprezto/runcoms/^README.md(.N); do
-    ln -s "$rcfile" "${ZDOTDIR:-$HOME}/.${rcfile:t}"
-  done
 else
   cd $HOME/.zprezto && git pull && git submodule update --init --recursive
 
-  setopt EXTENDED_GLOB
-  for rcfile in "${ZDOTDIR:-$HOME}"/.zprezto/runcoms/^README.md(.N); do
-    ln -s "$rcfile" "${ZDOTDIR:-$HOME}/.${rcfile:t}"
-  done
 fi
+
+setopt EXTENDED_GLOB
+for rcfile in "${ZDOTDIR:-$HOME}"/.zprezto/runcoms/^README.md(.N); do
+  ln -s "$rcfile" "${ZDOTDIR:-$HOME}/.${rcfile:t}"
+done
 
 cd $dir && ln -sf $dir/zpreztorc $HOME/.zpreztorc
 
@@ -90,3 +87,5 @@ type brew &>/dev/null && printf "`brew tap Homebrew/bundle && brew bundle &&
 vim +PluginInstall +qall
 
 printf "\nAll done!\nYou may want to run 'brew upgrade', too.\n"
+
+chsh -s /bin/zsh
