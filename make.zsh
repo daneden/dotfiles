@@ -74,7 +74,7 @@ echo "We're going to need your password."
 
 if [[ `uname` == "Darwin" ]]; then
   sudo easy_install pip
-elif [ "$(expr substr $(uname -s) 1 5)" == "Linux" ]; then
+elif [[ `uname` == "Linux" ]]; then
   sudo apt-get install pip
 fi
 
