@@ -53,6 +53,11 @@ if [ ! -d "$HOME/.zprezto" ]; then
   done
 else
   cd $HOME/.zprezto && git pull && git submodule update --init --recursive
+
+  setopt EXTENDED_GLOB
+  for rcfile in "${ZDOTDIR:-$HOME}"/.zprezto/runcoms/^README.md(.N); do
+    ln -s "$rcfile" "${ZDOTDIR:-$HOME}/.${rcfile:t}"
+  done
 fi
 
 cd $dir && ln -sf $dir/zpreztorc $HOME/.zpreztorc
