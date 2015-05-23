@@ -155,3 +155,6 @@ zstyle ':prezto:module:syntax-highlighting' styles \
 
 # Integrate with iTerm2.
 zstyle ':prezto:module:tmux:iterm' integrate 'yes'
+
+### Set character encoding
+export LC_CTYPE=en_US.UTF-8
