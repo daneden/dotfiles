@@ -2,12 +2,13 @@
 
 # First, let's get some helpful colors.
 red=$'\e[1;31m'
-yel=$'\e[0;35m'
+pur=$'\e[0;35m'
+yel=$'\e[0;33m'
 grn=$'\e[0;32m'
 end=$'\e[0m'
 
 msg() {
-  printf "${yel}$*${end}\n"
+  printf "${yel} ~ ${pur}$*${end}\n"
 }
 
 suc() {
