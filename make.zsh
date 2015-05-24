@@ -1,6 +1,16 @@
 #!/bin/zsh
 
-# First, let's get some helpful colors.
+#==============================
+#
+# Dotfiles: The Dan Eden Story
+# ----------------------------
+#
+# This makefile moves old dotfiles, creates symlinks to new ones, installs
+# useful stuff and basically automates a lot of tiresome configuration.
+#
+#==============================
+
+# First, let's set up some ouput functions
 red=$'\e[1;31m'
 pur=$'\e[0;35m'
 yel=$'\e[0;33m'
@@ -23,12 +33,12 @@ don() {
   printf "...done\n\n"
 }
 
-############################
-# .make.sh
-# This script creates symlinks from the home directory to any desired dotfiles in ~/.dotfiles
-############################
 
-########## Variables
+#==============================
+#
+# Variables
+#
+#==============================
 
 dir=$HOME/.dotfiles                    # dotfiles directory
 now=`date +%Y-%m-%d-%H:%M:%S`
@@ -36,11 +46,12 @@ olddir=$HOME/.dotfiles_old/$now      # old dotfiles backup directory
 files=("gitconfig" "gitignore" "vimrc" "vim" "zprivate")    # list of files/folders to symlink in homedir
 nodot=("Brewfile") # list of non-dot files to symlink
 
-#------------------------------
+
+#==============================
 #
 # Housekeeping
 #
-#------------------------------
+#==============================
 
 # create dotfiles_old in homedir
 msg "Creating $olddir for backup of any existing dotfiles in $HOME..."
@@ -64,6 +75,13 @@ for file in $nodot; do
 done
 don
 
+
+#==============================
+#
+# Prezto
+#
+#==============================
+
 # Install Prezto
 if [ ! -d "$HOME/.zprezto" ]; then
   msg "Installing Prezto..."
@@ -84,11 +102,19 @@ done
 cd $dir && ln -sf $dir/zpreztorc $HOME/.zpreztorc && ln -sf $dir/zshrc $HOME/.zshrc
 don
 
-#------------------------------
+# Install 256-color Base16 shell
+if [ !-d "$HOME/.config/base16-shell" ]; then
+  msg "Installing base16-shell..."
+  git clone https://github.com/chriskempson/base16-shell.git ~/.config/base16-shell
+  don
+fi
+
+
+#==============================
 #
 # Package manager stuff
 #
-#------------------------------
+#==============================
 
 # Install pip and Codemod
 msg "Installing pip and Codemod..."
@@ -111,10 +137,24 @@ if [[ `uname` == "Darwin" ]]; then
   don
 fi
 
+
+#==============================
+#
+# Vim
+#
+#==============================
+
 # Install Vim plugins
 msg "Installing Vim plugins..."
 vim +PluginClean! +PluginInstall! +qall
 don
+
+
+#==============================
+#
+# Closing ceremonies
+#
+#==============================
 
 # Switch to zsh if we're not already there
 if [[ ! `echo $SHELL` == "/bin/zsh" ]]; then

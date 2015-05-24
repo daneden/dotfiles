@@ -81,6 +81,9 @@ Plugin 'ConradIrwin/vim-bracketed-paste'
 " Base16 themes
 Plugin 'chriskempson/base16-vim'
 
+" Other themes
+Plugin 'flazz/vim-colorschemes'
+
 " Dim inactive panes
 Plugin 'blueyed/vim-diminactive'
 
@@ -136,7 +139,7 @@ augroup CLNRSet
 augroup END
 
 " Color scheme
-set t_Co=256
+let base16colorspace=256
 set background=dark
 colorscheme base16-google
 hi clear SignColumn

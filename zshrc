@@ -29,6 +29,9 @@ export LC_CTYPE=en_US.UTF-8
 # (Except in ssh, which is actually pretty handy)
 DEFAULT_USER=`whoami`
 
+# Base16 Shell
+BASE16_SHELL="$HOME/.config/base16-shell/base16-google.dark.sh"
+[[ -s $BASE16_SHELL ]] && source $BASE16_SHELL
 
 #==============================
 #
