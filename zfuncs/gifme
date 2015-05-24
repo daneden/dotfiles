@@ -1,9 +1,0 @@
-function gifme() {
-  if [[ -z $1 ]]; then
-    echo "Usage: gifme name.gif";
-  else
-    NAME=$(urlencode $1);
-    echo "http://gif.daneden.me/$NAME" | tr -d '\n' | pbcopy;
-    echo "Copied link to $1";
-  fi
-}
