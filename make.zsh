@@ -80,7 +80,7 @@ for rcfile in "${ZDOTDIR:-$HOME}"/.zprezto/runcoms/^README.md(.N); do
   ln -sf "$rcfile" "${ZDOTDIR:-$HOME}/.${rcfile:t}"
 done
 
-cd $dir && ln -sf $dir/zpreztorc $HOME/.zpreztorc
+cd $dir && ln -sf $dir/zpreztorc $HOME/.zpreztorc && ln -sf $dir/zshrc $HOME/.zshrc
 don
 
 #------------------------------
