@@ -112,7 +112,7 @@ fi
 
 # Install Vim plugins
 msg "Installing Vim plugins..."
-vim +PluginClean +PluginInstall +PluginUpdate +qall
+vim +PluginClean! +PluginInstall! +qall
 don
 
 # Switch to zsh if we're not already there
@@ -121,6 +121,8 @@ if [[ ! `echo $SHELL` == "/bin/zsh" ]]; then
   chsh -s /bin/zsh
   don
 fi
+
+source $HOME/.zshrc
 
 suc "All done!"
 suc "Don't forget to tip your barista.\n"
