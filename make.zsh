@@ -103,7 +103,7 @@ cd $dir && ln -sf $dir/zpreztorc $HOME/.zpreztorc && ln -sf $dir/zshrc $HOME/.zs
 don
 
 # Install 256-color Base16 shell
-if [ !-d "$HOME/.config/base16-shell" ]; then
+if [ ! -d "$HOME/.config/base16-shell" ]; then
   msg "Installing base16-shell..."
   git clone https://github.com/chriskempson/base16-shell.git ~/.config/base16-shell
   don
