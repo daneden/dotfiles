@@ -85,7 +85,7 @@ don
 # Install Prezto
 if [ ! -d "$HOME/.zprezto" ]; then
   msg "Installing Prezto..."
-  git clone --recursive https://github.com/sorin-ionescu/prezto.git "${ZDOTDIR:-$HOME}/.zprezto"
+  git clone --recursive https://github.com/daneden/prezto.git "${ZDOTDIR:-$HOME}/.zprezto"
 else
   msg "Updating Prezto..."
   cd $HOME/.zprezto && git pull && git submodule update --init --recursive
