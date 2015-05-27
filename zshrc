@@ -27,10 +27,13 @@ export LC_CTYPE=en_US.UTF-8
 
 # Remove name@host from zsh theme
 # (Except in ssh, which is actually pretty handy)
-DEFAULT_USER=`whoami`
+export DEFAULT_USER=`whoami`
+
+export EDITOR=/usr/local/bin/vim
+export VISUAL=/usr/local/bin/vim
 
 # Base16 Shell
-BASE16_SHELL="$HOME/.config/base16-shell/base16-google.dark.sh"
+export BASE16_SHELL="$HOME/.config/base16-shell/base16-google.dark.sh"
 [[ -s $BASE16_SHELL ]] && source $BASE16_SHELL
 
 #==============================
