@@ -68,3 +68,5 @@ alias groot='cd "$(git rev-parse --show-toplevel)"'
 # Add private aliases and functions
 source $HOME/.zprivate
 
+export PATH="$HOME/.rbenv/bin:$PATH"
+eval "$(rbenv init -)"
