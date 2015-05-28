@@ -16,6 +16,7 @@ if [[ -s "${ZDOTDIR:-$HOME}/.zprezto/init.zsh" ]]; then
   source "${ZDOTDIR:-$HOME}/.zprezto/init.zsh"
 fi
 
+
 #==============================
 #
 # General
@@ -35,6 +36,7 @@ export VISUAL=/usr/local/bin/vim
 # Base16 Shell
 export BASE16_SHELL="$HOME/.config/base16-shell/base16-google.dark.sh"
 [[ -s $BASE16_SHELL ]] && source $BASE16_SHELL
+
 
 #==============================
 #
@@ -64,6 +66,16 @@ alias be="bundle exec"
 
 # Easily jump to the root of a git repo
 alias groot='cd "$(git rev-parse --show-toplevel)"'
+
+# Start screensaver
+alias ss='open -a /System/Library/Frameworks/ScreenSaver.framework/Versions/A/Resources/ScreenSaverEngine.app'
+
+
+#==============================
+#
+# Wrap it up
+#
+#==============================
 
 # Add private aliases and functions
 source $HOME/.zprivate
