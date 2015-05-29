@@ -51,8 +51,8 @@ Plugin 'tpope/vim-git'
 """""""""""""""""""""""""""""""
 
 " Commenting
-" Use <Leader>cc to comment/uncomment lines
-Plugin 'scrooloose/nerdcommenter'
+" Use gcc to comment/uncomment lines
+Plugin 'tpope/vim-commentary'
 
 " Surround (insert surrounding quotes etc)
 Plugin 'tpope/vim-surround'
