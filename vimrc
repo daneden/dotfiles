@@ -66,6 +66,9 @@ Plugin 'scrooloose/syntastic'
 " Dash for documentation
 Plugin 'rizzatti/dash.vim'
 
+" Editor Config
+Plugin 'editorconfig/editorconfig-vim'
+
 """""""""""""""""""""""""""""""
 "
 " Misc. conveniences
@@ -270,8 +273,8 @@ autocmd BufWritePre     * :call TrimWhiteSpace()
 """""""""""""""""""""""""""""""
 
 " Most of the rules from here on out are stolen from thoughtbot/dotfiles
-" Make it obvious where 80 characters is
-set textwidth=80
+" Make it obvious where 120 characters is
+set textwidth=120
 set colorcolumn=+1
 
 augroup vimrcEx
