@@ -16,5 +16,6 @@ find.
 | `:e!`              | Same as above, but discards changes             |
 | `ci"`              | Change content wrapped in quotes "              |
 | `cit`              | Change text inside <tags>                       |
+| `cst`              | Change surrounding <tag>                        |
 | `p`                | Insert clipboard below current line             |
 | `P`                | Insert clipboard above current line             |
