@@ -15,5 +15,6 @@ find.
 | `:e`               | Refresh the current buffer/file                 |
 | `:e!`              | Same as above, but discards changes             |
 | `ci"`              | Change content wrapped in quotes "              |
+| `cit`              | Change text inside <tags>                       |
 | `p`                | Insert clipboard below current line             |
 | `P`                | Insert clipboard above current line             |
