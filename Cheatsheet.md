@@ -14,3 +14,6 @@ find.
 | `gd`               | Go to definition of the object under the cursor |
 | `:e`               | Refresh the current buffer/file                 |
 | `:e!`              | Same as above, but discards changes             |
+| `ci"`              | Change content wrapped in quotes "              |
+| `p`                | Insert clipboard below current line             |
+| `P`                | Insert clipboard above current line             |
