@@ -12,3 +12,5 @@ find.
 | `"+y`              | Copy to the system clipboard                    |
 | `:%s/find/replace` | Global find and replace                         |
 | `gd`               | Go to definition of the object under the cursor |
+| `:e`               | Refresh the current buffer/file                 |
+| `:e!`              | Same as above, but discards changes             |
