@@ -34,6 +34,7 @@ install 'wget'
 install 'xz'
 install 'zsh'
 
+cask install 'adium'
 cask install 'colorpicker-skalacolor'
 cask install 'dropbox'
 cask install 'fantastical'
