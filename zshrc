@@ -80,5 +80,10 @@ alias ss='open -a /System/Library/Frameworks/ScreenSaver.framework/Versions/A/Re
 # Add private aliases and functions
 source $HOME/.zprivate
 
+# Activate virtual environment if one exists
+if [[ -s "$HOME/.virt_env/bin/activate" ]]; then
+  source "$HOME/.virt_env/bin/activate"
+fi
+
 export PATH="$HOME/.rbenv/bin:$PATH"
 eval "$(rbenv init -)"
