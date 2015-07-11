@@ -70,6 +70,8 @@ alias groot='cd "$(git rev-parse --show-toplevel)"'
 # Start screensaver
 alias ss='open -a /System/Library/Frameworks/ScreenSaver.framework/Versions/A/Resources/ScreenSaverEngine.app'
 
+# Ag is in Brewfile and it's faster, but I keep forgetting
+alias ack='ag'
 
 #==============================
 #
