@@ -69,6 +69,9 @@ Plugin 'rizzatti/dash.vim'
 " Editor Config
 Plugin 'editorconfig/editorconfig-vim'
 
+" Autoprefixer
+Plugin 'vim-scripts/vim-autoprefixer'
+
 """""""""""""""""""""""""""""""
 "
 " Misc. conveniences
