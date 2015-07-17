@@ -70,7 +70,7 @@ Plugin 'rizzatti/dash.vim'
 Plugin 'editorconfig/editorconfig-vim'
 
 " Autoprefixer
-Plugin 'vim-scripts/vim-autoprefixer'
+Plugin 'daneden/vim-autoprefixer'
 
 """""""""""""""""""""""""""""""
 "
