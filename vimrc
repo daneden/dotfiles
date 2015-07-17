@@ -266,6 +266,8 @@ autocmd FileAppendPre   * :call TrimWhiteSpace()
 autocmd FilterWritePre  * :call TrimWhiteSpace()
 autocmd BufWritePre     * :call TrimWhiteSpace()
 
+autocmd BufWritePre * :%s/\s\+$//e
+
 """""""""""""""""""""""""""""""
 "
 " Thoughtbot's vimrc
