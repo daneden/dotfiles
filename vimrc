@@ -69,6 +69,9 @@ Plugin 'rizzatti/dash.vim'
 " Editor Config
 Plugin 'editorconfig/editorconfig-vim'
 
+" Autoprefixer
+Plugin 'daneden/vim-autoprefixer'
+
 """""""""""""""""""""""""""""""
 "
 " Misc. conveniences
@@ -265,6 +268,8 @@ autocmd FileWritePre    * :call TrimWhiteSpace()
 autocmd FileAppendPre   * :call TrimWhiteSpace()
 autocmd FilterWritePre  * :call TrimWhiteSpace()
 autocmd BufWritePre     * :call TrimWhiteSpace()
+
+autocmd BufWritePre * :%s/\s\+$//e
 
 """""""""""""""""""""""""""""""
 "
