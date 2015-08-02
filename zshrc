@@ -73,6 +73,9 @@ alias ss='open -a /System/Library/Frameworks/ScreenSaver.framework/Versions/A/Re
 # Ag is in Brewfile and it's faster, but I keep forgetting
 alias ack='ag'
 
+# Convenience alias for Python's Simple HTTP server
+alias httpserve='python -m SimpleHTTPServer 8000'
+
 #==============================
 #
 # Wrap it up
