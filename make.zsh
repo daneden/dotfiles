@@ -49,6 +49,32 @@ nodot=("Brewfile") # list of non-dot files to symlink
 
 #==============================
 #
+# Introduction
+#
+#==============================
+
+printf "\n\n${yel} _____     ______     ______   ______   __     __         ______     ______
+/\\  __-.  /\\  __ \\   /\\__  _\\ /\\  ___\\ /\\ \\   /\\ \\       /\\  ___\\   /\\  ___\\
+\\ \\ \\/\\ \\ \\ \\ \\/\\ \\  \\/_/\\ \\/ \\ \\  __\\ \\ \\ \\  \\ \\ \\____  \\ \\  __\\   \\ \\___  \\
+ \\ \\____-  \\ \\_____\\    \\ \\_\\  \\ \\_\\    \\ \\_\\  \\ \\_____\\  \\ \\_____\\  \\/\\_____\\
+  \\/____/   \\/_____/     \\/_/   \\/_/     \\/_/   \\/_____/   \\/_____/   \\/_____/${end}
+
+                             ${red}THE DAN EDEN STORY${end}\n\n\n"
+
+printf "This script is gonna do a bunch of wacky things to your computer/CLI. Continue? [Y/N] "
+read a
+if [[ $a == "N" || $a == "n" ]]; then
+  printf "\n${red}FORMATTING DISK...${end}\n"
+  sleep 1
+  printf "${pur}Just kidding. Didn't touch a thing.${end}\n\n"
+  exit;
+else
+  printf "\n${grn}You're the boss. Here we go.${end}\n\n"
+  sleep 1
+fi
+
+#==============================
+#
 # Housekeeping
 #
 #==============================

@@ -20,7 +20,7 @@ install 'gifsicle'
 install 'git'
 install 'graphicsmagick'
 install 'hub'
-install 'imagemagick'
+install 'imagemagick' --disable-openmp --build-from-source
 install 'jpeg'
 install 'libpng'
 install 'libtool'
