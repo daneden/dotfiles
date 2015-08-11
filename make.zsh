@@ -61,7 +61,7 @@ printf "\n\n${yel} _____     ______     ______   ______   __     __         ____
 
                              ${red}THE DAN EDEN STORY${end}\n\n\n"
 
-printf "This script is gonna do a bunch of wacky things to your computer/CLI. Continue? [Y/N] "
+printf "This script is gonna do a bunch of wacky things to your computer/CLI. Continue? [Y/n] "
 read a
 if [[ $a == "N" || $a == "n" ]]; then
   printf "\n${red}FORMATTING DISK...${end}\n"
