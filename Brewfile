@@ -33,6 +33,7 @@ install 'rbenv'
 install 'vim'
 install 'wget'
 install 'xz'
+install 'youtube-dl'
 install 'zsh'
 
 cask install 'adium'
