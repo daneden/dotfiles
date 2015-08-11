@@ -91,4 +91,5 @@ if [[ -s "$HOME/.virt_env/bin/activate" ]]; then
 fi
 
 export PATH="$HOME/.rbenv/bin:$PATH"
+export PATH="$HOME/.bin:$PATH"
 eval "$(rbenv init -)"

@@ -158,8 +158,8 @@ don
 # Check presence of Homebrew, add bundler, then install our desired recipes & update them
 if [[ `uname` == "Darwin" ]]; then
   msg "Installing Homebrew packages..."
-  type brew &>/dev/null && printf "`brew upgrade --all && brew bundle &&
-    brew update`" || echo "`ruby -e \"$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)\" && brew tap Homebrew/bundle && brew bundle && brew update`"
+  type brew &>/dev/null && printf "`brew bundle`" || echo "`ruby -e \"$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)\" && brew tap Homebrew/bundle && brew bundle`"
+  brew update && brew upgrade `brew outdated`
   don
 fi
 
@@ -174,6 +174,22 @@ fi
 msg "Installing Vim plugins..."
 vim +PluginClean! +PluginInstall! +qall
 don
+
+
+#==============================
+#
+# Misc. Goodies
+#
+#==============================
+
+if [[ `uname` == "Darwin" ]]; then
+  msg "Adding Mac goodies..."
+  if [ ! -d "$HOME/.bin" ]; then
+    mkdir $HOME/.bin
+  fi
+  ln -sf /System/Library/PrivateFrameworks/Apple80211.framework/Versions/Current/Resources/airport $HOME/.bin/airport
+  don
+fi
 
 
 #==============================
