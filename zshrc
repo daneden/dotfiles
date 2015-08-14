@@ -76,6 +76,17 @@ alias ack='ag'
 # Convenience alias for Python's Simple HTTP server
 alias httpserve='python -m SimpleHTTPServer 8000'
 
+# Git aliases
+alias g='git'
+alias gap='git add -p'
+alias gdt='git difftool'
+alias gcm='git commit -m'
+alias gps='git push'
+alias gpl='git pull'
+alias grb='git fetch origin && git rebase origin/master'
+alias gmt='git mergetool'
+alias gs='git status'
+
 #==============================
 #
 # Wrap it up
