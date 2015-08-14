@@ -40,7 +40,7 @@ export BASE16_SHELL="$HOME/.config/base16-shell/base16-google.dark.sh"
 
 #==============================
 #
-# Aliases and extra things
+# Aliases
 #
 #==============================
 
