@@ -163,6 +163,17 @@ if [[ `uname` == "Darwin" ]]; then
   don
 fi
 
+# Install node & npm packages
+msg "Installing Node.js and npm packages..."
+if hash node 2>/dev/null; then
+  if [[ `uname` == "Darwin" ]]; then
+    brew install node
+  elif [[ `uname` == "Linux" ]]; then
+    sudo apt-add-repository -y ppa:chris-lea/node.js && sudo apt-get update && sudo apt-get install -y nodejs
+  fi
+fi
+npm install -g
+don
 
 #==============================
 #
