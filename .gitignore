@@ -1,3 +1,15 @@
+# Common ignored files
+.git
+CVS
+.svn
+.hg
+.lock-wscript
+.wafpickle-N
+*.swp
+.DS_Store
+._*
+npm-debug.log
+
 # Ignore vim bundles (easier to manage)
 vim/bundle
 !vim/bundle/Vundle.vim

@@ -1,0 +1,16 @@
+{
+  "name": "dotfiles",
+  "version": "1.0.0",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/daneden/dotfiles.git"
+  },
+  "dependencies": {
+    "autoprefixer": "*",
+    "coffee-script": "*",
+    "grunt": "*",
+    "grunt-cli": "*",
+    "postcss-cli": "*",
+    "vtop": "*"
+  }
+}

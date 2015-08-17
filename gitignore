@@ -1,12 +1,11 @@
-# Ignore everything!
-*
-**/*
-
-# And restore normality to the files we actually want to track
-!.gitignore
-!.git
-!.gitconfig
-
-!.grunt-init
-!.shells
-!.zshrc
+# Common ignored files
+.git
+CVS
+.svn
+.hg
+.lock-wscript
+.wafpickle-N
+*.swp
+.DS_Store
+._*
+npm-debug.log
