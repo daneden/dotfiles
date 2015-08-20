@@ -186,7 +186,7 @@ nmap <leader>h :bprevious<CR>
 
 " Close the current buffer and move to the previous one
 " This replicates the idea of closing a tab
-nmap <leader>bq :bp <BAR> bd #<CR>
+nmap <leader>q :bp <BAR> bd #<CR>
 
 " Show all open buffers and their status
 nmap <leader>bl :ls<CR>
@@ -198,7 +198,7 @@ nnoremap <C-L> <C-W><C-L>
 nnoremap <C-H> <C-W><C-H>
 
 " Set mapping for CommandT
-nnoremap ff :CommandT<cr>
+nnoremap t :CommandT<cr>
 
 " Set mapping to navigate back and forth in a query
 nnoremap cn :cn<cr>
