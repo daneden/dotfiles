@@ -12,6 +12,7 @@
   co = checkout
   cm = commit
   p = push
+  cloen = clone
 
   # Show verbose output about tags, branches or remotes
   tags = tag -l
