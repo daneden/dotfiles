@@ -8,6 +8,7 @@
   "dependencies": {
     "autoprefixer": "*",
     "coffee-script": "*",
+    "caniuse-cmd": "*",
     "grunt": "*",
     "grunt-cli": "*",
     "postcss-cli": "*",
