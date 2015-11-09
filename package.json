@@ -11,6 +11,7 @@
     "caniuse-cmd": "*",
     "grunt": "*",
     "grunt-cli": "*",
+    "parker": "*",
     "postcss-cli": "*",
     "vtop": "*"
   }
