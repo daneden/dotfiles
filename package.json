@@ -9,8 +9,6 @@
     "autoprefixer": "*",
     "coffee-script": "*",
     "caniuse-cmd": "*",
-    "grunt": "*",
-    "grunt-cli": "*",
     "parker": "*",
     "postcss-cli": "*",
     "vtop": "*"
