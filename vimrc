@@ -18,6 +18,7 @@ Plugin 'gmarik/Vundle.vim'
 
 " Coffeescript
 Plugin 'kchmck/vim-coffee-script'
+Plugin 'mtscout6/vim-cjsx'
 
 " (S)CSS
 Plugin 'JulesWang/css.vim'
