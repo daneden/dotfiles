@@ -19,3 +19,5 @@ find.
 | `cst`              | Change surrounding <tag>                        |
 | `p`                | Insert clipboard below current line             |
 | `P`                | Insert clipboard above current line             |
+| `gf`               | Open the file under the current cursor          |
+| `*`                | Search for the current cursor in the buffer     |
