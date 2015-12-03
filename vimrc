@@ -1,3 +1,24 @@
+"""""""""""""""""""""""""""""""
+"
+" VIMRC
+"
+" Contents:
+"   1. Plugins
+"     1.1. Syntax Highlighting
+"     1.2. Git
+"     1.3. Code helpers
+"     1.4. Misc. conveniences
+"   2. Config
+"     2.1. Appearance & theming
+"     2.2. General editor settings
+"     2.3. Key mapping
+"     2.4. Ctrl-P Config
+"     2.5. Conveniences
+"     2.6. White space
+"   3. Thoughtbot Config
+"
+"""""""""""""""""""""""""""""""
+
 set nocompatible              " be iMproved, required
 filetype off                  " required
 
@@ -11,9 +32,7 @@ call vundle#begin()
 Plugin 'gmarik/Vundle.vim'
 
 """""""""""""""""""""""""""""""
-"
-" Syntax Highlighting
-"
+" 1.1. Syntax Highlighting
 """""""""""""""""""""""""""""""
 
 " Coffeescript
@@ -31,9 +50,7 @@ Plugin 'othree/html5.vim'
 Plugin 'groenewege/vim-less'
 
 """""""""""""""""""""""""""""""
-"
-" Git things
-"
+" 1.2. Git things
 """""""""""""""""""""""""""""""
 
 " Git gutter
@@ -46,9 +63,7 @@ Plugin 'tpope/vim-fugitive'
 Plugin 'tpope/vim-git'
 
 """""""""""""""""""""""""""""""
-"
-" Code helpers
-"
+" 1.3. Code helpers
 """""""""""""""""""""""""""""""
 
 " Commenting
@@ -74,9 +89,7 @@ Plugin 'editorconfig/editorconfig-vim'
 Plugin 'daneden/vim-autoprefixer'
 
 """""""""""""""""""""""""""""""
-"
-" Misc. conveniences
-"
+" 1.4. Misc. conveniences
 """""""""""""""""""""""""""""""
 
 " Powerline
@@ -100,12 +113,6 @@ Plugin 'wincent/command-t'
 " Ag
 Plugin 'rking/ag.vim'
 
-"""""""""""""""""""""""""""""""
-"
-" END OF PLUGINS
-"
-"""""""""""""""""""""""""""""""
-
 " All of your Plugins must be added before the following line
 call vundle#end()            " required
 filetype plugin indent on    " required
@@ -124,10 +131,13 @@ filetype plugin indent on    " required
 " Set up SCSS Lint
 let g:syntastic_scss_checkers = ['scss_lint']
 
+
+"==============================
+" MARK: 2. Configuration
+"==============================
+
 """""""""""""""""""""""""""""""
-"
-" Appearance & theming
-"
+" 2.1. Appearance & theming
 """""""""""""""""""""""""""""""
 
 " Set syntax highlighting
@@ -167,9 +177,6 @@ set hidden
 autocmd VimEnter * DimInactive
 
 """""""""""""""""""""""""""""""
-"
-" Key mapping
-"
 " 2.2. General editor settings
 """""""""""""""""""""""""""""""
 
@@ -184,6 +191,11 @@ set smartcase
 set incsearch
 
 """""""""""""""""""""""""""""""
+" 2.3. Key mapping
+"""""""""""""""""""""""""""""""
+
+" Toggle folds with space
+nnoremap <space> za
 
 " Change leader key to something more accessible
 let mapleader=","
@@ -219,9 +231,7 @@ nnoremap cn :cn<cr>
 nnoremap cp :cp<cr>
 
 """""""""""""""""""""""""""""""
-"
-" CtrlP Config
-"
+" 2.4. CtrlP Config
 """""""""""""""""""""""""""""""
 
 " Setup some default ignores
@@ -236,9 +246,7 @@ let g:ctrlp_custom_ignore = {
 let g:ctrlp_working_path_mode = 'r'
 
 """""""""""""""""""""""""""""""
-"
-" Conveniences
-"
+" 2.5. Conveniences
 """""""""""""""""""""""""""""""
 
 " More natural splitting
@@ -265,9 +273,7 @@ set clipboard=unnamed
 set autoread
 
 """""""""""""""""""""""""""""""
-"
-" White space
-"
+" 2.6. White space
 """""""""""""""""""""""""""""""
 
 " Removes trailing spaces
@@ -285,11 +291,9 @@ autocmd BufWritePre     * :call TrimWhiteSpace()
 
 autocmd BufWritePre * :%s/\s\+$//e
 
-"""""""""""""""""""""""""""""""
-"
-" Thoughtbot's vimrc
-"
-"""""""""""""""""""""""""""""""
+"==============================
+" MARK: 3. Thoughtbot Config
+"==============================
 
 " Most of the rules from here on out are stolen from thoughtbot/dotfiles
 " Make it obvious where 120 characters is
