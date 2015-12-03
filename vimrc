@@ -170,6 +170,19 @@ autocmd VimEnter * DimInactive
 "
 " Key mapping
 "
+" 2.2. General editor settings
+"""""""""""""""""""""""""""""""
+
+" Set smart case-matching for search
+" This means searching for lowercase phrases matches both cases,
+" and searching for uppercase matches only uppercase.
+" Example: /ste will match Stephen, step, and misstep, but
+" /Step will only match Stephen
+set smartcase
+
+" Automatically jump to and highlight search matches
+set incsearch
+
 """""""""""""""""""""""""""""""
 
 " Change leader key to something more accessible
