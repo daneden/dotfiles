@@ -12,7 +12,7 @@
 "     2.1. Appearance & theming
 "     2.2. General editor settings
 "     2.3. Key mapping
-"     2.4. Ctrl-P Config
+"     2.4. CommandT Config
 "     2.5. Conveniences
 "     2.6. White space
 "   3. Thoughtbot Config
@@ -231,19 +231,16 @@ nnoremap cn :cn<cr>
 nnoremap cp :cp<cr>
 
 """""""""""""""""""""""""""""""
-" 2.4. CtrlP Config
+" 2.4. CommandT Config
 """""""""""""""""""""""""""""""
 
-" Setup some default ignores
-let g:ctrlp_custom_ignore = {
-  \ 'dir':  '\v[\/](\.(git|hg|svn)|\_site)$',
-  \ 'file': '\v\.(exe|so|dll|class|png|jpg|jpeg)$',
-\}
+let g:CommandTFileScanner = "find"
 
-" Use the nearest .git directory as the cwd
-" This makes a lot of sense if you are working on a project that is in version
-" control. It also supports works with .svn, .hg, .bzr.
-let g:ctrlp_working_path_mode = 'r'
+let g:CommandTMaxHeight = 50
+
+let g:CommandTCancelMap=['<C-x>', '<C-c>', '<Esc>']
+
+let g:CommandTMatchWindowReverse = 1
 
 """""""""""""""""""""""""""""""
 " 2.5. Conveniences
