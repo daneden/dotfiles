@@ -87,6 +87,9 @@ alias grb='git fetch origin && git rebase origin/master'
 alias gmt='git mergetool'
 alias gs='git status -sb'
 
+# Goodies
+alias hi='echo "(●°u°●) 」"'
+
 #==============================
 #
 # Wrap it up
