@@ -86,6 +86,7 @@ alias gpl='git pull'
 alias grb='git fetch origin && git rebase origin/master'
 alias gmt='git mergetool'
 alias gs='git status -sb'
+alias gl='git lg'
 
 # Goodies
 alias hi='echo "(●°u°●) 」"'
