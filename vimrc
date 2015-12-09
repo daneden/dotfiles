@@ -39,6 +39,9 @@ Plugin 'gmarik/Vundle.vim'
 Plugin 'kchmck/vim-coffee-script'
 Plugin 'mtscout6/vim-cjsx'
 
+" ES6
+Plugin 'othree/yajs.vim'
+
 " (S)CSS
 Plugin 'JulesWang/css.vim'
 Plugin 'cakebaker/scss-syntax.vim'
@@ -175,6 +178,9 @@ set hidden
 
 " Dim inactive windows
 autocmd VimEnter * DimInactive
+
+" Set custom syntaxes
+autocmd BufRead,BufNewFile *.es6 setfiletype javascript
 
 """""""""""""""""""""""""""""""
 " 2.2. General editor settings
