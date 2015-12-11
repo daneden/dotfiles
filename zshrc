@@ -37,6 +37,8 @@ export VISUAL=/usr/local/bin/vim
 export BASE16_SHELL="$HOME/.config/base16-shell/base16-google.dark.sh"
 [[ -s $BASE16_SHELL ]] && source $BASE16_SHELL
 
+# Load completions
+fpath=(/usr/local/share/zsh-completions $fpath)
 
 #==============================
 #
@@ -90,6 +92,8 @@ alias gl='git lg'
 
 # Goodies
 alias hi='echo "(●°u°●) 」"'
+alias gifo='_(){gifsicle -O3 --lossy=80 --scale=0.6 $1 -o tmpgifo.gif; rm $1; mv tmpgifo.gif $1; }; _'
+setopt complete_aliases
 
 #==============================
 #
