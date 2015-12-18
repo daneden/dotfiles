@@ -196,6 +196,10 @@ set smartcase
 " Automatically jump to and highlight search matches
 set incsearch
 
+" Faster keyboard navigation
+set ttyfast
+set lazyredraw
+
 """""""""""""""""""""""""""""""
 " 2.3. Key mapping
 """""""""""""""""""""""""""""""
