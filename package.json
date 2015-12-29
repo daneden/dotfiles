@@ -12,6 +12,7 @@
     "caniuse-cmd": "*",
     "parker": "*",
     "postcss-cli": "*",
+    "tldr": "*",
     "vtop": "*"
   }
 }
