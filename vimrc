@@ -39,6 +39,9 @@ Plugin 'gmarik/Vundle.vim'
 Plugin 'kchmck/vim-coffee-script'
 Plugin 'mtscout6/vim-cjsx'
 
+" Typescript
+Plugin 'leafgarland/typescript-vim'
+
 " ES6
 Plugin 'othree/yajs.vim'
 
