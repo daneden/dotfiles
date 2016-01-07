@@ -10,8 +10,10 @@
     "babel-cli": "*",
     "coffee-script": "*",
     "caniuse-cmd": "*",
+    "gulp-cli": "*",
     "parker": "*",
     "postcss-cli": "*",
+    "tldr": "*",
     "vtop": "*"
   }
 }
