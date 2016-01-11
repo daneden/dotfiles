@@ -10,3 +10,4 @@ CVS
 ._*
 npm-debug.log
 *.un~
+.sass-cache
