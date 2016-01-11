@@ -12,9 +12,10 @@
 "     2.1. Appearance & theming
 "     2.2. General editor settings
 "     2.3. Key mapping
-"     2.4. CommandT Config
-"     2.5. Conveniences
-"     2.6. White space
+"     2.4. CtrlP Config
+"     2.5. Syntastic Config
+"     2.6. Conveniences
+"     2.7. White space
 "   3. Thoughtbot Config
 "
 """""""""""""""""""""""""""""""
@@ -54,6 +55,9 @@ Plugin 'othree/html5.vim'
 
 " Less
 Plugin 'groenewege/vim-less'
+
+" Autocompletions
+Plugin 'Valloric/YouCompleteMe'
 
 """""""""""""""""""""""""""""""
 " 1.2. Git things
@@ -114,7 +118,7 @@ Plugin 'flazz/vim-colorschemes'
 Plugin 'blueyed/vim-diminactive'
 
 " Fuzzy file/buffer finder
-Plugin 'wincent/command-t'
+Plugin 'ctrlpvim/ctrlp.vim'
 
 " Ag
 Plugin 'rking/ag.vim'
@@ -236,27 +240,41 @@ nnoremap <C-K> <C-W><C-K>
 nnoremap <C-L> <C-W><C-L>
 nnoremap <C-H> <C-W><C-H>
 
-" Set mapping for CommandT
-nnoremap t :CommandT<cr>
-
 " Set mapping to navigate back and forth in a query
 nnoremap cn :cn<cr>
 nnoremap cp :cp<cr>
 
 """""""""""""""""""""""""""""""
-" 2.4. CommandT Config
+" 2.4. CtrlP Config
 """""""""""""""""""""""""""""""
 
-let g:CommandTFileScanner = "find"
+let g:ctrlp_map = '<c-p>'
+let g:ctrlp_cmd = 'CtrlP'
 
-let g:CommandTMaxHeight = 50
+" Set CWD of CtrlP to the nearest parent with .git
+let g:ctrlp_working_path_mode = 'ra'
 
-let g:CommandTCancelMap=['<C-x>', '<C-c>', '<Esc>']
-
-let g:CommandTMatchWindowReverse = 1
+" Sane Ignore For ctrlp
+let g:ctrlp_custom_ignore = {
+  \ 'dir':  '\.git$\|\.hg$\|\.svn$\|\.yardoc\|public\/images\|public\/system\|data\|log\|tmp$',
+  \ 'file': '\.exe$\|\.so$\|\.dat$'
+  \ }
 
 """""""""""""""""""""""""""""""
-" 2.5. Conveniences
+" 2.5. Syntastic Config
+"""""""""""""""""""""""""""""""
+
+set statusline+=%#warningmsg#
+set statusline+=%{SyntasticStatuslineFlag()}
+set statusline+=%*
+
+let g:syntastic_always_populate_loc_list = 1
+let g:syntastic_auto_loc_list = 1
+let g:syntastic_check_on_open = 1
+let g:syntastic_check_on_wq = 0
+
+"""""""""""""""""""""""""""""""
+" 2.6. Conveniences
 """""""""""""""""""""""""""""""
 
 " More natural splitting
@@ -283,7 +301,7 @@ set clipboard=unnamed
 set autoread
 
 """""""""""""""""""""""""""""""
-" 2.6. White space
+" 2.7. White space
 """""""""""""""""""""""""""""""
 
 " Removes trailing spaces
