@@ -83,6 +83,9 @@ Plugin 'tpope/vim-commentary'
 " Surround (insert surrounding quotes etc)
 Plugin 'tpope/vim-surround'
 
+" Auto-closing tags etc.
+Plugin 'Raimondi/delimitMate'
+
 " Tab completions
 Plugin 'ervandew/supertab'
 
