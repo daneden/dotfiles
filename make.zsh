@@ -43,7 +43,7 @@ don() {
 dir=$HOME/.dotfiles                    # dotfiles directory
 now=`date +%Y-%m-%d-%H:%M:%S`
 olddir=$HOME/.dotfiles_old/$now      # old dotfiles backup directory
-files=("gitconfig" "gitignore" "vimrc" "vim" "zprivate")    # list of files/folders to symlink in homedir
+files=("gitconfig" "gitignore_global" "vimrc" "vim" "zprivate")    # list of files/folders to symlink in homedir
 nodot=("Brewfile") # list of non-dot files to symlink
 
 

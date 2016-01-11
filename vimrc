@@ -196,15 +196,25 @@ autocmd BufRead,BufNewFile *.es6 setfiletype javascript
 " 2.2. General editor settings
 """""""""""""""""""""""""""""""
 
+" Always use PHP/Python-style regex
+nnoremap / /\v
+vnoremap / /\v
+
 " Set smart case-matching for search
 " This means searching for lowercase phrases matches both cases,
 " and searching for uppercase matches only uppercase.
 " Example: /ste will match Stephen, step, and misstep, but
 " /Step will only match Stephen
+set ignorecase
 set smartcase
+
+" Always search globally
+set gdefault
 
 " Automatically jump to and highlight search matches
 set incsearch
+set showmatch
+set hlsearch
 
 " Faster keyboard navigation
 set ttyfast
@@ -246,6 +256,9 @@ nnoremap <C-H> <C-W><C-H>
 " Set mapping to navigate back and forth in a query
 nnoremap cn :cn<cr>
 nnoremap cp :cp<cr>
+
+" Remap : to ; to save having to hit shift
+nnoremap ; :
 
 """""""""""""""""""""""""""""""
 " 2.4. CtrlP Config
@@ -300,6 +313,22 @@ set clipboard=unnamed
 
 " Automatically refresh changed files (if the buffer is unchanged)
 set autoread
+
+" Set motions to navigate displayed lines instead of file lines
+noremap  <buffer> <silent> k gk
+noremap  <buffer> <silent> j gj
+noremap  <buffer> <silent> 0 g0
+noremap  <buffer> <silent> $ g$
+
+" Create an 'undo file' that stores changes even when closing files
+set undofile
+
+" Searching
+" Always use PHP/Python-style regex search
+nnoremap / /\v
+vnoremap / /\v
+
+
 
 """""""""""""""""""""""""""""""
 " 2.7. White space
