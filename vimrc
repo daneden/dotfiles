@@ -214,7 +214,6 @@ set gdefault
 " Automatically jump to and highlight search matches
 set incsearch
 set showmatch
-set hlsearch
 
 " Faster keyboard navigation
 set ttyfast
@@ -322,12 +321,6 @@ noremap  <buffer> <silent> $ g$
 
 " Create an 'undo file' that stores changes even when closing files
 set undofile
-
-" Searching
-" Always use PHP/Python-style regex search
-nnoremap / /\v
-vnoremap / /\v
-
 
 
 """""""""""""""""""""""""""""""
