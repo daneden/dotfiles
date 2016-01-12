@@ -11,9 +11,8 @@ CVS
 ._*
 npm-debug.log
 
-# Ignore vim bundles (easier to manage)
-vim/bundle
-!vim/bundle/Vundle.vim
+# Ignore vim plugins (easier to manage)
+vim/plugged
 
 vim/.netrwhist
 
