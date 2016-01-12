@@ -315,6 +315,7 @@ autocmd VimResized * wincmd =
 
 " Enable system clipboard
 set clipboard=unnamed
+set clipboard+=unnamedplus
 
 " Automatically refresh changed files (if the buffer is unchanged)
 set autoread
