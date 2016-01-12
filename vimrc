@@ -119,6 +119,9 @@ Plug 'ctrlpvim/ctrlp.vim'
 " Ag
 Plug 'rking/ag.vim'
 
+" Smarter default config
+Plug 'tpope/vim-sensible'
+
 " All of your Plugins must be added before the following line
 call plug#end()
 " Put your non-Plugin stuff after this line
@@ -193,9 +196,8 @@ set smartcase
 " Always search globally
 set gdefault
 
-" Automatically jump to and highlight search matches
-set incsearch
-set showmatch
+" Turn off search highlighting (after search is complete)
+set nohlsearch
 
 " Faster keyboard navigation
 set ttyfast
@@ -280,10 +282,6 @@ let g:syntastic_check_on_wq = 0
 """""""""""""""""""""""""""""""
 " 2.6. Conveniences
 """""""""""""""""""""""""""""""
-
-" More natural splitting
-set splitbelow
-set splitright
 
 " Set tab options
 " Expand tabs to spaces
