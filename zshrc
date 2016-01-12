@@ -30,8 +30,8 @@ export LC_CTYPE=en_US.UTF-8
 # (Except in ssh, which is actually pretty handy)
 export DEFAULT_USER=`whoami`
 
-export EDITOR=/usr/local/bin/vim
-export VISUAL=/usr/local/bin/vim
+export EDITOR=/usr/local/bin/nvim
+export VISUAL=/usr/local/bin/nvim
 
 # Base16 Shell
 export BASE16_SHELL="$HOME/.config/base16-shell/base16-google.dark.sh"
@@ -45,6 +45,9 @@ fpath=(/usr/local/share/zsh-completions $fpath)
 # Aliases
 #
 #==============================
+
+# Alias to nvim
+alias vim="nvim"
 
 # Update dotfiles
 alias updot="git --git-dir=$HOME/.dotfiles/.git pull --recurse-submodules && ~/.dotfiles/make.sh"

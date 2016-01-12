@@ -147,16 +147,18 @@ fi
 #==============================
 
 # Install pip and Codemod
-msg "Installing pip and Codemod..."
+msg "Installing pip, Neovim, and Codemod..."
 printf "Admin password may be required.\n"
 
 if [[ `uname` == "Darwin" ]]; then
   sudo easy_install pip
 elif [[ `uname` == "Linux" ]]; then
   sudo apt-get install pip
+  sudo add-apt-repository ppa:neovim-ppa/unstable && sudo apt-get install neovim
 fi
 
 sudo -H pip install git+https://github.com/facebook/codemod.git --upgrade
+sudo pip install neovim
 don
 
 # Check presence of Homebrew, add bundler, then install our desired recipes & update them
@@ -186,8 +188,11 @@ don
 #==============================
 
 # Install Vim plugins
-msg "Installing Vim plugins..."
-vim +PluginClean! +PluginInstall! +qall
+msg "Installing setting up vim/neovim..."
+mkdir -p ${XDG_CONFIG_HOME:=$HOME/.config}
+ln -s ~/.vim $XDG_CONFIG_HOME/nvim
+ln -s ~/.vimrc $XDG_CONFIG_HOME/nvim/init.vim
+nvim +PluginClean! +PluginInstall! +qall
 don
 
 
