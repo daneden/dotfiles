@@ -100,9 +100,6 @@ for file in $nodot; do
 	chflags -h hidden $HOME/$file
 done
 
-# Set up global gitignore
-git config --global core.excludesfile ~/.gitignore_global
-
 don
 
 
