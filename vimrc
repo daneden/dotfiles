@@ -239,12 +239,18 @@ nmap <leader>l :bnext<CR>
 " Move to the previous buffer
 nmap <leader>h :bprevious<CR>
 
+" In order for `,h` mapping to work, we need to disable gitgutter's mapping
+let g:gitgutter_map_keys = 0
+
 " Close the current buffer and move to the previous one
 " This replicates the idea of closing a tab
 nmap <leader>q :bp <BAR> bd #<CR>
 
 " Show all open buffers and their status
 nmap <leader>bl :ls<CR>
+
+" Swap to previously focused tab
+nmap <leader><leader> :b#<CR>
 
 " Remap split navigation
 nnoremap <C-J> <C-W><C-J>
