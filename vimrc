@@ -23,54 +23,47 @@
 set nocompatible              " be iMproved, required
 filetype off                  " required
 
-" set the runtime path to include Vundle and initialize
-set rtp+=~/.vim/bundle/Vundle.vim
-call vundle#begin()
-" alternatively, pass a path where Vundle should install plugins
-"call vundle#begin('~/some/path/here')
-
-" let Vundle manage Vundle, required
-Plugin 'gmarik/Vundle.vim'
+call plug#begin('~/.vim/plugged')
 
 """""""""""""""""""""""""""""""
 " 1.1. Syntax Highlighting
 """""""""""""""""""""""""""""""
 
 " Coffeescript
-Plugin 'kchmck/vim-coffee-script'
-Plugin 'mtscout6/vim-cjsx'
+Plug 'kchmck/vim-coffee-script'
+Plug 'mtscout6/vim-cjsx'
 
 " Typescript
-Plugin 'leafgarland/typescript-vim'
+Plug 'leafgarland/typescript-vim'
 
 " ES6
-Plugin 'othree/yajs.vim'
+Plug 'othree/yajs.vim'
 
 " (S)CSS
-Plugin 'JulesWang/css.vim'
-Plugin 'cakebaker/scss-syntax.vim'
+Plug 'JulesWang/css.vim'
+Plug 'cakebaker/scss-syntax.vim'
 
 " HTML5
-Plugin 'othree/html5.vim'
+Plug 'othree/html5.vim'
 
 " Less
-Plugin 'groenewege/vim-less'
+Plug 'groenewege/vim-less'
 
 " Autocompletions
-Plugin 'Valloric/YouCompleteMe'
+Plug 'Valloric/YouCompleteMe'
 
 """""""""""""""""""""""""""""""
 " 1.2. Git things
 """""""""""""""""""""""""""""""
 
 " Git gutter
-Plugin 'airblade/vim-gitgutter'
+Plug 'airblade/vim-gitgutter'
 
 " Git wrapper
-Plugin 'tpope/vim-fugitive'
+Plug 'tpope/vim-fugitive'
 
 " Git syntax stuff
-Plugin 'tpope/vim-git'
+Plug 'tpope/vim-git'
 
 """""""""""""""""""""""""""""""
 " 1.3. Code helpers
@@ -78,67 +71,56 @@ Plugin 'tpope/vim-git'
 
 " Commenting
 " Use gcc to comment/uncomment lines
-Plugin 'tpope/vim-commentary'
+Plug 'tpope/vim-commentary'
 
 " Surround (insert surrounding quotes etc)
-Plugin 'tpope/vim-surround'
+Plug 'tpope/vim-surround'
 
 " Auto-closing tags etc.
-Plugin 'Raimondi/delimitMate'
+Plug 'Raimondi/delimitMate'
 
 " Tab completions
-Plugin 'ervandew/supertab'
+Plug 'ervandew/supertab'
 
 " Linting!
-Plugin 'scrooloose/syntastic'
+Plug 'scrooloose/syntastic'
 
 " Dash for documentation
-Plugin 'rizzatti/dash.vim'
+Plug 'rizzatti/dash.vim'
 
 " Editor Config
-Plugin 'editorconfig/editorconfig-vim'
+Plug 'editorconfig/editorconfig-vim'
 
 " Autoprefixer
-Plugin 'daneden/vim-autoprefixer'
+Plug 'daneden/vim-autoprefixer'
 
 """""""""""""""""""""""""""""""
 " 1.4. Misc. conveniences
 """""""""""""""""""""""""""""""
 
 " Powerline
-Plugin 'bling/vim-airline'
+Plug 'bling/vim-airline'
 
 " Transparent pasting (cmd-v works as expected)
-Plugin 'ConradIrwin/vim-bracketed-paste'
+Plug 'ConradIrwin/vim-bracketed-paste'
 
 " Base16 themes
-Plugin 'chriskempson/base16-vim'
+Plug 'chriskempson/base16-vim'
 
 " Other themes
-Plugin 'flazz/vim-colorschemes'
+Plug 'flazz/vim-colorschemes'
 
 " Dim inactive panes
-Plugin 'blueyed/vim-diminactive'
+Plug 'blueyed/vim-diminactive'
 
 " Fuzzy file/buffer finder
-Plugin 'ctrlpvim/ctrlp.vim'
+Plug 'ctrlpvim/ctrlp.vim'
 
 " Ag
-Plugin 'rking/ag.vim'
+Plug 'rking/ag.vim'
 
 " All of your Plugins must be added before the following line
-call vundle#end()            " required
-filetype plugin indent on    " required
-" To ignore plugin indent changes, instead use:
-"filetype plugin on
-"
-" Brief help
-" :PluginList       - lists configured plugins
-" :PluginInstall    - installs plugins; append `!` to update or just :PluginUpdate
-" :PluginSearch foo - searches for foo; append `!` to refresh local cache
-" :PluginClean      - confirms removal of unused plugins; append `!` to auto-approve removal
-"
-" see :h vundle for more details or wiki for FAQ
+call plug#end()
 " Put your non-Plugin stuff after this line
 
 " Set up SCSS Lint
@@ -222,6 +204,9 @@ set lazyredraw
 """""""""""""""""""""""""""""""
 " 2.3. Key mapping
 """""""""""""""""""""""""""""""
+
+" Clear search highlighting on <esc>
+nnoremap <esc> :noh<return><esc>
 
 " Toggle folds with space
 nnoremap <space> za
