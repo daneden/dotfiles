@@ -50,7 +50,7 @@ Plug 'othree/html5.vim'
 Plug 'groenewege/vim-less'
 
 " Autocompletions
-Plug 'Valloric/YouCompleteMe'
+Plug 'Shougo/deoplete.nvim'
 
 """""""""""""""""""""""""""""""
 " 1.2. Git things
