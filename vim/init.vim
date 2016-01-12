@@ -1,1 +1,0 @@
-/home/ghost/.vimrc
