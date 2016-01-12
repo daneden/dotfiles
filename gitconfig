@@ -32,7 +32,7 @@
   pop = stash pop stash@{0}
 [core]
   editor = vim -c start
-	excludesfile = /Users/dte/.gitignore_global
+	excludesfile = ~/.gitignore_global
 [mergetool "Kaleidoscope"]
   cmd = ksdiff --merge --output \"$MERGED\" --base \"$BASE\" -- \"$LOCAL\" --snapshot \"$REMOTE\" --snapshot
   trustexitcode = true

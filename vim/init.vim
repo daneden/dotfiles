@@ -1,1 +1,1 @@
-/Users/dte/.vimrc
+/home/ghost/.vimrc
