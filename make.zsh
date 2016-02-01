@@ -43,7 +43,7 @@ don() {
 dir=$HOME/.dotfiles                    # dotfiles directory
 now=`date +%Y-%m-%d-%H:%M:%S`
 olddir=$HOME/.dotfiles_old/$now      # old dotfiles backup directory
-files=("gitconfig" "gitignore_global" "vimrc" "vim" "zprivate")    # list of files/folders to symlink in homedir
+files=("gitconfig" "gitignore_global" "vimrc" "vim" "zprivate" "osx") # list of files/folders to symlink in homedir
 nodot=("Brewfile") # list of non-dot files to symlink
 
 
@@ -221,6 +221,11 @@ if [[ ! `echo $SHELL` == "/bin/zsh" ]]; then
   msg "Switching to zsh..."
   chsh -s /bin/zsh
   don
+fi
+
+if [[ `uname` == "Darwin" ]]; then
+  # Set some better OS X defaults
+  $HOME/.osx
 fi
 
 source $HOME/.zshrc
