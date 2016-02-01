@@ -21,3 +21,4 @@ find.
 | `P`                | Insert clipboard above current line             |
 | `gf`               | Open the file under the current cursor          |
 | `*`                | Search for the current cursor in the buffer     |
+| `c/_`              | Change until the next `_`                       |
