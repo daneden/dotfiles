@@ -154,6 +154,7 @@ elif [[ `uname` == "Linux" ]]; then
   sudo add-apt-repository ppa:neovim-ppa/unstable && sudo apt-get install neovim
 fi
 
+sudo pip install --upgrade pip
 sudo -H pip install git+https://github.com/facebook/codemod.git --upgrade
 sudo pip install neovim
 don
