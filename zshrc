@@ -46,6 +46,9 @@ fpath=(/usr/local/share/zsh-completions $fpath)
 #
 #==============================
 
+# Repeat the last command as sudo
+alias please="sudo $(fc -ln -1)"
+
 # Alias to nvim
 alias vim="nvim"
 
