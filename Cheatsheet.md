@@ -2,6 +2,8 @@
 Just a list of the hard-to-remember but easy-to-love commands and shortcuts that I
 find.
 
+Plenty more useful Vim commands/tips [here](http://zzapper.co.uk/vimtips.html).
+
 | Command            | What is happened                                |
 |--------------------|-------------------------------------------------|
 | `^w then ^w`       | Cycle through open splits                       |
