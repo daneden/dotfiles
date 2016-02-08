@@ -57,7 +57,7 @@ zstyle ':prezto:module:editor' dot-expansion 'yes'
 zstyle ':prezto:module:git:status:ignore' submodules 'all'
 
 # Speed up Git/ZSH by checking for simple "dirty" status
-zstyle ':prezto:module:git:info' status 'simple'
+zstyle ':prezto:module:git:info' verbose 'no'
 
 #==============================
 #
