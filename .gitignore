@@ -10,6 +10,7 @@ CVS
 .DS_Store
 ._*
 npm-debug.log
+*.un~
 
 # Ignore vim plugins (easier to manage)
 vim/plugged
@@ -21,3 +22,15 @@ zprivate
 
 # This symlink changes per-machine
 init.vim
+
+# Atom Packages
+atom.symlink/.apm
+atom.symlink/.node-gyp
+atom.symlink/.storage
+atom.symlink/blob-store
+atom.symlink/compile-cache/
+atom.symlink/packages
+atom.symlink/storage
+atom.symlink/themes
+
+git/gitconfig.symlink

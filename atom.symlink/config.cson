@@ -1,0 +1,13 @@
+"*":
+  core: {}
+  editor:
+    fontFamily: "Input Mono"
+    invisibles: {}
+  "exception-reporting":
+    userId: "10c514b9-821b-4f4d-44e1-347f5b85bf97"
+  "linter-scss-lint":
+    disableWhenNoConfigFileInPath: true
+    executablePath: "/Users/dte/.rbenv/shims/scss-lint"
+  "one-dark-ui": {}
+  welcome:
+    showOnStartup: false

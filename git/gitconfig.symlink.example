@@ -1,13 +1,15 @@
+# Sample gitconfig
+#
+
 [user]
-  name = Daniel Eden
-  email = dan.eden@me.com
+  name = AUTHORNAME
+  email = AUTHOREMAIL
 [push]
-  default = current
+  default = simple
 [color]
   ui = 1
 [alias]
   s = status -sb
-  status = status -sb
   a = add -A .
   co = checkout
   cm = commit
@@ -31,7 +33,6 @@
   # Pop the latest stash. This is usually the only thing I do with git stash anyway.
   pop = stash pop stash@{0}
 [core]
-  editor = vim -c start
 	excludesfile = ~/.gitignore_global
 [mergetool "Kaleidoscope"]
   cmd = ksdiff --merge --output \"$MERGED\" --base \"$BASE\" -- \"$LOCAL\" --snapshot \"$REMOTE\" --snapshot
@@ -44,16 +45,15 @@
   prompt = false
 [mergetool]
   prompt = false
+  keepBackup = false
 [diff]
   tool = Kaleidoscope
 [credential]
-  helper = osxkeychain
-[filter "media"]
-  required = true
-  clean = git media clean %f
-  smudge = git media smudge %f
+  helper = GIT_CREDENTIAL_HELPER
 [github]
   user = daneden
+[hub]
+  protocol = ssh
 [grep]
   lineNumber = true
 [filter "lfs"]
