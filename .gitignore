@@ -18,7 +18,7 @@ vim/plugged
 vim/.netrwhist
 
 # Ignore private config
-zprivate
+zprivate.symlink
 
 # This symlink changes per-machine
 init.vim
