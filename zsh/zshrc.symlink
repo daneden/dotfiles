@@ -16,7 +16,6 @@ if [[ -s "${ZDOTDIR:-$HOME}/.zprezto/init.zsh" ]]; then
   source "${ZDOTDIR:-$HOME}/.zprezto/init.zsh"
 fi
 
-
 #==============================
 #
 # General
@@ -30,8 +29,8 @@ export LC_CTYPE=en_US.UTF-8
 # (Except in ssh, which is actually pretty handy)
 export DEFAULT_USER=`whoami`
 
-export EDITOR=/usr/local/bin/nvim
-export VISUAL=/usr/local/bin/nvim
+export EDITOR='atom'
+export VISUAL='atom'
 
 # Base16 Shell
 export BASE16_SHELL="$HOME/.config/base16-shell/base16-google.dark.sh"
