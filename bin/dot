@@ -5,32 +5,37 @@
 # `dot` handles installation, updates, things like that. Run it periodically
 # to make sure you're on the latest and greatest.
 
-set -x
-
 export ZSH=$HOME/.dotfiles
 
-# Set OS X defaults
-$ZSH/osx/set-defaults.sh
+# If we're on a Mac, do some Homebrew stuff
+if [ "$(uname)" == "Darwin" ]; then
+  # Set OS X defaults
+  $ZSH/osx/set-defaults.sh
 
-# Install homebrew
-$ZSH/homebrew/install.sh 2>&1
+  # Install homebrew
+  $ZSH/homebrew/install.sh 2>&1
 
-# Install Brew packages
-cd "$(dirname $0)"/..
-echo "> brew bundle"
-brew bundle
+  # Install Brew packages
+  cd "$(dirname $0)"/..
+  echo "> brew bundle"
+  brew bundle
 
-# Upgrade homebrew
-echo "› brew update"
-brew update
+  # Upgrade homebrew
+  echo "› brew update"
+  brew update
 
-echo "> brew upgrade"
-brew upgrade
+  echo "> brew upgrade"
+  brew upgrade
 
-# Do some housekeeping
-echo "> brew cleanup"
-brew cleanup
+  # Do some housekeeping
+  echo "> brew cleanup"
+  brew cleanup
+fi
 
 # Install software
 echo "› $ZSH/script/install"
 $ZSH/script/install
+
+# Install vim plugins
+# Sadly, this can't be done in an install.sh because vim expects a terminal input
+vim +PlugClean! +PlugInstall! +qall

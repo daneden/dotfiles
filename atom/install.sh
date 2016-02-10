@@ -1,6 +1,8 @@
-#!/usr/bin/env bash
+#!/bin/sh
 
 if [[ `uname` == "Darwin" ]]; then
   echo 'installing atom plugins'
-  apm stars --install
+  apm stars --install || echo 'atom plugin installation failed'
 fi
+
+exit 0

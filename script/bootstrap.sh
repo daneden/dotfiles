@@ -5,8 +5,6 @@
 cd "$(dirname "$0")/.."
 DOTFILES_ROOT=$(pwd -P)
 
-set -e
-
 echo ''
 
 info () {
@@ -140,16 +138,14 @@ install_dotfiles () {
 setup_gitconfig
 install_dotfiles
 
-# If we're on a Mac, let's install and setup homebrew.
-if [ "$(uname -s)" == "Darwin" ]
+info "installing dependencies (this will take a while)"
+if ./bin/dot > /tmp/dotfiles-dot 2>&1
 then
-  info "installing dependencies"
-  if source bin/dot > /tmp/dotfiles-dot 2>&1
-  then
-    success "dependencies installed"
-  else
-    fail "error installing dependencies"
-  fi
+  success "dependencies installed"
+else
+  ret_code=$?
+  fail $ret_code
+  fail "error installing dependencies"
 fi
 
 echo ''
