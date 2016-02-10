@@ -4,6 +4,9 @@
 #
 # `dot` handles installation, updates, things like that. Run it periodically
 # to make sure you're on the latest and greatest.
+
+set -x
+
 export ZSH=$HOME/.dotfiles
 
 # Set OS X defaults
@@ -11,6 +14,11 @@ $ZSH/osx/set-defaults.sh
 
 # Install homebrew
 $ZSH/homebrew/install.sh 2>&1
+
+# Install Brew packages
+cd "$(dirname $0)"/..
+echo "> brew bundle"
+brew bundle
 
 # Upgrade homebrew
 echo "› brew update"
