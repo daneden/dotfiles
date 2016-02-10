@@ -104,11 +104,8 @@ Plug 'bling/vim-airline'
 " Transparent pasting (cmd-v works as expected)
 Plug 'ConradIrwin/vim-bracketed-paste'
 
-" Base16 themes
-Plug 'chriskempson/base16-vim'
-
-" Other themes
-Plug 'flazz/vim-colorschemes'
+" Color theme
+Plug 'mhartington/oceanic-next'
 
 " Dim inactive panes
 Plug 'blueyed/vim-diminactive'
@@ -153,13 +150,14 @@ augroup CLNRSet
     autocmd! ColorScheme * hi CursorLineNR cterm=bold
 augroup END
 
-" Color scheme
-let base16colorspace=256
+" Theme
+syntax enable
+let $NVIM_TUI_ENABLE_TRUE_COLOR=1
+colorscheme OceanicNext
 set background=dark
-colorscheme base16-google
-hi clear SignColumn
 
 let g:airline_powerline_fonts=1
+let g:airline_theme='oceanicnext'
 
 " Enable the list of buffers
 let g:airline#extensions#tabline#enabled = 1

@@ -13,9 +13,9 @@ npm-debug.log
 *.un~
 
 # Ignore vim plugins (easier to manage)
-vim/plugged
+vim/**/plugged
 
-vim/.netrwhist
+vim/**/.netrwhist
 
 # Ignore private config
 zprivate.symlink

@@ -1,5 +1,12 @@
 "*":
-  core: {}
+  core:
+    disabledPackages: [
+      "vim-mode"
+    ]
+    themes: [
+      "one-dark-ui"
+      "oceanic-next"
+    ]
   editor:
     fontFamily: "Input Mono"
     invisibles: {}
