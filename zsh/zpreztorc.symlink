@@ -28,10 +28,11 @@ zstyle ':prezto:load' pmodule \
   'spectrum' \
   'utility' \
   'completion' \
+  'fasd' \
+  'git' \
   'ssh' \
   'syntax-highlighting' \
   'history-substring-search' \
-  'fasd' \
   'prompt'
 
 #==============================
