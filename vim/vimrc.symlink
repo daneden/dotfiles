@@ -207,7 +207,7 @@ set lazyredraw
 """""""""""""""""""""""""""""""
 
 " Clear search highlighting on <esc>
-nnoremap <esc> :noh<return><esc>
+nnoremap <silent> <esc> :noh<CR><esc>
 
 " Toggle folds with space
 nnoremap <space> za
