@@ -38,4 +38,7 @@ $ZSH/script/install
 
 # Install vim plugins
 # Sadly, this can't be done in an install.sh because vim expects a terminal input
+ln -s ~/.vim ~/.config/nvim
+ln -s ~/.vimrc ~/.config/nvim/init.vim
 vim +PlugClean! +PlugInstall! +qall
+
