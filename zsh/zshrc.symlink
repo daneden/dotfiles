@@ -45,6 +45,9 @@ fpath=(/usr/local/share/zsh-completions $fpath)
 #
 #==============================
 
+# Restore normal (impolite) rm functionality
+unalias rm
+
 # Alias to nvim
 alias vim="nvim"
 

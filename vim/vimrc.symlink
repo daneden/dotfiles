@@ -107,6 +107,9 @@ Plug 'ConradIrwin/vim-bracketed-paste'
 " Color theme
 Plug 'mhartington/oceanic-next'
 
+" Show whitespace
+Plug 'Yggdroot/indentLine'
+
 " Dim inactive panes
 Plug 'blueyed/vim-diminactive'
 
