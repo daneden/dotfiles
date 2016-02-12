@@ -13,9 +13,8 @@
 "     2.2. General editor settings
 "     2.3. Key mapping
 "     2.4. CtrlP Config
-"     2.5. Syntastic Config
-"     2.6. Conveniences
-"     2.7. White space
+"     2.5. Conveniences
+"     2.6. White space
 "   3. Thoughtbot Config
 "
 """""""""""""""""""""""""""""""
@@ -82,9 +81,6 @@ Plug 'Raimondi/delimitMate'
 " Tab completions
 Plug 'ervandew/supertab'
 
-" Linting!
-Plug 'scrooloose/syntastic'
-
 " Dash for documentation
 Plug 'rizzatti/dash.vim'
 
@@ -125,10 +121,6 @@ Plug 'tpope/vim-sensible'
 " All of your Plugins must be added before the following line
 call plug#end()
 " Put your non-Plugin stuff after this line
-
-" Set up SCSS Lint
-let g:syntastic_scss_checkers = ['scss_lint']
-
 
 "==============================
 " MARK: 2. Configuration
@@ -205,6 +197,9 @@ set nohlsearch
 set ttyfast
 set lazyredraw
 
+" Syntax coloring lines that are too long just slows down the world
+set synmaxcol=128
+
 """""""""""""""""""""""""""""""
 " 2.3. Key mapping
 """""""""""""""""""""""""""""""
@@ -271,18 +266,7 @@ let g:ctrlp_custom_ignore = {
   \ }
 
 """""""""""""""""""""""""""""""
-" 2.5. Syntastic Config
-"""""""""""""""""""""""""""""""
-
-set statusline+=%#warningmsg#
-set statusline+=%{SyntasticStatuslineFlag()}
-set statusline+=%*
-
-let g:syntastic_check_on_open = 1
-let g:syntastic_check_on_wq = 0
-
-"""""""""""""""""""""""""""""""
-" 2.6. Conveniences
+" 2.5. Conveniences
 """""""""""""""""""""""""""""""
 
 " Set tab options
@@ -316,7 +300,7 @@ set undofile
 
 
 """""""""""""""""""""""""""""""
-" 2.7. White space
+" 2.6. White space
 """""""""""""""""""""""""""""""
 
 " Removes trailing spaces
