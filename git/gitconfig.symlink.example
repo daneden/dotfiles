@@ -34,7 +34,7 @@
   pop = stash pop stash@{0}
 [core]
 	excludesfile = ~/.gitignore_global
-  editor = vim -c start
+  editor = nvim -c start
 [mergetool "Kaleidoscope"]
   cmd = ksdiff --merge --output \"$MERGED\" --base \"$BASE\" -- \"$LOCAL\" --snapshot \"$REMOTE\" --snapshot
   trustexitcode = true
