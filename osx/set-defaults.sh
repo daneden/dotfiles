@@ -90,3 +90,9 @@ defaults write com.apple.mail NSUserKeyEquivalents -dict-add "Send" -string "@\\
 # Don’t display the annoying prompt when quitting iTerm
 defaults write com.googlecode.iterm2 PromptOnQuit -bool false
 
+# Tell Sketch to export compact SVGs
+defaults write com.bohemiancoding.sketch3 svgExportCompact -bool yes
+defaults write ~/Library/Preferences/com.bohemiancoding.sketch3.plist svgExportCompact -bool yes
+
+defaults write com.bohemiancoding.sketch3 svgExportSkipAssignIdToLayerName -bool yes
+defaults write ~/Library/Preferences/com.bohemiancoding.sketch3.plist svgExportSkipAssignIdToLayerName -bool yes
