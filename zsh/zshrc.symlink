@@ -122,7 +122,13 @@ if [[ -s "$HOME/.dotfiles/zsh/xterm-256color-italic.terminfo" ]]; then
 fi
 
 # Add private aliases and functions
-source $HOME/.zprivate
+if [[ -s "${ZDOTDIR:-$HOME}/.zprivate" ]]; then
+  source "${ZDOTDIR:-$HOME}/.zprivate"
+fi
+
+if [[ -s "${ZDOTDIR:-$HOME}/.envvars" ]]; then
+  source "${ZDOTDIR:-$HOME}/.envvars"
+fi
 
 # Activate virtual environment if one exists
 if [[ -s "$HOME/.virt_env/bin/activate" ]]; then

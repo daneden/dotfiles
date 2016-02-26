@@ -1,0 +1,2 @@
+export GITHUB_SECRET="WqZoAbGJtUNyGefXWqHF3xdcB7>yw#dc"
+export JEKYLL_ENV=production
