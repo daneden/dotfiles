@@ -200,6 +200,15 @@ set lazyredraw
 " Syntax coloring lines that are too long just slows down the world
 set synmaxcol=128
 
+" Set italic escape codes
+let &t_ZH="\e[3m"
+let &t_ZR="\e[23m"
+
+" Make comments italicized
+" This has to appear after all other appearance settings
+highlight Comment cterm=italic
+highlight Comment gui=italic
+
 """""""""""""""""""""""""""""""
 " 2.3. Key mapping
 """""""""""""""""""""""""""""""
@@ -370,13 +379,3 @@ set showcmd       " display incomplete commands
 set incsearch     " do incremental searching
 set laststatus=2  " Always display the status line
 set autowrite     " Automatically :write before running commands
-
-"==============================
-" MARK: End of Thoughbot config
-"==============================
-
-" Make comments italicized
-" This has to appear after all other appearance settings
-highlight Comment cterm=italic
-
-
