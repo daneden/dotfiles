@@ -29,8 +29,8 @@ export LC_CTYPE=en_US.UTF-8
 # (Except in ssh, which is actually pretty handy)
 export DEFAULT_USER=`whoami`
 
-export EDITOR='vim'
-export VISUAL='vim'
+export EDITOR='nvim'
+export VISUAL=$EDITOR
 
 # Base16 Shell
 export BASE16_SHELL="$HOME/.config/base16-shell/base16-google.dark.sh"
@@ -115,6 +115,11 @@ setopt complete_aliases
 # Wrap it up
 #
 #==============================
+
+# Let our terminal know about italic fonts
+if [[ -s "$HOME/.dotfiles/zsh/xterm-256color-italic.terminfo" ]]; then
+  tic "$HOME/.dotfiles/zsh/xterm-256color-italic.terminfo"
+fi
 
 # Add private aliases and functions
 if [[ -s "${ZDOTDIR:-$HOME}/.zprivate" ]]; then
