@@ -370,3 +370,13 @@ set showcmd       " display incomplete commands
 set incsearch     " do incremental searching
 set laststatus=2  " Always display the status line
 set autowrite     " Automatically :write before running commands
+
+"==============================
+" MARK: End of Thoughbot config
+"==============================
+
+" Make comments italicized
+" This has to appear after all other appearance settings
+highlight Comment cterm=italic
+
+

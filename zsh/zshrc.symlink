@@ -116,6 +116,11 @@ setopt complete_aliases
 #
 #==============================
 
+# Let our terminal know about italic fonts
+if [[ -s "$HOME/.dotfiles/zsh/xterm-256color-italic.terminfo" ]]; then
+  tic "$HOME/.dotfiles/zsh/xterm-256color-italic.terminfo"
+fi
+
 # Add private aliases and functions
 source $HOME/.zprivate
 
