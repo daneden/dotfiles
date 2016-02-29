@@ -31,9 +31,9 @@ zstyle ':prezto:load' pmodule \
   'fasd' \
   'git' \
   'ssh' \
+  'prompt' \
   'syntax-highlighting' \
-  'history-substring-search' \
-  'prompt'
+  'history-substring-search'
 
 #==============================
 #
@@ -95,7 +95,7 @@ zstyle ':prezto:module:history-substring-search' globbing-flags ''
 # Set the prompt theme to load.
 # Setting it to 'random' loads a random theme.
 # Auto set to 'off' on dumb terminals.
-zstyle ':prezto:module:prompt' theme 'agnoster'
+zstyle ':prezto:module:prompt' theme 'pure'
 
 
 #==============================
