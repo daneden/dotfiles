@@ -116,8 +116,19 @@ setopt complete_aliases
 #
 #==============================
 
+# Let our terminal know about italic fonts
+if [[ -s "$HOME/.dotfiles/zsh/xterm-256color-italic.terminfo" ]]; then
+  tic "$HOME/.dotfiles/zsh/xterm-256color-italic.terminfo"
+fi
+
 # Add private aliases and functions
-source $HOME/.zprivate
+if [[ -s "${ZDOTDIR:-$HOME}/.zprivate" ]]; then
+  source "${ZDOTDIR:-$HOME}/.zprivate"
+fi
+
+if [[ -s "${ZDOTDIR:-$HOME}/.envvars" ]]; then
+  source "${ZDOTDIR:-$HOME}/.envvars"
+fi
 
 # Activate virtual environment if one exists
 if [[ -s "$HOME/.virt_env/bin/activate" ]]; then
@@ -127,3 +138,13 @@ fi
 export PATH="$HOME/.rbenv/bin:$PATH"
 export PATH="$HOME/.bin:$PATH"
 eval "$(rbenv init -)"
+
+# Set up themes
+autoload -U promptinit && promptinit
+prompt pure
+
+# Set a custom delay for git dirty status check (defaults to 1800 seconds)
+PURE_GIT_DELAY_DIRTY_CHECK=5
+
+# Set a custom prompt symbol
+PURE_PROMPT_SYMBOL="❯"
