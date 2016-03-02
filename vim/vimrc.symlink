@@ -204,6 +204,9 @@ set synmaxcol=128
 let &t_ZH="\e[3m"
 let &t_ZR="\e[23m"
 
+" Hide netrw help banner
+let g:netrw_banner=0
+
 " Make comments italicized
 " This has to appear after all other appearance settings
 highlight Comment cterm=italic
