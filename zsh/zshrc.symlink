@@ -101,7 +101,7 @@ alias grb='git fetch origin && git rebase origin/master'
 alias gmt='git mergetool'
 alias gs='git status -sb'
 alias gl='git lg'
-
+alias s='git status -sb'
 # Goodies
 alias hi='echo "(●°u°●) 」"'
 alias gifo='_g(){gifsicle -O3 --lossy=80 --scale=0.6 $1 -o tmpgifo.gif; rm $1; mv tmpgifo.gif $1; }; _g'
