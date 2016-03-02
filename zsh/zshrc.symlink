@@ -61,9 +61,6 @@ alias mkc="__mkc"
 # Alias to nvim
 alias vim="nvim"
 
-# Update dotfiles
-alias updot="git --git-dir=$HOME/.dotfiles/.git pull --recurse-submodules && ~/.dotfiles/make.sh"
-
 # Fixing autocorrect where appropriate
 alias grunt="nocorrect grunt"
 
