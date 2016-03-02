@@ -24,3 +24,7 @@ Plenty more useful Vim commands/tips [here](http://zzapper.co.uk/vimtips.html).
 | `gf`               | Open the file under the current cursor          |
 | `*`                | Search for the current cursor in the buffer     |
 | `c/_`              | Change until the next `_`                       |
+| `^E`               | Scroll window down                              |
+| `^Y`               | Scroll window up                                |
+| `^F`               | Page down                                       |
+| `^B`               | Page up                                         |
