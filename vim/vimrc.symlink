@@ -118,6 +118,9 @@ Plug 'rking/ag.vim'
 " Smarter default config
 Plug 'tpope/vim-sensible'
 
+" Multiple cursors
+Plug 'terryma/vim-multiple-cursors'
+
 " All of your Plugins must be added before the following line
 call plug#end()
 " Put your non-Plugin stuff after this line
@@ -198,7 +201,7 @@ set ttyfast
 set lazyredraw
 
 " Syntax coloring lines that are too long just slows down the world
-set synmaxcol=128
+set synmaxcol=200
 
 " Set italic escape codes
 let &t_ZH="\e[3m"
