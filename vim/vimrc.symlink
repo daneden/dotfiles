@@ -37,6 +37,7 @@ Plug 'leafgarland/typescript-vim'
 
 " ES6
 Plug 'othree/yajs.vim'
+Plug 'mxw/vim-jsx'
 
 " (S)CSS
 Plug 'JulesWang/css.vim'
