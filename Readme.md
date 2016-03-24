@@ -22,5 +22,5 @@ Unless you're me. Hi, Dan! New computer? Nice!
 
 1. In your home folder (just type `cd` in terminal to get there, silly), run
    `git clone --recursive git@github.com:daneden/dotfiles .dotfiles`
-2. Navigate to the cloned directory and run `./make.sh`
+2. Navigate to the cloned directory and run `./setup.sh`
 3. Party.

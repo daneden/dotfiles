@@ -37,6 +37,7 @@ Plug 'leafgarland/typescript-vim'
 
 " ES6
 Plug 'othree/yajs.vim'
+Plug 'mxw/vim-jsx'
 
 " (S)CSS
 Plug 'JulesWang/css.vim'
@@ -118,6 +119,9 @@ Plug 'rking/ag.vim'
 " Smarter default config
 Plug 'tpope/vim-sensible'
 
+" Multiple cursors
+Plug 'terryma/vim-multiple-cursors'
+
 " All of your Plugins must be added before the following line
 call plug#end()
 " Put your non-Plugin stuff after this line
@@ -198,7 +202,7 @@ set ttyfast
 set lazyredraw
 
 " Syntax coloring lines that are too long just slows down the world
-set synmaxcol=128
+set synmaxcol=200
 
 " Set italic escape codes
 let &t_ZH="\e[3m"
@@ -260,6 +264,9 @@ nnoremap cp :cp<cr>
 
 " Remap : to ; to save having to hit shift
 nnoremap ; :
+
+" Remap '"' to '*' to make searching for the word under the cursor easier
+noremap  " *
 
 """""""""""""""""""""""""""""""
 " 2.4. CtrlP Config
