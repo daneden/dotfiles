@@ -314,6 +314,8 @@ noremap  <buffer> <silent> $ g$
 " Create an 'undo file' that stores changes even when closing files
 set undofile
 
+" Remap '"' to '*' to make searching for the word under the cursor easier
+noremap  " *
 
 """""""""""""""""""""""""""""""
 " 2.6. White space
