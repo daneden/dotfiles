@@ -313,6 +313,9 @@ noremap  <buffer> <silent> $ g$
 " Create an 'undo file' that stores changes even when closing files
 set undofile
 
+" Allow clipboard access
+set clipboard=unnamed
+
 " Use deoplete.
 let g:deoplete#enable_at_startup = 1
 
