@@ -310,6 +310,8 @@ noremap  <buffer> <silent> $ g$
 " Create an 'undo file' that stores changes even when closing files
 set undofile
 
+" Use deoplete.
+let g:deoplete#enable_at_startup = 1
 
 """""""""""""""""""""""""""""""
 " 2.6. White space
