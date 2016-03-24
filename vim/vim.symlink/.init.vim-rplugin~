@@ -1,0 +1,9 @@
+" python3 plugins
+call remote#host#RegisterPlugin('python3', '/Users/dte/.vim/plugged/deoplete.nvim/rplugin/python3/deoplete.py', [
+      \ {'sync': 1, 'name': 'DeopleteInitializePython', 'type': 'command', 'opts': {}},
+     \ ])
+
+
+" python plugins
+
+

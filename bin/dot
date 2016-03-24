@@ -30,6 +30,10 @@ if [ "$(uname)" == "Darwin" ]; then
   # Do some housekeeping
   echo "> brew cleanup"
   brew cleanup
+
+  # Ensure python neovim is installed
+  echo "> sudo pip3 install neovim"
+  sudo pip3 install neovim
 fi
 
 # Install software
