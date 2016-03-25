@@ -145,3 +145,5 @@ PURE_GIT_DELAY_DIRTY_CHECK=5
 
 # Set a custom prompt symbol
 PURE_PROMPT_SYMBOL="❯"
+
+[[ -s /usr/local/rvm/scripts/rvm ]] && source /usr/local/rvm/scripts/rvm
