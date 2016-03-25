@@ -12,6 +12,7 @@ These dotfiles give you a bunch of things. Here's a few of them:
 - A bunch of Homebrew
   [packages](https://github.com/daneden/dotfiles/blob/master/Brewfile)
 - A bunch of Vim plugins and Vim configuration
+- Neovim as a Vim replacement
 - A zsh configuration with useful aliases
 
 That's about it. Everything in here is (obviously) catered to my own needs, so
