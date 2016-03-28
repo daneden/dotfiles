@@ -258,6 +258,13 @@ nnoremap <C-K> <C-W><C-K>
 nnoremap <C-L> <C-W><C-L>
 nnoremap <C-H> <C-W><C-H>
 
+" Split to the right and below
+set splitright
+set splitbelow
+
+" Make all splits equal in size
+nmap <leader>= <C-W>=
+
 " Set mapping to navigate back and forth in a query
 nnoremap cn :cn<cr>
 nnoremap cp :cp<cr>
