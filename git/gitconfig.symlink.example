@@ -35,20 +35,6 @@
 [core]
 	excludesfile = ~/.gitignore_global
   editor = nvim -c start
-[mergetool "Kaleidoscope"]
-  cmd = ksdiff --merge --output \"$MERGED\" --base \"$BASE\" -- \"$LOCAL\" --snapshot \"$REMOTE\" --snapshot
-  trustexitcode = true
-[merge]
-  tool = Kaleidoscope
-[difftool "Kaleidoscope"]
-  cmd = ksdiff --partial-changeset --relative-path \"$MERGED\" -- \"$LOCAL\" \"$REMOTE\"
-[difftool]
-  prompt = false
-[mergetool]
-  prompt = false
-  keepBackup = false
-[diff]
-  tool = Kaleidoscope
 [credential]
   helper = GIT_CREDENTIAL_HELPER
 [github]
@@ -63,3 +49,16 @@
 	required = true
 [gc]
 	auto = 0
+[difftool "Kaleidoscope"]
+	cmd = ksdiff --partial-changeset --relative-path \"$MERGED\" -- \"$LOCAL\" \"$REMOTE\"
+  trustexitcode = true
+[difftool]
+	prompt = false
+[diff]
+	tool = Kaleidoscope
+[mergetool "Kaleidoscope"]
+  cmd = ksdiff --merge --output \"$MERGED\" --base \"$BASE\" -- \"$LOCAL\" \"$REMOTE\"
+[mergetool]
+  prompt = false
+[merge]
+  tool = Kaleidoscope

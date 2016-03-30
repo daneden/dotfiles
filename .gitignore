@@ -10,7 +10,7 @@ CVS
 .DS_Store
 ._*
 npm-debug.log
-*.un~
+*~
 
 # Ignore vim plugins (easier to manage)
 vim/**/plugged
