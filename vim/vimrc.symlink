@@ -19,7 +19,6 @@
 "
 """""""""""""""""""""""""""""""
 
-set nocompatible              " be iMproved, required
 filetype off                  " required
 
 call plug#begin('~/.vim/plugged')
@@ -152,7 +151,6 @@ augroup END
 " Theme
 syntax enable
 let $NVIM_TUI_ENABLE_TRUE_COLOR=1
-set t_Co=256
 colorscheme OceanicNext
 set background=dark
 
@@ -174,6 +172,10 @@ autocmd VimEnter * DimInactive
 
 " Set custom syntaxes
 autocmd BufRead,BufNewFile *.es6 setfiletype javascript
+
+" Don't hide quotes in JSON files
+let g:indentLine_concealcursor = ''
+let g:indentLine_conceallevel = 1
 
 """""""""""""""""""""""""""""""
 " 2.2. General editor settings
@@ -198,7 +200,6 @@ set gdefault
 set nohlsearch
 
 " Faster keyboard navigation
-set ttyfast
 set lazyredraw
 
 " Syntax coloring lines that are too long just slows down the world
