@@ -6,6 +6,7 @@ tap 'homebrew/bundle'
 
 brew 'ag'
 brew 'autoconf'
+brew 'autoenv'
 brew 'autojump'
 brew 'automake'
 brew 'caskroom/cask/brew-cask'

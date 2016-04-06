@@ -1,19 +1,41 @@
 #==============================
 #
-# Initialise Prezto
+# Load modules and plugins via zgen
 #
 #==============================
 
-#
-# Executes commands at the start of an interactive session.
-#
-# Authors:
-#   Sorin Ionescu <sorin.ionescu@gmail.com>
-#
+if [[ -s "${HOME}/.zgen/zgen.zsh" ]]; then
+  source "${HOME}/.zgen/zgen.zsh"
+else
+  git clone https://github.com/tarjoilija/zgen.git .zgen
+  source "${HOME}/.zgen/zgen.zsh"
+fi
 
-# Source Prezto.
-if [[ -s "${ZDOTDIR:-$HOME}/.zprezto/init.zsh" ]]; then
-  source "${ZDOTDIR:-$HOME}/.zprezto/init.zsh"
+# if the init scipt doesn't exist
+if ! zgen saved; then
+  zgen prezto
+
+  zgen pmodule \
+    'environment' \
+    'terminal' \
+    'editor' \
+    'history' \
+    'directory' \
+    'spectrum' \
+    'utility' \
+    'completion' \
+    'fasd' \
+    'git' \
+    'ssh' \
+    'prompt' \
+    'syntax-highlighting' \
+    'history-substring-search'
+
+  # specify plugins here
+  zgen load Tarrasch/zsh-autoenv
+
+  # generate the init script from plugins above
+  zgen save
 fi
 
 #==============================
@@ -38,6 +60,10 @@ export BASE16_SHELL="$HOME/.config/base16-shell/base16-google.dark.sh"
 
 # Load completions
 fpath=(/usr/local/share/zsh-completions $fpath)
+
+# zsh-autoenv options
+export AUTOENV_FILE_ENTER=.env
+export AUTOENV_FILE_LEAVE=.out
 
 #==============================
 #
@@ -131,10 +157,6 @@ fi
 if [[ -s "$HOME/.virt_env/bin/activate" ]]; then
   source "$HOME/.virt_env/bin/activate"
 fi
-
-export PATH="$HOME/.rbenv/bin:$PATH"
-export PATH="$HOME/.bin:$PATH"
-eval "$(rbenv init -)"
 
 # Set up themes
 autoload -U promptinit && promptinit
