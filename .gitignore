@@ -12,9 +12,10 @@ CVS
 npm-debug.log
 *~
 
-# Ignore vim plugins (easier to manage)
+# Ignore vim plugins
+# We manage vim plugins using Plugged for Vim, which is set up by the installation scripts
 vim/**/plugged
-
+vim/**/plug.vim
 vim/**/.netrwhist
 
 # Ignore private config
