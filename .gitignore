@@ -19,18 +19,10 @@ vim/**/.netrwhist
 
 # Ignore private config
 zprivate.symlink
+envvars.symlink
 
 # This symlink changes per-machine
 init.vim
 
-# Atom Packages
-atom/atom.symlink/.apm
-atom/atom.symlink/.node-gyp
-atom/atom.symlink/.storage
-atom/atom.symlink/blob-store
-atom/atom.symlink/compile-cache/
-atom/atom.symlink/packages
-atom/atom.symlink/storage
-atom/atom.symlink/themes
-
+# Ignore git config in case it has per-machine settings
 git/gitconfig.symlink
