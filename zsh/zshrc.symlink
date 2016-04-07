@@ -7,7 +7,7 @@
 if [[ -s "${HOME}/.zgen/zgen.zsh" ]]; then
   source "${HOME}/.zgen/zgen.zsh"
 else
-  git clone https://github.com/tarjoilija/zgen.git .zgen
+  git clone https://github.com/tarjoilija/zgen.git ~/.zgen
   source "${HOME}/.zgen/zgen.zsh"
 fi
 
