@@ -1,4 +1,4 @@
-#!bin/sh
+#!/bin/sh
 # Install Plugged for vim
 
 curl -fLo ~/.vim/autoload/plug.vim --create-dirs \
