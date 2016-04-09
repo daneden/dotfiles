@@ -15,8 +15,7 @@ fi
 if ! zgen saved; then
   zgen prezto
 
-  zgen pmodule \
-    'environment' \
+  zgen prezto \
     'terminal' \
     'editor' \
     'history' \
