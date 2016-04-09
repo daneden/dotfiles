@@ -2,6 +2,22 @@
 #
 # bootstrap installs things.
 
+while [[ $# > 1 ]]
+do
+key="$1"
+
+case $key in
+    -u|--user)
+    USER="$2"
+    shift # past argument
+    ;;
+    *)
+            # unknown option
+    ;;
+esac
+shift # past argument or value
+done
+
 cd "$(dirname "$0")/.."
 DOTFILES_ROOT=$(pwd -P)
 
@@ -150,3 +166,6 @@ fi
 
 echo ''
 echo '  All installed!'
+echo '  Switching to zsh...'
+
+chsh -s $(which zsh) $USER
