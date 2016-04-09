@@ -4,4 +4,6 @@
 # yeah, let's do that.
 
 echo "› sudo softwareupdate -i -a"
-sudo softwareupdate -i -a
+sudo -p "\
+  Updating OS X and Mac App Store apps may require a password. \
+  Enter password: " softwareupdate -i -a

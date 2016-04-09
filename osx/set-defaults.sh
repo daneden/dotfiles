@@ -1,7 +1,9 @@
 #!/usr/bin/env bash
 
 # Ask for the administrator password upfront
-sudo -v
+sudo -v -p "\
+  Setting OS X defaults may require a password. \
+  Enter password: "
 
 # Keep-alive: update existing `sudo` time stamp until `.osx` has finished
 while true; do sudo -n true; sleep 60; kill -0 "$$" || exit; done 2>/dev/null &

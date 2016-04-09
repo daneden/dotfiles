@@ -6,7 +6,9 @@
 # to make sure you're on the latest and greatest.
 
 # Ask for the administrator password upfront
-sudo -v
+sudo -v -p "\
+  Installing and updating software may require a password.\
+  Enter your password: "
 
 export ZSH=$HOME/.dotfiles
 
