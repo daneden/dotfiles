@@ -12,7 +12,7 @@
   s = status -sb
   a = add -A .
   co = checkout
-  cm = commit
+  cm = commit -S
   p = push
   cloen = clone
 
