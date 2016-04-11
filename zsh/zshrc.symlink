@@ -15,20 +15,19 @@ fi
 if ! zgen saved; then
   zgen prezto
 
-  zgen prezto \
-    'terminal' \
-    'editor' \
-    'history' \
-    'directory' \
-    'spectrum' \
-    'utility' \
-    'completion' \
-    'fasd' \
-    'git' \
-    'ssh' \
-    'prompt' \
-    'syntax-highlighting' \
-    'history-substring-search'
+  zgen prezto 'terminal'
+  zgen prezto 'editor'
+  zgen prezto 'history'
+  zgen prezto 'directory'
+  zgen prezto 'spectrum'
+  zgen prezto 'utility'
+  zgen prezto 'completion'
+  zgen prezto 'fasd'
+  zgen prezto 'git'
+  zgen prezto 'ssh'
+  zgen prezto 'prompt'
+  zgen prezto 'syntax-highlighting'
+  zgen prezto 'history-substring-search'
 
   # specify plugins here
   zgen load Tarrasch/zsh-autoenv
@@ -167,4 +166,10 @@ PURE_GIT_DELAY_DIRTY_CHECK=5
 # Set a custom prompt symbol
 PURE_PROMPT_SYMBOL="❯"
 
-[[ -s /usr/local/rvm/scripts/rvm ]] && source /usr/local/rvm/scripts/rvm
+if [[ -s /usr/local/rvm/scripts/rvm ]]; then
+  source /usr/local/rvm/scripts/rvm
+elif [[ -s "$HOME/.rvm/scripts/rvm" ]]; then
+  source "$HOME/.rvm/scripts/rvm"
+fi
+
+export PATH="$PATH:$HOME/.rvm/bin" # Add RVM to PATH for scripting
