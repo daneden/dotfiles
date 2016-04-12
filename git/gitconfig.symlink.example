@@ -1,6 +1,3 @@
-# Sample gitconfig
-#
-
 [user]
   name = AUTHORNAME
   email = AUTHOREMAIL
@@ -33,8 +30,8 @@
   # Pop the latest stash. This is usually the only thing I do with git stash anyway.
   pop = stash pop stash@{0}
 [core]
-	excludesfile = ~/.gitignore_global
   editor = nvim -c start
+	excludesfile = ~/.gitignore_global
 [credential]
   helper = GIT_CREDENTIAL_HELPER
 [github]
@@ -49,16 +46,24 @@
 	required = true
 [gc]
 	auto = 0
+[merge]
+	tool = Kaleidoscope
+[mergetool "nvimdiff"]
+  cmd = "nvim -d -u ~/.vimrc \"$LOCAL\" \"$REMOTE\""
+[mergetool "Kaleidoscope"]
 [difftool "Kaleidoscope"]
-	cmd = ksdiff --partial-changeset --relative-path \"$MERGED\" -- \"$LOCAL\" \"$REMOTE\"
-  trustexitcode = true
 [difftool]
-	prompt = false
+[mergetool]
 [diff]
 	tool = Kaleidoscope
 [mergetool "Kaleidoscope"]
-  cmd = ksdiff --merge --output \"$MERGED\" --base \"$BASE\" -- \"$LOCAL\" \"$REMOTE\"
+	cmd = ksdiff --merge --output \"$MERGED\" --base \"$BASE\" -- \"$LOCAL\" --snapshot \"$REMOTE\" --snapshot
+	trustexitcode = true
+[difftool "Kaleidoscope"]
+	cmd = ksdiff --partial-changeset --relative-path \"$MERGED\" -- \"$LOCAL\" \"$REMOTE\"
+[difftool]
+	prompt = false
 [mergetool]
-  prompt = false
-[merge]
-  tool = Kaleidoscope
+	prompt = false
+[commit]
+	gpgsign = true
