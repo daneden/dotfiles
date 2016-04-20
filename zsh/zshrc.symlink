@@ -95,6 +95,9 @@ alias dotfiles="cd $HOME/.dotfiles"
 alias reload="source $HOME/.zshrc"
 alias sketchplugs="cd $HOME/Library/Containers/com.bohemiancoding.sketch3/Data/Library/Application\ Support/com.bohemiancoding.sketch3/Plugins"
 
+# We use gpg21 where available
+alias gpg="gpg2"
+
 # Jekyll helper aliases
 alias jb="bundle exec jekyll build --config _config.yml,_config_local.yml"
 alias js="bundle exec jekyll serve --watch --config _config.yml,_config_local.yml"
@@ -155,6 +158,14 @@ fi
 if [[ -s "$HOME/.virt_env/bin/activate" ]]; then
   source "$HOME/.virt_env/bin/activate"
 fi
+
+# Start gpg-agent
+if [ -f ~/.gnupg/.gpg-agent-info ] && [ -n "$(pgrep gpg-agent)" ]; then
+    source ~/.gnupg/.gpg-agent-info
+    export GPG_AGENT_INFO
+else
+    eval $(gpg-agent --daemon --write-env-file ~/.gnupg/.gpg-agent-info)
+  fi
 
 # Set up themes
 autoload -U promptinit && promptinit
