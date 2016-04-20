@@ -13,4 +13,6 @@ if [ "$(uname)" == "Darwin" ]; then
 pinentry-program /usr/local/bin/pinentry-mac" >> $HOME/.gnupg/gpg-agent.conf
 fi
 
-echo "use-agent" >> $HOME/.gnupg/gpg.conf
+if [ tail -1 $HOME/.gnupg/gpg.conf != "use-agent" ]; then
+  echo "use-agent" >> $HOME/.gnupg/gpg.conf
+fi
