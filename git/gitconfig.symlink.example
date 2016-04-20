@@ -6,12 +6,15 @@
 [color]
   ui = 1
 [alias]
-  s = status -sb
+  # Shortcuts and typos
   a = add -A .
-  co = checkout
-  cm = commit -S
-  p = push
+  b = branch
+  bs = branch -a
   cloen = clone
+  cm = commit
+  co = checkout
+  p = push
+  s = status -sb
 
   # Show verbose output about tags, branches or remotes
   tags = tag -l
