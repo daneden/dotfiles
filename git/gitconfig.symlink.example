@@ -10,7 +10,6 @@
   a = add -A .
   b = branch
   bs = branch -a
-  cloen = clone
   cm = commit
   co = checkout
   p = push
