@@ -1,15 +1,15 @@
 #!/bin/sh
 # Install the node packages I want globally
 
-npm install -g \
+npm update -g \
   autoprefixer \
   babel-cli \
-  coffee-script \
   caniuse-cmd \
+  coffee-script \
   gulp-cli \
   parker \
   postcss-cli \
+  space-hogs \
   tldr \
-  vtop
+  vtop \
 
-npm update -g

@@ -140,7 +140,7 @@ link_file () {
 }
 
 install_dotfiles () {
-  info 'installing dotfiles'
+  info 'Installing dotfiles'
 
   local overwrite_all=false backup_all=false skip_all=false
 
@@ -151,17 +151,23 @@ install_dotfiles () {
   done
 }
 
+setup_ssh_key () {
+  info "Checking for SSH key, generating one if it doesn't exist ..."
+  [[ -f ~/.ssh/id_rsa.pub ]] || ssh-keygen -t rsa
+}
+
 setup_gitconfig
+setup_ssh_key
 install_dotfiles
 
-info "installing dependencies (this will take a while)"
+info "Installing dependencies (this will take a while)"
 if ./bin/dot > /tmp/dotfiles-dot 2>&1
 then
-  success "dependencies installed"
+  success "Dependencies installed"
 else
   ret_code=$?
   fail $ret_code
-  fail "error installing dependencies"
+  fail "Error installing dependencies"
 fi
 
 echo ''

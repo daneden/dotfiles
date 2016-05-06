@@ -1,3 +1,4 @@
+#!/bin/sh
 # The Brewfile handles Homebrew-based app and library installs, but there may
 # still be updates and installables in the Mac App Store. There's a nifty
 # command line interface to it that we can use to just install everything, so
@@ -11,3 +12,8 @@ sudo -p "\
 # Brewfile also installs the pinentry app, and we want to tell GPG to use
 # that for passphrase entry so we can take advantage of OS X keychain.
 echo "pinentry-program /usr/local/bin/pinentry-mac" > $HOME/.gnupg/gpg-agent.conf
+
+# Install Alcatraz package manager for Xcode
+if [ "$(uname)" == "Darwin" ]; then
+  curl -fsSL https://raw.githubusercontent.com/supermarin/Alcatraz/deploy/Scripts/install.sh | sh
+fi
