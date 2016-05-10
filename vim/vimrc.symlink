@@ -48,6 +48,9 @@ Plug 'othree/html5.vim'
 " Less
 Plug 'groenewege/vim-less'
 
+" Swift
+Plug 'keith/swift.vim'
+
 " Autocompletions
 Plug 'Shougo/deoplete.nvim'
 
