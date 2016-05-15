@@ -4,5 +4,9 @@ command -v rvm >/dev/null 2>&1 || { gpg --keyserver hkp://keys.gnupg.net --recv-
 
 source "$HOME/.rvm/scripts/rvm"
 
+rvm install ruby
+
+rvm default
+
 gem install bundler
 
