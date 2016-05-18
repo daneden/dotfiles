@@ -188,6 +188,11 @@ let g:indentLine_conceallevel = 1
 nnoremap / /\v
 vnoremap / /\v
 
+" Make Y yank everything from the cursor to the end of the line. This makes Y
+" act more like C or D because by default, Y yanks the current line (i.e. the
+" same as yy).
+noremap Y y$
+
 " Set smart case-matching for search
 " This means searching for lowercase phrases matches both cases,
 " and searching for uppercase matches only uppercase.
@@ -219,6 +224,14 @@ let g:netrw_banner=0
 " This has to appear after all other appearance settings
 highlight Comment cterm=italic
 highlight Comment gui=italic
+
+" Use relative numbers by default
+set number
+set relativenumber
+
+" Use relative numbers in normal mode, absolute numbers in insert
+autocmd InsertEnter * :set number
+autocmd InsertLeave * :set relativenumber
 
 """""""""""""""""""""""""""""""
 " 2.3. Key mapping
