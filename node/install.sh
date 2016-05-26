@@ -7,6 +7,8 @@ npm update -g \
   caniuse-cmd \
   coffee-script \
   gulp-cli \
+  n \
+  nwb \
   parker \
   postcss-cli \
   space-hogs \
