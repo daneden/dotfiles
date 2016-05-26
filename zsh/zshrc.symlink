@@ -82,6 +82,11 @@ function __mkc {
 
 alias mkc="__mkc"
 
+# cd aliases for moving to common directories
+alias cdp="cd ~/Repos/Playground"
+alias cdr="cd ~/Repos"
+alias cdw="cd /var/www/docs"
+
 # Alias to nvim
 alias vim="nvim"
 
