@@ -124,6 +124,9 @@ Plug 'tpope/vim-sensible'
 " Multiple cursors
 Plug 'terryma/vim-multiple-cursors'
 
+" Netrw fanciness
+Plug 'tpope/vim-vinegar'
+
 " All of your Plugins must be added before the following line
 call plug#end()
 " Put your non-Plugin stuff after this line
@@ -269,12 +272,6 @@ nmap <leader>bl :ls<CR>
 " Swap to previously focused tab
 nmap <leader><leader> :b#<CR>
 
-" Remap split navigation
-nnoremap <C-J> <C-W><C-J>
-nnoremap <C-K> <C-W><C-K>
-nnoremap <C-L> <C-W><C-L>
-nnoremap <C-H> <C-W><C-H>
-
 " Split to the right and below
 set splitright
 set splitbelow
@@ -338,7 +335,7 @@ noremap  <buffer> <silent> $ g$
 set undofile
 
 " Allow clipboard access
-set clipboard=unnamed
+set clipboard=unnamedplus
 
 " Use deoplete.
 let g:deoplete#enable_at_startup = 1
