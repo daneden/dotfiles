@@ -175,3 +175,10 @@ echo '  All installed!'
 echo '  Switching to zsh...'
 
 chsh -s $(which zsh) $USER
+
+echo '  Done.'
+echo ''
+echo '  You may need to restart your terminal for all changes to take effect.'
+echo '  Have a great day!'
+
+exit

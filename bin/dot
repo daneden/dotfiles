@@ -23,18 +23,18 @@ if [ "$(uname)" == "Darwin" ]; then
   # Install Brew packages
   cd "$(dirname $0)"/..
   echo "> brew bundle"
-  brew bundle
+  sudo -u $USER brew bundle
 
   # Upgrade homebrew
   echo "› brew update"
-  brew update
+  sudo -u $USER brew update
 
   echo "> brew upgrade"
-  brew upgrade
+  sudo -u $USER brew upgrade
 
   # Do some housekeeping
   echo "> brew cleanup"
-  brew cleanup
+  sudo -u $USER brew cleanup
 
   # Ensure python neovim is installed
   echo "> sudo pip3 install neovim"
