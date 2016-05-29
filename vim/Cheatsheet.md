@@ -23,7 +23,8 @@ Plenty more useful Vim commands/tips [here](http://zzapper.co.uk/vimtips.html).
 | `P`                | Insert clipboard above current line             |
 | `gf`               | Open the file under the current cursor          |
 | `*`                | Search for the current cursor in the buffer     |
-| `c/_`              | Change until the next `_`                       |
+| `ct_`              | Change until the next `_`                       |
+| `c/foo<CR>`        | Change until the search term "foo"              |
 | `^E`               | Scroll window down                              |
 | `^Y`               | Scroll window up                                |
 | `^F`               | Page down                                       |
