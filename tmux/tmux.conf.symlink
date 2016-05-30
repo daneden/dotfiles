@@ -1,0 +1,25 @@
+set -g prefix C-a
+unbind C-b
+bind C-a send-prefix
+
+# Set the tmux status bar colors
+set -g status-bg colour236
+set -g status-fg white
+setw -g status-left #H:#S at #W:#T
+
+# Set the tmux command prompt colors
+set -g message-bg colour236
+set -g message-fg colour11
+
+# Prevent the delay when switching between modes in vim
+set -sg escape-time 0
+
+# Add Powerline to tmux
+if-shell 'test -f ~/.local/lib/python2.7/site-packages/powerline/bindings/tmux/powerline.conf' 'source-file ~/.local/lib/python2.7/site-packages/powerline/bindings/tmux/powerline.conf'
+
+if-shell 'test -f /usr/local/lib/python2.7/site-packages/powerline/bindings/tmux/powerline.conf' 'source-file /usr/local/lib/python2.7/site-packages/powerline/bindings/tmux/powerline.conf'
+
+if-shell 'test -f /usr/local/lib/python2.7/dist-packages/powerline/bindings/tmux/powerline.conf' 'source-file /usr/local/lib/python2.7/dist-packages/powerline/bindings/tmux/powerline.conf'
+
+if-shell 'test -f /usr/local/lib/python3.3/dist-packages/powerline/bindings/tmux/powerline.conf' 'source-file /usr/local/lib/python3.3/dist-packages/powerline/bindings/tmux/powerline.conf'
+
