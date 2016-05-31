@@ -9,6 +9,9 @@ set-option -ga terminal-overrides ",xterm-256color:Tc"
 # Prevent the delay when switching between modes in vim
 set -sg escape-time 0
 
+set -g message-bg black
+set -g message-fg blue
+
 # Add Powerline to tmux
 if-shell 'test -f ~/.local/lib/python2.7/site-packages/powerline/bindings/tmux/powerline.conf' 'source-file ~/.local/lib/python2.7/site-packages/powerline/bindings/tmux/powerline.conf'
 
