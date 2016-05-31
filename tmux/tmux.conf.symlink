@@ -11,6 +11,9 @@ setw -g status-left #H:#S at #W:#T
 set -g message-bg colour236
 set -g message-fg colour11
 
+# Force tmux to use 256 colors
+set-option -ga terminal-overrides ",xterm-256color:Tc"
+
 # Prevent the delay when switching between modes in vim
 set -sg escape-time 0
 

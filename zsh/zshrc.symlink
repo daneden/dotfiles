@@ -88,6 +88,7 @@ alias cdr="cd ~/Repos"
 alias cdw="cd /var/www/docs"
 
 # Alias to nvim
+alias v="nvim"
 alias vim="nvim"
 
 # Fixing autocorrect where appropriate
@@ -144,11 +145,6 @@ setopt complete_aliases
 # Wrap it up
 #
 #==============================
-
-# Let our terminal know about italic fonts
-if [[ -s "$HOME/.dotfiles/zsh/xterm-256color-italic.terminfo" ]]; then
-  tic "$HOME/.dotfiles/zsh/xterm-256color-italic.terminfo"
-fi
 
 # Add private aliases and functions
 if [[ -s "${ZDOTDIR:-$HOME}/.zprivate" ]]; then
