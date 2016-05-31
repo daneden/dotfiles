@@ -1,15 +1,7 @@
+# Change the tmux prefix to <C-a>
 set -g prefix C-a
 unbind C-b
 bind C-a send-prefix
-
-# Set the tmux status bar colors
-set -g status-bg colour236
-set -g status-fg white
-setw -g status-left #H:#S at #W:#T
-
-# Set the tmux command prompt colors
-set -g message-bg colour236
-set -g message-fg colour11
 
 # Force tmux to use 256 colors
 set-option -ga terminal-overrides ",xterm-256color:Tc"
