@@ -1,6 +1,9 @@
 #!/bin/sh
 
-pip install --upgrade pip setuptools
+pip install --upgrade \
+  pip \
+  setuptools \
+  psutil
 
 pip install --user git+git://github.com/powerline/powerline
 
