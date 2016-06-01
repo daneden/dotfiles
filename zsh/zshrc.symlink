@@ -63,6 +63,9 @@ fpath=(/usr/local/share/zsh-completions $fpath)
 export AUTOENV_FILE_ENTER=.env
 export AUTOENV_FILE_LEAVE=.out
 
+# Ensure gpg-agent is expecting the correct I/O
+export GPG_TTY=$(tty)
+
 #==============================
 #
 # Aliases
