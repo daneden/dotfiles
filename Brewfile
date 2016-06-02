@@ -47,6 +47,7 @@ brew 'youtube-dl'
 brew 'zsh'
 
 cask 'aerial'
+cask 'bartender'
 cask 'Caskroom/cask/java'
 cask 'colorpicker-skalacolor'
 cask 'dropbox'
