@@ -73,7 +73,7 @@ set -g status-bg black
 set -g status-fg colour137
 set -g status-attr dim
 set -g status-left ''
-set -g status-right '#[fg=white,bg=colour8,bold] %d/%m #[fg=white,bg=colour4,bold] %H:%M '
+set -g status-right '#{battery_icon} #{battery_percentage} #{battery_remain} #[fg=white,bg=colour8,bold] %d/%m #[fg=white,bg=colour4,bold] %H:%M '
 set -g status-right-length 50
 set -g status-left-length 20
 
@@ -99,6 +99,7 @@ setw -g window-status-bell-bg colour1
 # List of plugins
 set -g @plugin 'tmux-plugins/tpm'
 set -g @plugin 'tmux-plugins/tmux-sensible'
+set -g @plugin 'tmux-plugins/tmux-battery'
 
 # Other examples:
 # set -g @plugin 'github_username/plugin_name'
