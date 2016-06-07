@@ -1,7 +1,7 @@
 #!/bin/sh
 # Install the node packages I want globally
 
-npm update -g \
+npm install -g \
   autoprefixer \
   babel-cli \
   caniuse-cmd \
