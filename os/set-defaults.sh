@@ -33,6 +33,12 @@ defaults write com.apple.finder FXPreferredViewStyle -string "clmv"
 # Change minimize/maximize window effect
 defaults write com.apple.dock mineffect -string "scale"
 
+# Change the size of the dock
+defaults write com.apple.dock tilesize -int 40
+
+# Autohide the dock
+defaults write com.apple.dock autohide -bool true
+
 # Enable spring loading for all Dock items
 defaults write com.apple.dock enable-spring-load-actions-on-all-items -bool true
 
