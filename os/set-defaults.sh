@@ -100,9 +100,7 @@ defaults write com.googlecode.iterm2 PromptOnQuit -bool false
 
 # Tell Sketch to export compact SVGs
 defaults write com.bohemiancoding.sketch3 svgExportCompact -bool yes
-defaults write ~/Library/Preferences/com.bohemiancoding.sketch3.plist svgExportCompact -bool yes
 defaults write com.bohemiancoding.sketch3 svgExportSkipAssignIdToLayerName -bool yes
-defaults write ~/Library/Preferences/com.bohemiancoding.sketch3.plist svgExportSkipAssignIdToLayerName -bool yes
 
 # Tell OS X to start standby after 12hrs instead of the default 70min
 pmset -a standbydelay 43200
