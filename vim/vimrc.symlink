@@ -189,6 +189,16 @@ let g:indentLine_conceallevel = 1
 " 2.2. General editor settings
 """""""""""""""""""""""""""""""
 
+" Fold settings
+set foldmethod=indent   "fold based on indent
+set foldnestmax=10      "deepest fold is 10 levels
+set nofoldenable        "dont fold by default
+set foldlevel=1         "this is just what i use
+
+" Wrap lines when navigating with h/l
+set whichwrap+=>,l
+set whichwrap+=<,h
+
 " Always use PHP/Python-style regex
 nnoremap / /\v
 vnoremap / /\v

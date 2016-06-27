@@ -153,7 +153,7 @@ install_dotfiles () {
 
 setup_ssh_key () {
   info "Checking for SSH key, generating one if it doesn't exist ..."
-  [[ -f ~/.ssh/id_rsa.pub ]] || ssh-keygen -t rsa
+  [[ -f $HOME/.ssh/id_rsa.pub ]] || sudo -u $USER ssh-keygen -t rsa
 }
 
 setup_gitconfig

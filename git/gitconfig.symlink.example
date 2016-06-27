@@ -51,14 +51,9 @@
 	auto = 0
 [merge]
 	tool = Kaleidoscope
-[mergetool "nvimdiff"]
-  cmd = "nvim -d -u ~/.vimrc \"$LOCAL\" \"$REMOTE\""
-[mergetool "Kaleidoscope"]
-[difftool "Kaleidoscope"]
-[difftool]
-[mergetool]
 [diff]
 	tool = Kaleidoscope
+	compactionHeuristic = true
 [mergetool "Kaleidoscope"]
 	cmd = ksdiff --merge --output \"$MERGED\" --base \"$BASE\" -- \"$LOCAL\" --snapshot \"$REMOTE\" --snapshot
 	trustexitcode = true
@@ -72,3 +67,6 @@
 	gpgsign = true
 [gpg]
 	program = gpg2
+[submodules]
+  # Allow 4 parallel submodule clone/pull tasks
+	fetchJobs = 4
