@@ -31,6 +31,7 @@ brew 'libpng'
 brew 'libtool'
 brew 'mas'
 brew 'mercurial'
+brew 'mobile-shell'
 brew 'neovim', args: ['HEAD', 'with-release']
 brew 'node'
 brew 'pinentry-mac'
