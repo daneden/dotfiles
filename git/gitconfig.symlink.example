@@ -8,6 +8,7 @@
 [alias]
   # Shortcuts and typos
   a = add -A .
+  ap = add -p
   b = branch
   bs = branch -a
   cloen = clone
