@@ -7,6 +7,7 @@ npm install -g \
   caniuse-cmd \
   coffee-script \
   gulp-cli \
+  gifify \
   n \
   nwb \
   parker \
