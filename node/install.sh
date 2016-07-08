@@ -8,10 +8,12 @@ npm install -g \
   coffee-script \
   gulp-cli \
   gifify \
+  jsx \
   n \
   nwb \
   parker \
   postcss-cli \
+  react \
   space-hogs \
   tldr \
   vtop \
