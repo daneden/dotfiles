@@ -76,7 +76,7 @@ set -o vi
 #==============================
 
 # Restore normal (impolite) rm functionality
-unalias rm
+unalias rm 2>/dev/null
 
 # A handy utility for making and then cd-ing to a directory
 function __mkc {
