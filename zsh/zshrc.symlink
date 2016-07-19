@@ -66,6 +66,9 @@ export AUTOENV_FILE_LEAVE=.out
 # Ensure gpg-agent is expecting the correct I/O
 export GPG_TTY=$(tty)
 
+# Enable vi-style editing of commands on command line
+set -o vi
+
 #==============================
 #
 # Aliases
