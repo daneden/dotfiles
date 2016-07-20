@@ -72,6 +72,9 @@ set -o vi
 # Make the scrollback history excessive
 HISTSIZE=130000 SAVEHIST=130000
 
+# Map ^R to backwards-incremental search
+bindkey "^R" history-incremental-search-backward
+
 #==============================
 #
 # Aliases
