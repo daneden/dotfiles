@@ -33,6 +33,9 @@ bind c new-window -c "#{pane_current_path}"
 # Enable mouse scrolling
 set-option -g -q mouse on
 
+# Set a big scrollback history
+set -g history-limit 30000
+
 ######################
 ### DESIGN CHANGES ###
 ######################
