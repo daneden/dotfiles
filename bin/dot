@@ -50,5 +50,5 @@ $ZSH/script/install
 ln -s ~/.vim ~/.config/nvim
 ln -s ~/.vimrc ~/.config/nvim/init.vim
 # Pass this through `yes` to dismiss warnings about missing plugins we're about to install
-yes | vim +PlugClean! +PlugInstall! +qall >/dev/tty
+nvim +PlugClean! +PlugInstall! +qall >/dev/tty
 
