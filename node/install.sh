@@ -6,6 +6,7 @@ npm install -g \
   babel-cli \
   caniuse-cmd \
   coffee-script \
+  create-react-app \
   gulp-cli \
   gifify \
   jsx \
