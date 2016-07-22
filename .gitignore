@@ -17,6 +17,7 @@ npm-debug.log
 vim/**/plugged
 vim/**/plug.vim
 vim/**/.netrwhist
+config.symlink/nvim
 
 # Ignore private config
 zprivate.symlink
