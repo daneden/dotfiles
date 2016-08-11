@@ -295,11 +295,11 @@ nmap <leader>= <C-W>=
 nnoremap cn :cn<cr>
 nnoremap cp :cp<cr>
 
-" Remap : to ; to save having to hit shift
-nnoremap ; :
-
 " Remap '"' to '*' to make searching for the word under the cursor easier
 noremap  " *
+
+" Set :W to write, just like :w
+command! W write
 
 """""""""""""""""""""""""""""""
 " 2.4. CtrlP Config
