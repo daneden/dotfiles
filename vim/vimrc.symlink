@@ -156,8 +156,7 @@ augroup END
 
 " Theme
 syntax enable
-let base16colorspace=256
-colorscheme base16-default-dark
+colorscheme base16-tomorrow-night
 set background=dark
 
 let g:airline_powerline_fonts=1
