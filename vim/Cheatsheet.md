@@ -29,3 +29,4 @@ Plenty more useful Vim commands/tips [here](http://zzapper.co.uk/vimtips.html).
 | `^Y`               | Scroll window up                                |
 | `^F`               | Page down                                       |
 | `^B`               | Page up                                         |
+| `^Z`               | Send vim to background (`fg<CR>` to resume)     |
