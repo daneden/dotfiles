@@ -27,6 +27,9 @@ call plug#begin('~/.vim/plugged')
 " 1.1. Syntax Highlighting
 """""""""""""""""""""""""""""""
 
+" Color scheme
+Plug 'chriskempson/base16-vim'
+
 " Coffeescript
 Plug 'kchmck/vim-coffee-script'
 Plug 'mtscout6/vim-cjsx'
@@ -103,9 +106,6 @@ Plug 'bling/vim-airline'
 " Transparent pasting (cmd-v works as expected)
 Plug 'ConradIrwin/vim-bracketed-paste'
 
-" Color theme
-Plug 'mhartington/oceanic-next'
-
 " Show whitespace
 Plug 'Yggdroot/indentLine'
 
@@ -156,12 +156,11 @@ augroup END
 
 " Theme
 syntax enable
-let $NVIM_TUI_ENABLE_TRUE_COLOR=1
-colorscheme OceanicNext
+let base16colorspace=256
+colorscheme base16-default-dark
 set background=dark
 
 let g:airline_powerline_fonts=1
-let g:airline_theme='oceanicnext'
 
 set termguicolors
 
