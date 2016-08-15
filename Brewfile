@@ -42,7 +42,7 @@ brew 'python'
 brew 'python3'
 brew 'reattach-to-user-namespace'
 brew 'shellcheck'
-brew 'vim'
+brew 'vim', args: ['with-lua']
 brew 'wget'
 brew 'wifi-password'
 brew 'xz'

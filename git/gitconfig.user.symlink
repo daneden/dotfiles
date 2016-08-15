@@ -3,3 +3,16 @@
   email = dan.eden@me.com
 [credential]
 	helper = osxkeychain
+[alias]
+  # add
+  aa = add .
+  ap = add --patch
+
+  # commit
+  cm = commit -a
+
+  # log
+  lg = log --graph --date=short
+
+  # push
+  p = push                         # push
