@@ -2,17 +2,20 @@
   name = Daniel Eden
   email = dan.eden@me.com
 [credential]
-	helper = osxkeychain
+  helper = osxkeychain
+[core]
+  editor = vim -c start
+  excludesfile = ~/.gitignore_global
 [alias]
-  # add
+# add
   aa = add .
   ap = add --patch
 
-  # commit
+# commit
   cm = commit -a
 
-  # log
+# log
   lg = log --graph --date=short
 
-  # push
+# push
   p = push                         # push
