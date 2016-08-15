@@ -1,3 +1,5 @@
 [user]
   name = Daniel Eden
   email = dan.eden@me.com
+[credential]
+	helper = osxkeychain
