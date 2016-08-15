@@ -1,0 +1,10 @@
+" Custom vim configuration
+" Loaded after YADR's .vimrc
+
+" Use relative numbers by default
+set number
+set relativenumber
+
+" Use relative numbers in normal mode, absolute numbers in insert
+autocmd InsertEnter * :set number
+autocmd InsertLeave * :set relativenumber
