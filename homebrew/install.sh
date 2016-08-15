@@ -6,5 +6,5 @@ cd "$(dirname $0)"/..
 
 if hash brew 2>/dev/null; then
   brew tap Homebrew/bundle
-  brew bundle check || brew bundle
+  brew bundle check || brew bundle install
 fi
