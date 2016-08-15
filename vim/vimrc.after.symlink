@@ -1,0 +1,33 @@
+" Custom vim configuration
+" Loaded after YADR's .vimrc
+
+" Highlight the current cursor line
+set cursorline
+
+" Enable undofiles
+set undodir=~/.vim/undo-dir
+set undofile
+
+" Use relative numbers in normal mode, absolute numbers in insert
+set relativenumber 
+set number
+autocmd InsertEnter * :set number norelativenumber
+autocmd InsertLeave * :set relativenumber
+
+" Tab completion for Neocomplete
+inoremap <expr><TAB>  pumvisible() ? "\<C-n>" : "\<TAB>""
+
+" Removes trailing spaces
+function! TrimWhiteSpace()
+  %s/\s\+$//e
+endfunction
+
+nnoremap <silent> <Leader>rts :call TrimWhiteSpace()<CR>
+
+" Automatically trim whitespace on save
+autocmd FileWritePre    * :call TrimWhiteSpace()
+autocmd FileAppendPre   * :call TrimWhiteSpace()
+autocmd FilterWritePre  * :call TrimWhiteSpace()
+autocmd BufWritePre     * :call TrimWhiteSpace()
+
+autocmd BufWritePre * :%s/\s\+$//e

@@ -1,10 +1,10 @@
 #!/bin/sh
 
-username=$(whoami)
+# Install YADR
+sh -c "`curl -fsSL https://raw.githubusercontent.com/skwp/dotfiles/master/install.sh `"
 
-# Ask for the administrator password upfront
-sudo -v -p "\
-  You're about to change a lot of things on your computer. We're gonna need a password.
-  Enter password: "
+# Setup gitconfig, customizations, and extensions
+./script/bootstrap.sh
 
-sudo ./script/bootstrap.sh -u "$username"
+# Run package manager installation scripts
+./script/install

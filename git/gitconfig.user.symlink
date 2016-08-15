@@ -1,0 +1,21 @@
+[user]
+  name = Daniel Eden
+  email = dan.eden@me.com
+[credential]
+  helper = osxkeychain
+[core]
+  editor = vim -c start
+  excludesfile = ~/.gitignore_global
+[alias]
+# add
+  aa = add .
+  ap = add --patch
+
+# commit
+  cm = commit -a
+
+# log
+  lg = log --color --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr)%C(bold blue)<%an>%Creset' --abbrev-commit
+
+# push
+  p = push                         # push

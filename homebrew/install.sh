@@ -1,24 +1,10 @@
-#!/bin/sh
+#!/usr/bin/env bash
 #
-# Homebrew
-#
-# This installs some of the common dependencies needed (or at least desired)
-# using Homebrew.
+# Check if brew is installed, then run bundle to get latest packages listed in Brewfile
 
-# Check for Homebrew
-if test ! $(which brew)
-then
-  echo "  Installing Homebrew."
+cd "$(dirname $0)"/..
 
-  # Install the correct homebrew for each OS type
-  if test "$(uname)" = "Darwin"
-  then
-    ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
-  elif test "$(expr substr $(uname -s) 1 5)" = "Linux"
-  then
-    ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/linuxbrew/go/install)"
-  fi
-
+if hash brew 2>/dev/null; then
+  brew tap Homebrew/bundle
+  brew bundle check || brew bundle install
 fi
-
-exit 0

@@ -42,7 +42,7 @@ fail () {
 }
 
 setup_gitconfig () {
-  if ! [ -f "$DOTFILES_ROOT/git/gitconfig.symlink" ]
+  if ! [ -f "$DOTFILES_ROOT/git/gitconfig.user.symlink" ]
   then
     info 'setup gitconfig'
 
@@ -151,34 +151,7 @@ install_dotfiles () {
   done
 }
 
-setup_ssh_key () {
-  info "Checking for SSH key, generating one if it doesn't exist ..."
-  [[ -f $HOME/.ssh/id_rsa.pub ]] || sudo -u $USER ssh-keygen -t rsa
-}
-
 setup_gitconfig
-setup_ssh_key
 install_dotfiles
-
-info "Installing dependencies (this will take a while)"
-if ./bin/dot > /tmp/dotfiles-dot 2>&1
-then
-  success "Dependencies installed"
-else
-  ret_code=$?
-  fail $ret_code
-  fail "Error installing dependencies"
-fi
-
-echo ''
-echo '  All installed!'
-echo '  Switching to zsh...'
-
-chsh -s $(which zsh) $USER
-
-echo '  Done.'
-echo ''
-echo '  You may need to restart your terminal for all changes to take effect.'
-echo '  Have a great day!'
 
 exit

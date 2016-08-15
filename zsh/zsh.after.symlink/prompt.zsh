@@ -1,0 +1,2 @@
+# Customize prompt
+prompt pure
