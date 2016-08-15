@@ -1,10 +1,18 @@
 " Custom vim configuration
 " Loaded after YADR's .vimrc
 
-" Use relative numbers by default
-set number
-set relativenumber
+" Highlight the current cursor line
+set cursorline
+
+" Enable undofiles
+set undodir=~/.vim/undo-dir
+set undofile
 
 " Use relative numbers in normal mode, absolute numbers in insert
-autocmd InsertEnter * :set number
+set relativenumber 
+set number
+autocmd InsertEnter * :set number norelativenumber
 autocmd InsertLeave * :set relativenumber
+
+" Tab completion for Neocomplete
+inoremap <expr><TAB>  pumvisible() ? "\<C-n>" : "\<TAB>""
