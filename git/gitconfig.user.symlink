@@ -15,7 +15,7 @@
   cm = commit -a
 
 # log
-  lg = log --graph --date=short
+  lg = log --color --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr)%C(bold blue)<%an>%Creset' --abbrev-commit
 
 # push
   p = push                         # push
