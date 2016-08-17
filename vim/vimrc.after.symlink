@@ -1,15 +1,25 @@
 " Custom vim configuration
 " Loaded after YADR's .vimrc
 
+" Improve I/O by disabling swap/backup files
+" This is considered a Bad Idea (TM) by many, but I haven't (yet) had Vim
+" crash on me or anything.
+set nobackup
+set nowritebackup
+set noswapfile
+
+" Automatically :write before running commands
+set autowrite
+
 " Highlight the current cursor line
 set cursorline
 
 " Enable undofiles
-set undodir=~/.vim/undo-dir
+set undodir=~/.vim.user/undo
 set undofile
 
 " Use relative numbers in normal mode, absolute numbers in insert
-set relativenumber 
+set relativenumber
 set number
 autocmd InsertEnter * :set number norelativenumber
 autocmd InsertLeave * :set relativenumber
@@ -31,3 +41,9 @@ autocmd FilterWritePre  * :call TrimWhiteSpace()
 autocmd BufWritePre     * :call TrimWhiteSpace()
 
 autocmd BufWritePre * :%s/\s\+$//e
+
+" HARD MODE
+nnoremap <Left> :echoe "Use h"<CR>
+nnoremap <Right> :echoe "Use l"<CR>
+nnoremap <Up> :echoe "Use k"<CR>
+nnoremap <Down> :echoe "Use j"<CR>
