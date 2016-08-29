@@ -14,3 +14,6 @@ set-option -g -q mouse on
 
 # Set a big scrollback history
 set -g history-limit 30000
+
+# Set prefix key for nested sessions
+bind a send-prefix

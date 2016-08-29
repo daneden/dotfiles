@@ -18,6 +18,10 @@ set cursorline
 set undodir=~/.vim.user/undo
 set undofile
 
+" Enable mouse and system clipboard
+set mouse=a
+set clipboard=unnamed
+
 " Use relative numbers in normal mode, absolute numbers in insert
 set relativenumber
 set number
@@ -26,6 +30,9 @@ autocmd InsertLeave * :set relativenumber
 
 " Tab completion for Neocomplete
 inoremap <expr><TAB>  pumvisible() ? "\<C-n>" : "\<TAB>""
+
+" YADR remaps C-z to :cp, but suspending Vim is pretty damn useful
+unmap <C-z>
 
 " Removes trailing spaces
 function! TrimWhiteSpace()
