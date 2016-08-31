@@ -1,0 +1,12 @@
+[ui]
+style = status
+
+[extensions]
+pager =
+graphlog =
+color =
+
+[alias]
+lg = log -G
+
+%include .hgrc.local

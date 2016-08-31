@@ -26,5 +26,6 @@ envvars.symlink
 # This symlink changes per-machine
 init.vim
 
-# Ignore git config in case it has per-machine settings
+# Ignore vcs config in case it has per-machine settings
 git/gitconfig.symlink
+hg/hgrc.local.symlink
