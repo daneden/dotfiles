@@ -8,5 +8,6 @@ color =
 
 [alias]
 lg = log -G
+slg = log -G --style compact
 
 %include .hgrc.local
