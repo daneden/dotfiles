@@ -1,5 +1,9 @@
 " Custom vim configuration
 " Loaded after YADR's .vimrc
+if executable('zsh')
+  set shell=zsh\ -l
+endif
+
 
 " Improve I/O by disabling swap/backup files
 " This is considered a Bad Idea (TM) by many, but I haven't (yet) had Vim
