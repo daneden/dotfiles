@@ -28,6 +28,9 @@ set number
 autocmd InsertEnter * :set number norelativenumber
 autocmd InsertLeave * :set relativenumber
 
+" Open file explorer on '-'
+nnoremap - :Ex<CR>
+
 " Tab completion for Neocomplete
 inoremap <expr><TAB>  pumvisible() ? "\<C-n>" : "\<TAB>""
 
