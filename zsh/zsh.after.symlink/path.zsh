@@ -3,3 +3,7 @@ if [ -d "/usr/local/rvm" ]; then
 elif [ -d "$HOME/.rvm" ]; then
   [[ -s "$HOME/.rvm/scripts/rvm" ]] && source "$HOME/.rvm/scripts/rvm"
 fi
+
+if [ -d "$HOME/.linuxbrew" ]; then
+  export PATH="$HOME/.linuxbrew/bin:$PATH"
+fi
