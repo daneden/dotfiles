@@ -18,4 +18,5 @@ npm install -g \
   space-hogs \
   tldr \
   vtop \
+  yarn \
 
