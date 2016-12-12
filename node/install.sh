@@ -1,6 +1,8 @@
 #!/bin/sh
 # Install the node packages I want globally
 
+curl -o- -L https://yarnpkg.com/install.sh | bash
+
 npm install -g \
   autoprefixer \
   babel-cli \
