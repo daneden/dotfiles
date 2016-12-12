@@ -40,6 +40,9 @@ autocmd InsertLeave * :set relativenumber
 " Expand brackets to a newline by default
 let delimitMate_expand_cr = 1
 
+" Disable flow typechecking by default
+let g:flow#enable = 0
+
 """"""""""""""""""""""""""""
 " KEY MAPPING
 """"""""""""""""""""""""""""
