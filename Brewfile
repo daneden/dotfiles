@@ -51,6 +51,7 @@ brew 'youtube-dl'
 brew 'zsh'
 
 cask 'aerial'
+cask 'alcatraz'
 cask 'bartender'
 cask 'Caskroom/cask/java'
 cask 'colorpicker-skalacolor'
