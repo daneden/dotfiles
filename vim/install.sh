@@ -19,3 +19,5 @@ if [ $i -eq 0 ]; then
 else
   echo "Created $i new directories"
 fi
+
+yav --url https://github.com/w0ng/vim-hybrid
