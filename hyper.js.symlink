@@ -1,16 +1,16 @@
 module.exports = {
   config: {
     // default font size in pixels for all tabs
-    fontSize: 12,
+    fontSize: 13,
 
     // font family with optional fallbacks
     fontFamily: 'SFMono-Medium, Menlo, "DejaVu Sans Mono", Consolas, "Lucida Console", monospace',
 
     // terminal cursor background color and opacity (hex, rgb, hsl, hsv, hwb or cmyk)
-    cursorColor: 'rgba(248,28,229,0.8)',
+    cursorColor: 'rgba(255,255,255,0.8)',
 
     // `BEAM` for |, `UNDERLINE` for _, `BLOCK` for █
-    cursorShape: 'BLOCK',
+    cursorShape: 'UNDERLINE',
 
     // color of the text
     foregroundColor: '#fff',
@@ -90,7 +90,10 @@ module.exports = {
   //   `hyperpower`
   //   `@company/project`
   //   `project#1.0.1`
-  plugins: ['hyper-hybrid-theme'],
+  plugins: [
+    'hyper-hybrid-theme',
+    'hyperlink',
+    'hyper-blink'],
 
   // in development, you can create a directory under
   // `~/.hyper_plugins/local/` and include it here

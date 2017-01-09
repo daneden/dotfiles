@@ -20,3 +20,8 @@ bind a send-prefix
 
 # Set 24-bit colors
 set -g default-terminal xterm-256color
+
+# color scheme overrides
+set -g pane-border-fg colour245
+set -g pane-active-border-fg colour3
+set -g window-status-current-format "#[fg=colour234,bg=colour3]⮀#[fg=colour16,bg=colour3,noreverse,bold] #{?window_zoomed_flag,#[fg=colour226],} #I: #W #[fg=colour3,bg=colour234,nobold]⮀"
