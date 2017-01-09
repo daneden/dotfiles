@@ -1,5 +1,8 @@
 " Custom vim configuration
 " Loaded after YADR's .vimrc
+"
+let g:yadr_disable_solarized_enhancements = 1
+colorscheme onedark
 
 " Improve I/O by disabling swap/backup files
 " This is considered a Bad Idea (TM) by many, but I haven't (yet) had Vim
