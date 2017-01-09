@@ -7,3 +7,9 @@ fi
 if [ -d "$HOME/.linuxbrew" ]; then
   export PATH="$HOME/.linuxbrew/bin:$PATH"
 fi
+
+if [ -d "$HOME/.yarn" ]; then
+  export PATH="$HOME/.yarn/bin:$PATH"
+fi
+
+export PYTHONPATH="`which python3`:$PYTHONPATH"

@@ -4,6 +4,15 @@
 let g:yadr_disable_solarized_enhancements = 1
 colorscheme onedark
 
+""""""""""""""""""""""""""""
+" GENERAL
+""""""""""""""""""""""""""""
+
+" Make sure we're using the expected shell
+if executable('zsh')
+  set shell=zsh\ -l
+endif
+
 " Improve I/O by disabling swap/backup files
 " This is considered a Bad Idea (TM) by many, but I haven't (yet) had Vim
 " crash on me or anything.
@@ -30,6 +39,16 @@ set relativenumber
 set number
 autocmd InsertEnter * :set number norelativenumber
 autocmd InsertLeave * :set relativenumber
+
+" Expand brackets to a newline by default
+let delimitMate_expand_cr = 1
+
+" Disable flow typechecking by default
+let g:flow#enable = 0
+
+""""""""""""""""""""""""""""
+" KEY MAPPING
+""""""""""""""""""""""""""""
 
 " Open file explorer on '-'
 nnoremap - :Ex<CR>
