@@ -17,3 +17,6 @@ set -g history-limit 30000
 
 # Set prefix key for nested sessions
 bind a send-prefix
+
+# Set 24-bit colors
+set -g default-terminal xterm-256color

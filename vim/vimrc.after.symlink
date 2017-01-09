@@ -1,8 +1,8 @@
 " Custom vim configuration
 " Loaded after YADR's .vimrc
-"
-let g:yadr_disable_solarized_enhancements = 1
-colorscheme onedark
+
+let g:yadr_disable_solarized_enhancements=1
+colorscheme hybrid
 
 """"""""""""""""""""""""""""
 " GENERAL
