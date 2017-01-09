@@ -27,7 +27,7 @@ brew 'htop'
 brew 'hub'
 brew 'imagemagick'
 brew 'jpeg'
-brew 'koekeishiya/kwm/kwm'
+brew 'koekeishiya/kwm/kwm', restart_service: true
 brew 'libpng'
 brew 'libtool'
 brew 'mas'
