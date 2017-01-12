@@ -1,3 +1,3 @@
 if [ "$(uname)" == "Darwin" ]; then
-  defaults write NSGlobalDomain KeyRepeat -int 0.02
+  defaults write NSGlobalDomain KeyRepeat -int 1
 fi
