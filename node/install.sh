@@ -9,6 +9,7 @@ npm install -g \
   caniuse-cmd \
   coffee-script \
   create-react-app \
+  diff-so-fancy \
   gulp-cli \
   gifify \
   jsx \
