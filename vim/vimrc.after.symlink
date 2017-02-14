@@ -2,7 +2,9 @@
 " Loaded after YADR's .vimrc
 
 let g:yadr_disable_solarized_enhancements=1
-colorscheme hybrid
+syntax enable
+set background=dark
+colorscheme material-theme
 
 """"""""""""""""""""""""""""
 " GENERAL
@@ -25,6 +27,7 @@ set autowrite
 
 " Highlight the current cursor line
 set cursorline
+highlight CursorLine ctermbg=Black
 
 " Enable undofiles
 set undodir=~/.vim.user/undo

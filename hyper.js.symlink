@@ -22,17 +22,7 @@ module.exports = {
     borderColor: '#333',
 
     // custom css to embed in the main window
-    css: `
-      .tab_text {
-        opacity: 0.5;
-        box-shadow: inset 0 -2px rgba(0,0,0,.3);
-      }
-
-      .tab_text.tab_textActive {
-        opacity: 1;
-        box-shadow: inset 0 -2px #FDA842;
-      }
-    `,
+    css: ``,
 
     // custom css to embed in the terminal window
     termCSS: `x-row { line-height: 1.4em; }`,
@@ -107,6 +97,7 @@ module.exports = {
     'hyperline',
     'hypercwd',
     'hyperfull',
+    'hyperterm-material',
     'hyper-blink'],
 
   // in development, you can create a directory under
