@@ -2,6 +2,8 @@
 " Loaded after YADR's .vimrc
 
 let g:yadr_disable_solarized_enhancements=1
+set t_Co=256
+set termguicolors
 syntax enable
 set background=dark
 colorscheme material-theme
