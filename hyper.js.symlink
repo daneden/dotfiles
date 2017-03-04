@@ -1,10 +1,10 @@
 module.exports = {
   config: {
     // default font size in pixels for all tabs
-    fontSize: 13,
+    fontSize: 14,
 
     // font family with optional fallbacks
-    fontFamily: 'SFMono-Medium, Menlo, "DejaVu Sans Mono", Consolas, "Lucida Console", monospace',
+    fontFamily: 'FiraCode-Retina, SFMono-Medium, Menlo, "DejaVu Sans Mono", Consolas, "Lucida Console", monospace',
 
     // terminal cursor background color and opacity (hex, rgb, hsl, hsv, hwb or cmyk)
     cursorColor: 'rgba(255,255,255,0.9)',
@@ -25,7 +25,10 @@ module.exports = {
     css: ``,
 
     // custom css to embed in the terminal window
-    termCSS: `x-row { line-height: 1.4em; }`,
+    termCSS: `
+    x-screen x-row { font-variant-ligatures: contextual; }
+    x-row { line-height: 1.4em; }
+    `,
     // set to `true` if you're using a Linux set up
     // that doesn't shows native menus
     // default: `false` on Linux, `true` on Windows (ignored on macOS)
