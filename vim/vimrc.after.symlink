@@ -52,6 +52,20 @@ let delimitMate_expand_cr = 1
 let g:flow#enable = 0
 
 """"""""""""""""""""""""""""
+" FILETYPE-SPECIFIC SETTINGS
+""""""""""""""""""""""""""""
+
+" Highlight lines that exceed 80 characters
+set colorcolumn=81
+
+" Force line-wrapping on markdown above 80 chars
+autocmd FileType markdown set textwidth=80
+
+" For git commits, shorten line length to 72 chars
+autocmd FileType gitcommit set colorcolumn=73
+autocmd FileType gitcommit set textwidth=72
+
+""""""""""""""""""""""""""""
 " KEY MAPPING
 """"""""""""""""""""""""""""
 
