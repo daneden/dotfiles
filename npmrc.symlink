@@ -1,0 +1,7 @@
+init.author.name="Daniel Eden"
+init.author.email="dan.eden@me.com"
+init.author.url="https://daneden.me"
+init.license="MIT"
+init.version="0.0.1"
+
+loglevel="silent"
