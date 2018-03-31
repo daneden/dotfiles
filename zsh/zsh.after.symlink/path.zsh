@@ -8,6 +8,10 @@ if [ -d "$HOME/.linuxbrew" ]; then
   export PATH="$HOME/.linuxbrew/bin:$PATH"
 fi
 
+if [ -d "$HOME/.npm-modules" ]; then
+  export PATH="$HOME/.npm-modules/bin:$PATH"
+fi
+
 if [ -d "$HOME/.yarn" ]; then
   export PATH="$HOME/.yarn/bin:$PATH"
 fi
