@@ -13,3 +13,5 @@ if [ -d "$HOME/.yarn" ]; then
 fi
 
 export PYTHONPATH="`which python3`:$PYTHONPATH"
+
+export PATH=/usr/local/bin:$PATH
