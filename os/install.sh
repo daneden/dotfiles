@@ -16,4 +16,5 @@ if [ "$(uname)" == "Darwin" ]; then
   defaults write -g NSUserKeyEquivalents "{ 'Zoom' = '${COMMAND_KEY_SYMBOL}${SHIFT_KEY_SYMBOL}M'; }"
 
   defaults write com.apple.Mail NSUserKeyEquivalents "{ 'Send' = '${COMMEND_KEY_SYMBOL}${ENTER_KEY_SYMBOL}'; }"
+  defaults write com.apple.Mail NSUserKeyEquivalents "{ 'Archive' = '${COMMEND_KEY_SYMBOL}E'; }"
 fi
