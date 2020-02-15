@@ -1,8 +1,6 @@
 [user]
   name = Daniel Eden
   email = dan.eden@me.com
-[credential]
-  helper = osxkeychain
 [core]
   editor = vim -c start
   excludesfile = ~/.gitignore_global
@@ -13,7 +11,7 @@
   ap = add --patch
 
 # commit
-  cm = commit -a
+  cm = commit -S
 
 # log
   lg = vlog --color --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr)%C(bold blue)<%an>%Creset' --abbrev-commit

@@ -64,6 +64,9 @@ autocmd FileType markdown set textwidth=80
 autocmd FileType gitcommit set colorcolumn=73
 autocmd FileType gitcommit set textwidth=72
 
+" Auto-format js code on save
+autocmd BufWritePre *.js Neoformat
+
 """"""""""""""""""""""""""""
 " KEY MAPPING
 """"""""""""""""""""""""""""
