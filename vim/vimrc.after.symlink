@@ -95,6 +95,16 @@ autocmd BufWritePre     * :call TrimWhiteSpace()
 
 autocmd BufWritePre * :%s/\s\+$//e
 
+" Always use 'very magic' mode searching
+" This ensures that the expected perl-type regex character meanings are always
+" turned on
+nnoremap / /\v
+vnoremap / /\v
+cnoremap %s/ %smagic/
+cnoremap \>s/ \>smagic/
+nnoremap :g/ :g/\v
+nnoremap :g// :g//
+
 " HARD MODE
 nnoremap <Left> :echoe "Use h"<CR>
 nnoremap <Right> :echoe "Use l"<CR>

@@ -4,4 +4,4 @@ init.author.url=https://daneden.me
 init.license=MIT
 init.version=0.0.1
 loglevel=silent
-//registry.npmjs.org/:_authToken=847e7e05-8448-4197-82f0-4e3de0a6fe7e
+allow-same-version=true
