@@ -3,23 +3,10 @@
 
 curl -o- -L https://yarnpkg.com/install.sh | bash
 
-npm install -g \
-  autoprefixer \
+yarn global add \
   babel-cli \
-  caniuse-cmd \
-  coffee-script \
   create-react-app \
-  diff-so-fancy \
-  gulp-cli \
-  gifify \
-  jsx \
   n \
-  nwb \
-  parker \
-  postcss-cli \
-  react \
-  space-hogs \
-  tldr \
+  now \
+  typescript \
   vtop \
-  yarn \
-
