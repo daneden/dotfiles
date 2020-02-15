@@ -20,5 +20,3 @@ else
   echo "Created $i new directories"
 fi
 
-yav --url https://github.com/w0ng/vim-hybrid
-yav --url https://github.com/jdkanani/vim-material-theme

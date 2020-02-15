@@ -5,7 +5,7 @@ let g:yadr_disable_solarized_enhancements=1
 set termguicolors
 syntax enable
 set background=dark
-colorscheme material-theme
+colorscheme codedark
 
 """"""""""""""""""""""""""""
 " GENERAL
