@@ -7,6 +7,3 @@ function __mkc {
 }
 
 alias mkc="__mkc"
-
-# Attach to tmux with 24-bit color
-alias tm="tmux -2 attach -d -t init || tmux -2 new -s init"
