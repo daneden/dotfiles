@@ -74,6 +74,9 @@ autocmd BufWritePre *.js Neoformat
 " Open file explorer on '-'
 nnoremap - :Ex<CR>
 
+" Trigger CtrlP with... well
+nnoremap <C-p> :CtrlP<CR>
+
 " Tab completion for Neocomplete
 inoremap <expr><TAB>  pumvisible() ? "\<C-n>" : "\<TAB>""
 
