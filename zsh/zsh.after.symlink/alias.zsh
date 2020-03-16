@@ -7,3 +7,14 @@ function __mkc {
 }
 
 alias mkc="__mkc"
+
+function __shorten {
+  pushd ~/Repos/shortener;
+  yarn shorten "$@";
+  popd;
+}
+
+alias shorten='__shorten'
+
+alias pull="git pull"
+alias push="git push"

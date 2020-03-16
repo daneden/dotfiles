@@ -30,6 +30,7 @@ brew 'pow'
 brew 'reattach-to-user-namespace'
 brew 'ruby'
 brew 'shellcheck'
+brew 'swiftlint'
 brew 'vim', args: ['with-lua']
 brew 'wget'
 brew 'wifi-password'
