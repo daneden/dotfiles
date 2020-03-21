@@ -8,6 +8,8 @@ function __mkc {
 
 alias mkc="__mkc"
 
+# Custom URL shortener
+# (Requires that I've git cloned the shortener repo locally)
 function __shorten {
   pushd ~/Repos/shortener;
   yarn shorten "$@";
@@ -16,5 +18,17 @@ function __shorten {
 
 alias shorten='__shorten'
 
+# A utility function to clone a GitHub repo and cd into it
+function __gcd {
+  if [ "$1x" != "x" ]; then
+    git clone "https://github.com/$1"
+    DIRNAME="$(cut -d'/' -f2 <<<$1)"
+    cd "$DIRNAME"
+  fi
+}
+
+alias gcd='__gcd'
+
+# Some convenience aliases
 alias pull="git pull"
 alias push="git push"
