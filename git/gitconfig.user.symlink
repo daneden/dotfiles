@@ -4,7 +4,6 @@
 [core]
   editor = vim -c start
   excludesfile = ~/.gitignore_global
-	pager = diff-so-fancy | less --tabs=4 -RFX
 [alias]
 # add
   aa = add .
@@ -17,7 +16,10 @@
   lg = vlog --color --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr)%C(bold blue)<%an>%Creset' --abbrev-commit
 
 # push
-  p = push                         # push
+  p = push
+
+# status
+  s = status
 
 [diff]
   compactionHeuristic = true

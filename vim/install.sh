@@ -1,7 +1,7 @@
 #!/bin/bash
 
 # Create necessary directories for Vim
-dirs=( "$HOME/.vim.user/undo" "$HOME/.cache/neocomplete" )
+dirs=( "$HOME/.vim.user/undo" )
 i=0
 
 for dir in "${dirs[@]}"

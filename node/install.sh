@@ -4,9 +4,7 @@
 curl -o- -L https://yarnpkg.com/install.sh | bash
 
 yarn global add \
-  babel-cli \
-  create-react-app \
   n \
-  now \
+  vercel \
   typescript \
   vtop \

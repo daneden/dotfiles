@@ -1,11 +1,8 @@
 " Custom vim configuration
 " Loaded after YADR's .vimrc
 
-let g:yadr_disable_solarized_enhancements=1
-set termguicolors
 syntax enable
-set background=dark
-colorscheme codedark
+colorscheme peachpuff
 
 """"""""""""""""""""""""""""
 " GENERAL
@@ -28,7 +25,7 @@ set autowrite
 
 " Highlight the current cursor line
 set cursorline
-highlight CursorLine ctermbg=Black
+highlight CursorLineNr ctermfg=grey
 
 " Enable undofiles
 set undodir=~/.vim.user/undo
@@ -43,12 +40,48 @@ set relativenumber
 set number
 autocmd InsertEnter * :set number norelativenumber
 autocmd InsertLeave * :set relativenumber
+highlight LineNr ctermfg=darkgrey
 
-" Expand brackets to a newline by default
-let delimitMate_expand_cr = 1
+" Reopen file buffers to the same location
+if has("autocmd")
+  au BufReadPost * if line("'\"") > 0 && line("'\"") <= line("$")
+    \| exe "normal! g'\"" | endif
+endif
 
-" Disable flow typechecking by default
-let g:flow#enable = 0
+" Set tab preferences
+filetype plugin indent on
+set tabstop=2
+set shiftwidth=2
+set expandtab
+
+" Status line
+function! GitBranch()
+  return system("git rev-parse --abbrev-ref HEAD 2>/dev/null | tr -d '\n'")
+endfunction
+
+function! StatuslineGit()
+  let l:branchname = GitBranch()
+  return strlen(l:branchname) > 0?'  '.l:branchname.' ':''
+endfunction
+
+set laststatus=2
+set statusline=
+set statusline+=%#PmenuSel#
+set statusline+=%{StatuslineGit()}
+set statusline+=%#LineNr#
+set statusline+=\ %f
+set statusline+=%m\
+set statusline+=%=
+set statusline+=%#CursorColumn#
+set statusline+=\ %y
+set statusline+=\ %{&fileencoding?&fileencoding:&encoding}
+set statusline+=\[%{&fileformat}\]
+set statusline+=\ %p%%
+set statusline+=\ %l:%c
+set statusline+=\
+
+" Scroll margin
+set scrolloff=10
 
 """"""""""""""""""""""""""""
 " FILETYPE-SPECIFIC SETTINGS
@@ -56,6 +89,7 @@ let g:flow#enable = 0
 
 " Highlight lines that exceed 80 characters
 set colorcolumn=81
+highlight ColorColumn ctermfg=darkgrey
 
 " Force line-wrapping on markdown above 80 chars
 autocmd FileType markdown set textwidth=80
@@ -64,24 +98,12 @@ autocmd FileType markdown set textwidth=80
 autocmd FileType gitcommit set colorcolumn=73
 autocmd FileType gitcommit set textwidth=72
 
-" Auto-format js code on save
-autocmd BufWritePre *.js Neoformat
-
 """"""""""""""""""""""""""""
 " KEY MAPPING
 """"""""""""""""""""""""""""
 
 " Open file explorer on '-'
 nnoremap - :Ex<CR>
-
-" Trigger CtrlP with... well
-nnoremap <C-p> :CtrlP<CR>
-
-" Tab completion for Neocomplete
-inoremap <expr><TAB>  pumvisible() ? "\<C-n>" : "\<TAB>""
-
-" YADR remaps C-z to :cp, but suspending Vim is pretty damn useful
-unmap <C-z>
 
 " Removes trailing spaces
 function! TrimWhiteSpace()

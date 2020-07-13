@@ -11,3 +11,4 @@ CVS
 npm-debug.log
 *.un~
 .sass-cache
+yarn-error.log
