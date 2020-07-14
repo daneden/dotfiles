@@ -1,6 +1,7 @@
 # Dotfiles: The Dan Eden Story
 
-I have no idea what I’m doing, but with any luck, that’ll change the more I use my own dotfiles.
+I have no idea what I’m doing, but with any luck, that’ll change the more I use
+my own dotfiles.
 
 ## Installation
 
@@ -11,10 +12,10 @@ I have no idea what I’m doing, but with any luck, that’ll change the more I 
 
 ## What's Inside?
 
-These dotfiles used to be pretty complex, but now they're just a layer of customisations on top
-of [skwp/dotfiles](http://skwp.github.io/dotfiles/), for a couple of reasons:
-
-1. Maintaining my own dotfiles completely turned out to be a lot of work. This way, the onus is
-   no longer on me to keep things running smoothly.
-2. My employer's remote servers only whitelist a few GitHub repositories. This was one of them.
-   My own dotfiles repo was not.
+1. A script that copies dotfiles to my home directory to configure things like
+   git, vim, and zsh
+2. zsh configuration that provides a useful prompt and some aliases
+3. git configuration that provides my own details and some aliases
+4. vim configuration that provides some plugins and sets some preferences
+5. A Brewfile to install common apps and CLI tools I use frequently
+6. Yarn/Node global package installation
