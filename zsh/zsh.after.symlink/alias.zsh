@@ -32,3 +32,6 @@ alias gcd='__gcd'
 # Some convenience aliases
 alias pull="git pull"
 alias push="git push"
+
+# One-liner to fix Homebrew permissions
+alias fixbrew="sudo chown -R $(whoami) /usr/local/bin /usr/local/lib /usr/local/sbin && chmod u+w /usr/local/bin /usr/local/lib /usr/local/sbin"
