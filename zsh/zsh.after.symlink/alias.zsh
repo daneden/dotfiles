@@ -21,13 +21,21 @@ alias shorten='__shorten'
 # A utility function to clone a GitHub repo and cd into it
 function __gcd {
   if [ "$1x" != "x" ]; then
-    git clone "https://github.com/$1"
+    git clone "https://github.com/$1" --depth=10
     DIRNAME="$(cut -d'/' -f2 <<<$1)"
     cd "$DIRNAME"
   fi
 }
 
+# Clone a GitHub repo
+function __gc {
+  if [ "$1x" != "x" ]; then
+    git clone "https://github.com/$1" --depth=10
+  fi
+}
+
 alias gcd='__gcd'
+alias gc='__gc'
 
 # Some convenience aliases
 alias pull="git pull"
