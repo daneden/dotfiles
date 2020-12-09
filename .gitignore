@@ -32,3 +32,6 @@ hg/hgrc.local.symlink
 
 # Ignore `curl`ed files
 antigen.zsh
+
+# Ignore generated/lockfiles
+# antigen.config.zsh.zwc
