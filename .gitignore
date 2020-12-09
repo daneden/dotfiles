@@ -29,3 +29,6 @@ init.vim
 # Ignore vcs config in case it has per-machine settings
 git/gitconfig.symlink
 hg/hgrc.local.symlink
+
+# Ignore `curl`ed files
+antigen.zsh

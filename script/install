@@ -25,3 +25,5 @@ find . -name postinstall.sh | while read installer ; do \
 done
 
 echo "${DONE}Finished running postinstall scripts\n"
+
+echo "All done setting up dotfiles! Open a new shell to apply changes."
