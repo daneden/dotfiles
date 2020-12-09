@@ -4,7 +4,6 @@ source ${HOME}/.dotfiles/antigen.zsh
 antigen apply
 
 # Install plugins
-antigen bundle git
 antigen bundle command-not-found
 antigen bundle zsh-users/zsh-syntax-highlighting
 
