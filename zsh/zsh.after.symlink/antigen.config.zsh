@@ -10,3 +10,9 @@ antigen bundle zsh-users/zsh-history-substring-search
 
 # Chocks away
 antigen apply
+
+# Apply config specific to these packages
+
+## History Substring Search
+bindkey '^[[A' history-substring-search-up
+bindkey '^[[B' history-substring-search-down
